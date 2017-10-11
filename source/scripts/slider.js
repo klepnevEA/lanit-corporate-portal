@@ -6,7 +6,7 @@ $(function(){
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 5000,
 	});
 
@@ -43,6 +43,24 @@ $(function(){
 			}
 			
 		]
+	});
+
+	$(".slider-news").slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		dots: false,
+		arrows: true,
+		autoplay: false,
+		autoplaySpeed: 5000,
+	});
+
+	$(".birthdays__slider").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		autoplay: false,
+		autoplaySpeed: 5000,
 	});
 
 

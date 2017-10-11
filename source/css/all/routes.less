@@ -1,0 +1,73 @@
+.routes {
+	&__elem {
+		display: block;
+	}
+
+	&__link {
+		display: inline-block;
+		width: 100%;
+		padding: 10px @sp;
+		background-color: @blue;
+		border-bottom: 1px solid #59caff;
+		
+		
+		&_title {
+			padding: 20px @sp;
+		}
+	}
+
+	&__text {
+		font-family: 'PFBeauSansPro-Regular';
+		color: #fff;
+		font-size: 14px;
+		margin-bottom: @sp/3;
+	}
+
+	&__dropdown {
+		display: inline-block;
+		position: relative;
+		color: #fff;
+		font-family: 'PFBeauSansPro-Bold';
+		font-size: 20px;
+		
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			width: 84%;
+			
+			border-bottom: 1px dashed #fff;
+		}
+	}
+
+	&__place {
+		font-family: 'PFBeauSansPro-Regular';
+		color: #005578;
+		font-size: 14px;
+		margin-bottom: @sp/3;
+	}
+
+	&__time {
+		font-family: 'PFBeauSansPro-SemiBold';
+		color: #fff;
+		font-size: 13px;
+		margin-bottom: @sp/3;
+	}
+
+	&__comment {
+		font-family: 'PFBeauSansPro-Italic';
+		color: #fff;
+		font-size: 13px;
+	}
+
+	&__schedule {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		font-family: 'PFBeauSansPro-Regular';
+		color: #fff;
+		font-size: 14px;
+		text-decoration: underline;
+	}
+}

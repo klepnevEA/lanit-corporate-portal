@@ -1,0 +1,81 @@
+.food {
+	background-color: @bg;
+	padding: 0 @sp;
+	
+	&__tab {
+		display: inline-block;
+		font-family: 'PFBeauSansPro-Bold';
+		color: @gray;
+		font-size: 17px;
+		border-top: 4px solid transparent;
+		text-transform: uppercase;
+		padding: 13px 10px @sp 0;
+		margin-right: @sp;
+		
+		&.active {
+			border-top: 4px solid @blue;
+			color: #000;
+		}
+	}
+
+	&__wrap {
+		height: 326px;
+		overflow-y: auto;
+		border-top: 1px solid @light-gray;
+		border-bottom: 1px solid @light-gray;
+	}
+
+	&__link {
+		display: inline-block;
+		width: 100%;
+		padding: 10px 0;
+		border-bottom: 1px solid @light-gray;
+	}
+
+	&__comment {
+		display: inline-block;
+		color: #fff;
+		font-family: 'PFBeauSansPro-SemiBold';
+		font-size: 12px;
+		line-height: 1;
+		padding: 3px;
+        border-radius: 3px;
+        padding:0px 5px 1px;
+        margin-bottom: @sp/3;
+        
+        &_red {
+        	background-color: @red;
+        }
+
+        &_green {
+        	background-color: @green;
+        }
+	}
+
+	&__description {
+		width: 100%;
+		.clearfix;
+		
+	}
+
+	&__name {
+		font-family: 'PFBeauSansPro-Regular';
+		font-size: 13px;
+		color: #000;
+		float: left;
+		width: 70%;
+	}
+
+	&__price {
+		font-family: 'PFBeauSansPro-Bold';
+		font-size: 14px;
+		color: #000;
+		float: right;
+		width: 30%;
+		text-align: right;
+		
+		span {
+			font-size: 18px;
+		}
+	}
+}
