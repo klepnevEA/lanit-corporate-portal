@@ -20,6 +20,17 @@ $(document).ready(function() {
 	}
 
 	$('.header__turn').on('click', curtailMenu);
+
+
+	$(window).on('resize', function() {
+		var windowWidth = window.innerWidth;
+		if(windowWidth <= 1620) {
+			$('.header__menu').addClass('curtail');
+		} else if (windowWidth > 1620) {
+			$('.header__menu').removeClass('curtail');
+		}
+		
+	});
 }); 
 
 

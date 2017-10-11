@@ -1,14 +1,49 @@
 // слайдер
 $(function(){
-	$(".slider").slick({
-	    dots: true,
-	    arrows: true
+	//слайдер отзывов
+	$(".slider-concur").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		autoplay: false,
+		autoplaySpeed: 5000,
 	});
 
 
-	$(".slider-without-arrows").slick({
-	    dots: true,
-	    arrows: false
+	$(".slider-services").slick({
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		dots: false,
+		arrows: true,
+		autoplay: false,
+		autoplaySpeed: 5000,
+
+		responsive: [
+			{
+			breakpoint: 1201,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4
+				}
+			},
+			{
+			breakpoint: 769,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			},
+			{
+			breakpoint: 376,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			}
+			
+		]
 	});
+
 
 })
