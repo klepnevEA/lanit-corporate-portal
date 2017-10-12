@@ -1,0 +1,35 @@
+.photo-prew {
+	margin-bottom: 25px;
+	
+	&__list {
+		.clearfix;
+	}
+
+	&__elem {
+		position: relative;
+		display: inline-block;
+		height: 65px;
+		width: 65px;
+		float: left;
+		margin-right: 1px;
+	}
+
+	&__img {
+		height: 65px;
+		width: 65px;
+		background-position: center center;
+		background-repeat: no-repeat;
+	    background-size: cover;
+	}
+
+	&__counter {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 18px;
+		font-family: 'PFBeauSansPro-Bold';
+		color: @blue;
+		white-space:nowrap;
+	}
+}
