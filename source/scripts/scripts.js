@@ -4,30 +4,30 @@ $(document).ready(function() {
 	var openMenu = function(e) {
 		e.preventDefault();
 		var thisEl = $(this),
-			parentEl = thisEl.closest('.header__menu-elem-main');
+			parentEl = thisEl.closest('.nav-menu__menu-elem-main');
 
 			parentEl.toggleClass('active');
 	}
 
-	$('.header__menu-link-main').on('click', openMenu);
+	$('.nav-menu__menu-link-main').on('click', openMenu);
 
 	// сворачивание бокового меню
 
 	var curtailMenu =  function(e) {
 		e.preventDefault();
-		$('.header__menu').toggleClass('curtail');
-		$('.header__menu-elem-main').removeClass('active');
+		$('.container-wrap').toggleClass('curtail');
+		//$('.nav-menu__menu-elem-main').removeClass('active');
 	}
 
-	$('.header__turn').on('click', curtailMenu);
+	$('.nav-menu__turn').on('click', curtailMenu);
 
 
 	$(window).on('resize', function() {
 		var windowWidth = window.innerWidth;
-		if(windowWidth <= 1620) {
-			$('.header__menu').addClass('curtail');
-		} else if (windowWidth > 1620) {
-			$('.header__menu').removeClass('curtail');
+		if(windowWidth <= 1201) {
+			$('.container-wrap').addClass('curtail');
+		} else if (windowWidth > 1200) {
+			$('.container-wrap').removeClass('curtail');
 		}
 		
 	});
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 
 	// троеточие в тексте
-	
+
 	var box = document.querySelector('.advertising__adt-text'),
     text = box.innerHTML,
     clone = document.createElement('div');
