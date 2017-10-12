@@ -1,0 +1,92 @@
+.advertising {
+	background-color: @bg;
+	padding: 20px 0;
+	margin-bottom: @sp*2;
+	
+	&__col {
+		padding: 0 25px;
+	}
+
+	&__add {
+		display: inline-block;
+		width: 100%;
+		max-width: 190px;
+		text-align: center;
+		background-color: @blue;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 13px;
+		font-family: 'PFBeauSansPro-SemiBold';
+		line-height: 1;
+		padding: 10px;
+		margin-bottom: 25px;
+	}
+
+	&__list {
+		margin-bottom: @sp*2;
+	}
+
+	&__elem {
+		&.active {
+			.advertising__text {
+				color: @gray;
+			}
+
+			.advertising__quantity {
+				display: inline-block;
+			}
+
+			.advertising__link {
+				&:after {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__all {
+		font-family: 'PFBeauSansPro-Regular';
+		font-size: 13px;
+		text-decoration: underline;
+		color: @blue;	
+	}
+
+	&__link {
+		display: inline-block;
+		position: relative;
+		width: 100%;
+		display: inline-block;
+		padding: @sp/3 0;
+		
+		&:after {
+			content: '';
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: @gray;
+		}
+	}
+
+	&__text {
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+		padding-right: 20px;
+		background-color: #fff;
+		font-family: 'PFBeauSansPro-SemiBold';
+		font-size: 14px;
+		color: #000;	
+		text-transform: uppercase;
+	}
+
+	&__quantity {
+		display: none;
+		position: relative;
+		font-family: 'PFBeauSansPro-Regular';
+		font-size: 12px;
+		top: -5px;
+	}
+}

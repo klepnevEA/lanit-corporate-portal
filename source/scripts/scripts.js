@@ -31,6 +31,24 @@ $(document).ready(function() {
 		}
 		
 	});
+
+
+	// табы
+
+	var tabOpen = function(e) {
+		e.preventDefault();
+		var thisEl = $(this),
+		dataVal = thisEl.data('food');
+		$('.food__tab').removeClass('active');
+		thisEl.addClass('active');
+		console.log(dataVal);
+
+		$('.food__blok').removeClass('active');
+		$('#' + dataVal).addClass('active');
+	}
+
+	$('.food__tab').on('click', tabOpen);
+
 }); 
 
 

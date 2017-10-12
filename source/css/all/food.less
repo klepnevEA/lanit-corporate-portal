@@ -1,6 +1,7 @@
 .food {
 	background-color: @bg;
 	padding: 0 @sp;
+	margin-bottom: @sp*2;
 	
 	&__tab {
 		display: inline-block;
@@ -19,10 +20,19 @@
 	}
 
 	&__wrap {
+		padding-right: 10px;
 		height: 326px;
 		overflow-y: auto;
+	}
+
+	&__blok {
+		display: none;
 		border-top: 1px solid @light-gray;
 		border-bottom: 1px solid @light-gray;
+		
+		&.active {
+			display: block;
+		}
 	}
 
 	&__link {
@@ -77,5 +87,42 @@
 		span {
 			font-size: 18px;
 		}
+	}
+
+	&__menu {
+		text-align: center;
+		padding: 20px 0 @sp;
+		
+		&-link {
+			font-family: 'PFBeauSansPro-Regular';
+			font-size: 14px;
+			color: @blue;
+			text-decoration: underline;
+		}
+	}
+
+
+	::-webkit-scrollbar-button { 
+		width:4px; 
+		height:0px 
+	} 
+
+	::-webkit-scrollbar-track { 
+		background-color: transparent; 
+	} 
+
+	::-webkit-scrollbar-thumb { 
+		-webkit-border-radius: 5px; 
+		border-radius: 5px; 
+		background-color:#a1adb2; 
+	} 
+
+	::-webkit-resizer{ 
+		width:4px; 
+		height:0px 
+	} 
+
+	::-webkit-scrollbar{ 
+		width: 4px; 
 	}
 }
