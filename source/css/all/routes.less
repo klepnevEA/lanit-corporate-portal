@@ -1,8 +1,19 @@
 .routes {
 	margin-bottom: @sp*2;
 	
+
+	
 	&__elem {
 		display: block;
+	}
+
+	&__list {
+		height: 390px;
+		overflow-y: auto;
+		padding-right: @sp/5;
+		background-color: @blue;
+		margin-bottom: 0;
+		border-bottom: 1px solid #59caff;
 	}
 
 	&__link {
@@ -11,6 +22,7 @@
 		padding: 10px @sp;
 		background-color: @blue;
 		border-bottom: 1px solid #59caff;
+		
 		
 		
 		&_title {
@@ -73,4 +85,32 @@
 		font-size: 14px;
 		text-decoration: underline;
 	}
+
+
+
+	::-webkit-scrollbar-button { 
+		width:5px; 
+		height:0px 
+	} 
+
+	::-webkit-scrollbar-track { 
+		background-color: transparent; 
+	} 
+
+	::-webkit-scrollbar-thumb { 
+		-webkit-border-radius: 10px; 
+		border-radius: 10px; 
+		background-color:#fff; 
+	} 
+
+	::-webkit-resizer{ 
+		width:5px; 
+		height:0px 
+	} 
+
+	::-webkit-scrollbar{ 
+		width: 4px; 
+	}
+
+
 }

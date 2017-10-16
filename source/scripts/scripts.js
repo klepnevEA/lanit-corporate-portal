@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+var elements = document.querySelectorAll('.sticky');
+Stickyfill.add(elements);
+Stickyfill.refreshAll();
+
 	//открытие/зактытие пунктов в боковом меню
 	var openMenu = function(e) {
 		e.preventDefault();
@@ -16,7 +20,10 @@ $(document).ready(function() {
 	var curtailMenu =  function(e) {
 		e.preventDefault();
 		$('.container-wrap').toggleClass('curtail');
-		//$('.nav-menu__menu-elem-main').removeClass('active');
+		$('.slider-concur').slick('refresh');
+		$(".slider-services").slick('refresh');
+		$(".slider-news").slick('refresh');
+		$(".birthdays__slider").slick('refresh');
 	}
 
 	$('.nav-menu__turn').on('click', curtailMenu);
@@ -56,9 +63,9 @@ $(document).ready(function() {
 	var box = document.querySelector('.advertising__adt-text'),
     text = box.innerHTML,
     clone = document.createElement('div');
-    console.log(box);
 
-	clone.style.position = 'absolute';
+	clone.style.position = 'fixed';
+	clone.style.top = '-1000px';
 	clone.style.visibility = 'hidden';
 	clone.style.width = box.clientWidth + 'px';
 	clone.innerHTML = text;
@@ -70,6 +77,9 @@ $(document).ready(function() {
 	}
 
 	box.innerHTML = clone.innerHTML;
+
+
+	
 
 }); 
 

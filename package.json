@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "normalize.css": "^4.1.1",
-    "simplebar": "^2.2.1"
+    "simplebar": "^2.2.1",
+    "stickyfilljs": "^2.0.2"
   }
 }

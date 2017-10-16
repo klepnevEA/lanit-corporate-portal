@@ -32,34 +32,20 @@
         border-radius: 50%;
         
         &-status {
-        	position: absolute;
-        	width: 15px;
-        	height: 15px;
-   	        border-radius: 50%;
-   	        background-color: #fff;
-   	        bottom: 7px;
-   	        right: 0px;
-   	        
-   	        &:after {
-   	        	content: '';
-   	        	position: absolute;
-   	        	top: 49%;
-   	        	left: 53%;
-   	        	transform: translate(-50%, -50%);
-	         	width: 5px;
-	        	height: 5px;
-	   	        border-radius: 50%;
-	   	        border: 2px solid @gray;
-	   	        background-color: #fff;
-   	        }
-
-   	        &.active {
-   	        	&:after {
-   	        		background-color: @green;
-   	        		border: 0;
-   	        		border: 2px solid @green;
-   	        	}
-   	        }
+		    position: absolute;
+		    width: 11px;
+		    height: 11px;
+		    border-radius: 50%;
+		    background-color: #fff;
+		    border: 2px solid #adadad;
+		    box-shadow: 0px 0px 0px 3px rgba(255,255,255,1);
+		    bottom: 7px;
+		    right: 0px;
+		    
+		    &.active {
+		    	background-color: #48b219;
+		    	border: 2px solid #48b219;
+		    }
         }
 	}
 

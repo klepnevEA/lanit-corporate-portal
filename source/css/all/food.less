@@ -3,6 +3,8 @@
 	padding: 0 @sp;
 	margin-bottom: @sp*2;
 	
+
+	
 	&__tab {
 		display: inline-block;
 		font-family: 'PFBeauSansPro-Bold';
@@ -10,8 +12,8 @@
 		font-size: 17px;
 		border-top: 4px solid transparent;
 		text-transform: uppercase;
-		padding: 13px 10px @sp 0;
-		margin-right: @sp;
+		padding: 13px 0 @sp 0;
+		margin-right: 10px;
 		
 		&.active {
 			border-top: 4px solid @blue;
@@ -23,12 +25,12 @@
 		padding-right: 10px;
 		height: 326px;
 		overflow-y: auto;
+		border-top: 1px solid @light-gray;
+		border-bottom: 1px solid @light-gray;
 	}
 
 	&__blok {
 		display: none;
-		border-top: 1px solid @light-gray;
-		border-bottom: 1px solid @light-gray;
 		
 		&.active {
 			display: block;
@@ -101,7 +103,6 @@
 		}
 	}
 
-
 	::-webkit-scrollbar-button { 
 		width:4px; 
 		height:0px 
@@ -125,4 +126,5 @@
 	::-webkit-scrollbar{ 
 		width: 4px; 
 	}
+	
 }
