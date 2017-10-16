@@ -1,9 +1,5 @@
 .user-info {
 	display: flex;
-	
-	&__left {
-		
-	}
 
 	&__img {
 		position: relative;
@@ -34,6 +30,10 @@
 	}
 
     &__name {
+    	max-width: 200px;
+    	overflow: hidden;
+    	white-space: nowrap;
+    	text-overflow:ellipsis;
     	font-size: 16px;
     	font-family: 'PFBeauSansPro-Bold';
     	margin-bottom: @sp/3;

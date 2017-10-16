@@ -1,7 +1,11 @@
 .advertising {
 	background-color: @bg;
-	padding: 20px 0;
+	padding: 20px @sp;
 	margin-bottom: @sp*2;
+	
+	.title {
+		margin-bottom: 20px;
+	}
 	
 	&__col {
 		padding: 0 25px;
@@ -10,7 +14,7 @@
 	&__add {
 		display: inline-block;
 		width: 100%;
-		max-width: 190px;
+		max-width: 2320px;
 		text-align: center;
 		background-color: @blue;
 		color: #fff;
@@ -75,7 +79,7 @@
 		position: relative;
 		z-index: 10;
 		padding-right: 20px;
-		background-color: #fff;
+		background-color: @bg;
 		font-family: 'PFBeauSansPro-SemiBold';
 		font-size: 14px;
 		color: #000;	
