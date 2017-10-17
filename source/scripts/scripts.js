@@ -147,6 +147,11 @@ Stickyfill.refreshAll();
 			    }, angle, true));
 			  })(curr, prev);
 			}, 0);
+
+
+			// включаем скроллы
+			jQuery('.food__wrap').scrollbar();
+			
 }); 
 
 

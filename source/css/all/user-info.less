@@ -31,6 +31,7 @@
 
     &__name {
     	max-width: 200px;
+        text-align: center;
     	overflow: hidden;
     	white-space: nowrap;
     	text-overflow:ellipsis;
@@ -40,17 +41,26 @@
     	text-transform: uppercase;
     }
 
+    &__icons {
+        width: 200px;
+        white-space:nowrap;
+    }
+
     &__icon {
     	&-list {
-    		.clearfix;
+    		display: flex;
+            justify-content: space-around;
+            width: 200px;
+            padding-right: 38px;
     	}
 
     	&-elem {
     		display: inline-block;
-    		float: right;
-    		width: 38px;
+            
+            width: 1px;
+    		//float: right;
     		height: 38px;
-    		margin-left: -8px;
+    		//margin-left: -8px;
     	}
     }
 
