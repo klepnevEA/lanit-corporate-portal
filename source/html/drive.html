@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+					
+					@@include('./file-include/header.html')
+
+					<!-- популярные сервисы-->
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 class="title title_fsz-30">Подвези друга</h2>
+
+							<!-- форма поиска -->
+							<div class="block block_flex block_gray">
+								<div class="input-block active">
+									<input class="input" type="text" value="Селиванов"/>
+									<div class="input-block__text">ФИО</div>
+								</div>
+								<div class="input-block active">
+									<input class="input" type="text" value="ЧЧ.ММ – ЧЧ.ММ"/>
+									<div class="input-block__text">Время</div>
+								</div>
+								<div class="input-block">
+									<input class="input" type="text" />
+									<div class="input-block__text">Номер машины</div>
+								</div>
+								<div class="input-block">
+									<input class="input input_width-230" type="text" />
+									<div class="input-block__text">Ключевое слово (улица, метро)</div>
+								</div>
+
+								<button class="btn">Найти</button>
+							</div>
+							<!-- форма поиска -->
+
+							<!-- сортировка -->
+							<div class="clearfix block_margin-bottom">
+								<div class="sorting">
+									<div class="sorting__text">
+										Сортировать по
+									</div>
+									<button class="btn btn_small btn_orange">Имени <span class="mdi mdi-arrow-down"></span></button>
+									<button class="btn btn_small btn_transparent">Рейтингу <span class="mdi mdi-arrow-down"></span></button>
+								</div>
+
+
+								<button class="btn btn_medium btn_orange btn_right"><span class="mdi mdi-account-multiple-plus"></span> Стать участником</button>
+							</div>
+							<!-- сортировка -->
+
+
+						</div>
+					</div>
+					<!-- популярные сервисы конец-->
+
+					<div class="row">
+						<div class="col-xs-12">
+							<table class="table-order">
+								<tr class="table-order__info">
+									<td class="table-order__arrow">
+										<button  class="table-order__button">
+											<span class="mdi mdi-chevron-double-down"></span>
+										</button>		
+									</td>
+									<td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											Иванов Владимир Вадимович
+										</div>
+									</td>
+									<td class="table-order__contacts">
+										<ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+									</td>
+									<td class="table-order__car">
+										<ul class="table-order__list">
+											<li class="table-order__elem">
+												<span>Машина:</span>
+												<span>ВАЗ 2109</span>
+											</li>
+											<li class="table-order__elem">
+												<span>Номер:</span>
+												<span>А 336 СН 44</span>
+											</li>
+											<li class="table-order__elem">
+												<span>Цвет:</span>
+												<span><div class="table-order__car-color" style="background-color: #000"></div>черный</span>
+											</li>
+										</ul>
+									</td>
+									<td class="table-order__review">
+										<button class="table-order__review-button">
+											<div class="mdi mdi-thumb-up-outline"></div>
+											<div>93</div>
+										</button>
+									</td>
+								</tr>
+								<tr class="table-order__drodown" >
+									<td colspan="5">
+										<table class="table-route">
+											<tr>
+												<td class="table-route__first-column">
+													<span class="icon-ellipsis"></span>
+												</td>
+												<td class="table-route__comments">
+													Сразу предупреждаю, что никого не ждем. Выезжаем строго по времени. Поэтому, если кто-то задерживаться любит, то лучше присоединиться к кому-то другому.
+												</td>
+											</tr>
+											<tr>
+												<td class="table-route__time">
+													08-30
+												</td>
+												<td class="table-route__way">
+													way
+												</td>
+											</tr>
+											<tr>
+												<td class="table-route__time">
+													18-00
+												</td>
+												<td class="table-route__way">
+													way
+												</td>
+											</tr>
+											
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+
+					<!-- Что нового в ГК Ланит конец-->
+
+					<hr class="delimiter">
+
+
+					@@include('./file-include/footer.html')
+				</div><!--container-main-->		
+
+			</div><!--container-wrap-->
+				
+		</div>	 <!--container-->		
+		<!-- <div class="footer__before"></div> -->
+	
+	</div> <!--wrapper-->
+
+
+	<!-- popups -->
+	@@include('./file-include/popup.html')
+	
+
+	
+</body>
+</html>
+

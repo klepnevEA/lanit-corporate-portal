@@ -149,9 +149,16 @@ Stickyfill.refreshAll();
 			}, 0);
 
 
-			// включаем скроллы
-			jQuery('.food__wrap').scrollbar();
-			
+			// // включаем скроллы
+			// jQuery('.food__wrap').scrollbar();
+
+	/*инпуты*/
+
+	$('.input-block').on('click', function(e) {
+		
+		$(this).addClass('active');
+		$(this).find('.input').focus();
+	});		
 }); 
 
 
