@@ -12,9 +12,19 @@
 
 	&__dropdown {
 		&-btn {
+			position: relative;
 			font-family: 'PFBeauSansPro-Regular';
 			color: @blue;
 			font-size: 13px;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				width: calc(~'100% - 15px');
+				border-bottom: 1px dashed @blue;
+			
+			}
 		}
 	}
  }

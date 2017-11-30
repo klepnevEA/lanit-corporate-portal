@@ -59,24 +59,28 @@ Stickyfill.refreshAll();
 
 
 	// троеточие в тексте
+	if(document.getElementsByClassName('.advertising__adt-text')){
+    	
+ 		console.log('!!!');
+		// var box = document.querySelector('.advertising__adt-text'),
+	 //    text = box.innerHTML,
+	 //    clone = document.createElement('div');
 
-	var box = document.querySelector('.advertising__adt-text'),
-    text = box.innerHTML,
-    clone = document.createElement('div');
+		// clone.style.position = 'fixed';
+		// clone.style.top = '-1000px';
+		// clone.style.visibility = 'hidden';
+		// clone.style.width = box.clientWidth + 'px';
+		// clone.innerHTML = text;
+		// document.body.appendChild(clone);
 
-	clone.style.position = 'fixed';
-	clone.style.top = '-1000px';
-	clone.style.visibility = 'hidden';
-	clone.style.width = box.clientWidth + 'px';
-	clone.innerHTML = text;
-	document.body.appendChild(clone);
+		// var l = text.length - 1;
+		// for (; l >= 0 && clone.clientHeight > box.clientHeight; --l) {
+		//     clone.innerHTML = text.substring(0, l) + '...';
+		// }
 
-	var l = text.length - 1;
-	for (; l >= 0 && clone.clientHeight > box.clientHeight; --l) {
-	    clone.innerHTML = text.substring(0, l) + '...';
+		// box.innerHTML = clone.innerHTML;
+
 	}
-
-	box.innerHTML = clone.innerHTML;
 
 	// закрыть любой попап
 
@@ -158,7 +162,20 @@ Stickyfill.refreshAll();
 		
 		$(this).addClass('active');
 		$(this).find('.input').focus();
-	});		
+	});	
+
+
+	/*выпадающий блок в таблице заказов такси*/
+	$('.table-order__button').on('click', function(e) {
+
+		var thisBtn = $(this),
+		thisBtnParent = thisBtn.closest('.table-order__info'),
+		thisBtnDropdown = thisBtnParent.next();
+
+		thisBtn.toggleClass('active');
+		thisBtnDropdown.toggleClass('active');
+
+	});	
 }); 
 
 

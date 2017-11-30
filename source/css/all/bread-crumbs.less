@@ -1,0 +1,32 @@
+.bread-crumbs {
+	margin-bottom: @sp;
+	
+	&__elem {
+		display: inline-block;
+	}
+
+	&__elem {
+		&:last-child {
+
+			.bread-crumbs__link {
+				color: #000;
+				
+				&:after {
+					content: "";
+				}
+			}
+			
+		}
+	}
+
+	&__link {
+		color: @gray;
+		font-size: 13px;
+		white-space: nowrap;
+		
+		&:after {
+			content: "/";
+			padding-left: 10px;
+		}
+	}
+}

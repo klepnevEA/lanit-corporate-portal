@@ -14,7 +14,9 @@
 
 				<div class="container-main">
 					
-					@@include('./file-include/header.html')
+					@@include('./file-include/header-2.html')
+
+					@@include('./file-include/bread-crumbs.html')
 
 					<!-- популярные сервисы-->
 					<div class="row">
@@ -32,7 +34,7 @@
 									<div class="input-block__text">Время</div>
 								</div>
 								<div class="input-block">
-									<input class="input" type="text" />
+									<input class="input " type="text" />
 									<div class="input-block__text">Номер машины</div>
 								</div>
 								<div class="input-block">
@@ -67,6 +69,7 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<table class="table-order">
+								<!-- один заказ -->
 								<tr class="table-order__info">
 									<td class="table-order__arrow">
 										<button  class="table-order__button">
@@ -136,7 +139,35 @@
 													08-30
 												</td>
 												<td class="table-route__way">
-													way
+													<div class="order-way">
+														<div class="order-way__wrap">
+															<div class="order-way__road">
+																<div class="order-way__point order-way__point_start">
+																	<div class="order-way__text">
+																		ВДНХ
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:31%">
+																	<div class="order-way__text">
+																		М. Алексеевская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:63%">
+																	<div class="order-way__text">
+																		Рижская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_end">
+																	<div class="order-way__text">
+																		Мурманский проезд, д.14, к.1
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												</td>
 											</tr>
 											<tr>
@@ -144,24 +175,346 @@
 													18-00
 												</td>
 												<td class="table-route__way">
-													way
+													<div class="order-way">
+														<div class="order-way__wrap">
+															<div class="order-way__road">
+																<div class="order-way__point order-way__point_start">
+																	<div class="order-way__text">
+																		ВДНХ
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:31%">
+																	<div class="order-way__text">
+																		М. Алексеевская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:63%">
+																	<div class="order-way__text">
+																		Рижская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_end">
+																	<div class="order-way__text">
+																		Мурманский проезд, д.14, к.1
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												</td>
 											</tr>
 											
 										</table>
 									</td>
 								</tr>
+								
+								<tr>
+									<td class="table-order__delimiter" colspan="5"></td>
+								</tr>
+
+								<!-- один заказ конец -->
+								<!-- один заказ -->
+								<tr class="table-order__info">
+									<td class="table-order__arrow">
+										<button  class="table-order__button">
+											<span class="mdi mdi-chevron-double-down"></span>
+										</button>		
+									</td>
+									<td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											Иванов Владимир Вадимович
+										</div>
+									</td>
+									<td class="table-order__contacts">
+										<ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+									</td>
+									<td class="table-order__car">
+										<ul class="table-order__list">
+											<li class="table-order__elem">
+												<span>Машина:</span>
+												<span>ВАЗ 2109</span>
+											</li>
+											<li class="table-order__elem">
+												<span>Номер:</span>
+												<span>А 336 СН 44</span>
+											</li>
+											<li class="table-order__elem">
+												<span>Цвет:</span>
+												<span><div class="table-order__car-color" style="background-color: #fff"></div>белый</span>
+											</li>
+										</ul>
+									</td>
+									<td class="table-order__review">
+										<button class="table-order__review-button">
+											<div class="mdi mdi-thumb-up-outline"></div>
+											<div>1093</div>
+										</button>
+									</td>
+								</tr>
+								<tr class="table-order__drodown" >
+									<td colspan="5">
+										<table class="table-route">
+											<tr>
+												<td class="table-route__first-column">
+													<span class="icon-ellipsis"></span>
+												</td>
+												<td class="table-route__comments">
+													Сразу предупреждаю, что никого не ждем. Выезжаем строго по времени. Поэтому, если кто-то задерживаться любит, то лучше присоединиться к кому-то другому.
+												</td>
+											</tr>
+											<tr>
+												<td class="table-route__time">
+													08-30
+												</td>
+												<td class="table-route__way">
+													<div class="order-way">
+														<div class="order-way__wrap">
+															<div class="order-way__road">
+																<div class="order-way__point order-way__point_start">
+																	<div class="order-way__text">
+																		ВДНХ
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:31%">
+																	<div class="order-way__text">
+																		М. Алексеевская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:63%">
+																	<div class="order-way__text">
+																		Рижская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_end">
+																	<div class="order-way__text">
+																		Мурманский проезд, д.14, к.1
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="table-route__time">
+													18-00
+												</td>
+												<td class="table-route__way">
+													<div class="order-way">
+														<div class="order-way__wrap">
+															<div class="order-way__road">
+																<div class="order-way__point order-way__point_start">
+																	<div class="order-way__text">
+																		ВДНХ
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:31%">
+																	<div class="order-way__text">
+																		М. Алексеевская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:63%">
+																	<div class="order-way__text">
+																		Рижская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_end">
+																	<div class="order-way__text">
+																		Мурманский проезд, д.14, к.1
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+											
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td class="table-order__delimiter" colspan="5"></td>
+								</tr>
+
+								<!-- один заказ конец -->
+
+								<!-- один заказ -->
+								<tr class="table-order__info">
+									<td class="table-order__arrow">
+										<button  class="table-order__button">
+											<span class="mdi mdi-chevron-double-down"></span>
+										</button>		
+									</td>
+									<td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											Гаджимустафаева Назлуханум Мирзамагомедовна
+										</div>
+									</td>
+									<td class="table-order__contacts">
+										<ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+									</td>
+									<td class="table-order__car">
+										<ul class="table-order__list">
+											<li class="table-order__elem">
+												<span>Машина:</span>
+												<span>Mitsubishi Outlander III</span>
+											</li>
+											<li class="table-order__elem">
+												<span>Номер:</span>
+												<span>А 336 СН 44</span>
+											</li>
+											<li class="table-order__elem">
+												<span>Цвет:</span>
+												<span><div class="table-order__car-color" style="background-color: #f00"></div>красный</span>
+											</li>
+										</ul>
+									</td>
+									<td class="table-order__review">
+										<button class="table-order__review-button">
+											<div class="mdi mdi-thumb-up-outline"></div>
+											<div>3</div>
+										</button>
+									</td>
+								</tr>
+								<tr class="table-order__drodown" >
+									<td colspan="5">
+										<table class="table-route">
+											<tr>
+												<td class="table-route__first-column">
+													<span class="icon-ellipsis"></span>
+												</td>
+												<td class="table-route__comments">
+													Сразу предупреждаю, что никого не ждем. Выезжаем строго по времени. Поэтому, если кто-то задерживаться любит, то лучше присоединиться к кому-то другому.
+												</td>
+											</tr>
+											<tr>
+												<td class="table-route__time">
+													08-30
+												</td>
+												<td class="table-route__way">
+													<div class="order-way">
+														<div class="order-way__wrap">
+															<div class="order-way__road">
+																<div class="order-way__point order-way__point_start">
+																	<div class="order-way__text">
+																		ВДНХ
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:31%">
+																	<div class="order-way__text">
+																		М. Алексеевская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:63%">
+																	<div class="order-way__text">
+																		Рижская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_end">
+																	<div class="order-way__text">
+																		Мурманский проезд, д.14, к.1
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td class="table-route__time">
+													18-00
+												</td>
+												<td class="table-route__way">
+													<div class="order-way">
+														<div class="order-way__wrap">
+															<div class="order-way__road">
+																<div class="order-way__point order-way__point_start">
+																	<div class="order-way__text">
+																		ВДНХ
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:31%">
+																	<div class="order-way__text">
+																		М. Алексеевская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_middle" style="left:63%">
+																	<div class="order-way__text">
+																		Рижская
+																	</div>
+																</div>
+
+																<div class="order-way__point order-way__point_end">
+																	<div class="order-way__text">
+																		Мурманский проезд, д.14, к.1
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+											</tr>
+											
+										</table>
+									</td>
+								</tr>
+
+								<!-- один заказ конец -->
 							</table>
 						</div>
 					</div>
 
-
-					<!-- Что нового в ГК Ланит конец-->
-
-					<hr class="delimiter">
-
+					@@include('./file-include/pagination.html')
 
 					@@include('./file-include/footer.html')
+
 				</div><!--container-main-->		
 
 			</div><!--container-wrap-->
