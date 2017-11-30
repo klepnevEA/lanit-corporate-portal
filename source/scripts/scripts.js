@@ -92,7 +92,8 @@ Stickyfill.refreshAll();
 
 	// настроение в офисе попап
 
-	$('.mood-office__link').on('click', function(e) {
+	$('.popup-open').on('click', function(e) {
+		console.log('!!!');
 		e.preventDefault();
 		var thisEl = $(this),
 			thisVal = thisEl.data('popup');
