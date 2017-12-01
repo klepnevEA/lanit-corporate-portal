@@ -1,0 +1,64 @@
+.person-block {
+	.clearfix;
+
+	&__info {
+		float: left;
+		padding-top: 3px;
+		width: calc(~"100% - 95px");
+	}
+
+
+	&__title-small {
+		font-family: 'PFBeauSansPro-SemiBold';
+		font-size: 15px;
+		color: @gray;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+
+	&__title-big {
+		font-family: 'PFBeauSansPro-Bold';
+		font-size: 18px;
+		color: #000;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		
+		&_margin-bottom {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		font-family: 'PFBeauSansPro-Bold';
+		font-size: 15px;
+		margin-bottom: 10px;
+		color: #000;
+		text-transform: uppercase;
+	}
+
+
+	&__submit {
+		font-family: 'PFBeauSansPro-Regular';
+		font-size: 16px;
+		color: @gray;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		font-family: 'PFBeauSansPro-Regular';
+		font-size: 13px;
+		color: #000;
+		margin-bottom: 15px;
+		line-height: 1.65;
+	}
+
+	&__date {
+		font-size: 13px;
+		color: @gray;
+		font-family: 'PFBeauSansPro-Regular';
+	}
+
+	&__input-block {
+		display: flex;
+	}
+}

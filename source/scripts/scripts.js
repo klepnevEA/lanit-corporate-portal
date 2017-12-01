@@ -60,8 +60,7 @@ Stickyfill.refreshAll();
 
 	// троеточие в тексте
 	if(document.getElementsByClassName('.advertising__adt-text')){
-    	
- 		console.log('!!!');
+
 		// var box = document.querySelector('.advertising__adt-text'),
 	 //    text = box.innerHTML,
 	 //    clone = document.createElement('div');
@@ -177,6 +176,8 @@ Stickyfill.refreshAll();
 		thisBtnDropdown.toggleClass('active');
 
 	});	
+
+	// jQuery('#datetimepicker').datetimepicker();
 }); 
 
 

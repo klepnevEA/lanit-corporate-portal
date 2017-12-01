@@ -47,12 +47,29 @@
 		}
 	}
 
+	&_blue-dark {
+		background-color: @blue-dark;
+		
+		&:hover {
+			background-color: lighten(@orange, 10%);
+		}
+	}
+
 	&_transparent {
 		background-color: transparent;
 		color: #000;
 		
 		&:hover {
 			background-color: transparent;
+		}
+	}
+
+	&__block_center {
+		text-align: center;
+		padding: 20px;
+		
+		.btn {
+			margin: 0 3px;
 		}
 	}
 }
