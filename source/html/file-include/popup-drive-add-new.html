@@ -1,145 +1,149 @@
 <div class="popup" id="drive-add-new">
-		<div class="popup__wrap popup__wrap_width-700">
-			<a href="#" class="popup__close">
-				<i class="mdi mdi-close"></i>
-			</a>
-			<div class="popup__block popup__block_pt-0">
-				<div class="popup__head">
-					<div class="popup__title">
-						добавление нового участника
+	<div class="popup__wrap popup__wrap_width-700">
+		<a href="#" class="popup__close">
+			<i class="mdi mdi-close"></i>
+		</a>
+		<div class="popup__block popup__block_pt-0">
+			<div class="popup__head">
+				<div class="popup__title">
+					добавление нового участника
+				</div>
+			</div>
+		</div>
+
+		<div class="popup__block popup__block_gray popup__block_border-top popup__block_border-bottom">
+			<div class="person-block">
+				<div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')">
+
+				</div>
+
+				<div class="person-block__info">
+					<div class="person-block__title-small">Водитель:</div>
+					<div class="person-block__title-big person-block__title-big_margin-bottom">Александра Владиславовна Берская</div>
+					<div class="person-block__input-block">
+						<div class="input-block">
+							<input class="input " type="text">
+							<div class="input-block__text">Номер машины<sup>*</sup></div>
+						</div>
+						<div class="input-block">
+							<input class="input " type="text">
+							<div class="input-block__text">Машина<sup>*</sup></div>
+						</div>
+						<div class="input-block">
+							<input class="input " type="text">
+							<div class="input-block__text">Цвет<sup>*</sup></div>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="popup__block popup__block_gray popup__block_border-top popup__block_border-bottom">
-					<div class="person-block">
-						<div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')">
-							
-						</div>
-
-						<div class="person-block__info">
-							<div class="person-block__title-small">Водитель:</div>
-							<div class="person-block__title-big person-block__title-big_margin-bottom">Александра Владиславовна Берская</div>
-							<div class="person-block__input-block">
-								<div class="input-block">
-									<input class="input " type="text">
-									<div class="input-block__text">Номер машины<sup>*</sup></div>
-								</div>
-								<div class="input-block">
-									<input class="input " type="text">
-									<div class="input-block__text">Машина<sup>*</sup></div>
-								</div>
-								<div class="input-block">
-									<input class="input " type="text">
-									<div class="input-block__text">Цвет<sup>*</sup></div>
-								</div>
-							</div>
+		<div class="popup__block popup__block_padding-top-bottom-0">
+			<div class="path-creation">
+				<div class="path-creation__left">
+					<div class="path-creation__title">Путь в офис</div>
+					<div class="path-creation__time">
+						<div class="path-creation__time-title">Время</div>
+						<div class="path-creation__time-block">
+							<select class="select path-creation__time-input">
+								<option>08.00</option>
+								<option>12.00</option>
+							</select>
+							<span class="path-creation__time-dash">&mdash;</span>
+							<select class="select path-creation__time-input">
+								<option>08.00</option>
+								<option>12.00</option>
+							</select>
 						</div>
 					</div>
-			</div>
-
-			<div class="popup__block popup__block_padding-top-bottom-0">
-				<div class="path-creation">
-					<div class="path-creation__left">
-						<div class="path-creation__title">Путь в офис</div>
-						<div class="path-creation__time">
-							<div class="path-creation__time-title">Время</div>
-							<div class="path-creation__time-block">
-								<select class="path-creation__time-input">
-								  <option>08.00</option>
-								  <option>12.00</option>
-								</select>
-								<span class="path-creation__time-dash">&mdash;</span>
-								<select class="path-creation__time-input">
-								  <option>08.00</option>
-								  <option>12.00</option>
-								</select>
-							</div>
-						</div>
 
 
-						<div class="path-creation__chekbox-block">
-							
-						</div>
-
-						<div class="path-creation__text">Пункт маршрута (улица, станция метро)</div>
-						<button class="btn btn_orange btn_medium">
-							<span class="mdi mdi-plus-circle-outline"></span>
-							Добавить
-						</button>
-
-						<ul class="path-creation__list">
-							<li class="path-creation__elem">
-								<div class="path-creation__elem-block">Название пункта 1</div>
-								<a href="#" class="path-creation__elem-close">
-									<span class="mdi mdi-close"></span>
-								</a>
-							</li>
-							<li class="path-creation__elem">
-								<div class="path-creation__elem-block">Название пункта 2</div>
-								<a href="#" class="path-creation__elem-close">
-									<span class="mdi mdi-close"></span>
-								</a>
-							</li>
-						</ul>
+					<div class="path-creation__chekbox-block">
 
 					</div>
-					<div class="path-creation__right">
-						<div class="path-creation__title">Путь из офиса</div>
-						<div class="path-creation__time">
-							<div class="path-creation__time-title">Время</div>
-							<div class="path-creation__time-block">
-								<select class="path-creation__time-input">
-								  <option>08.00</option>
-								  <option>12.00</option>
-								</select>
-								<span class="path-creation__time-dash">&mdash;</span>
-								<select class="path-creation__time-input">
-								  <option>08.00</option>
-								  <option>12.00</option>
-								</select>
-							</div>
-						</div>
 
+					<div class="path-creation__text">Пункт маршрута (улица, станция метро)</div>
+					<button class="btn btn_orange btn_medium">
+						<span class="mdi mdi-plus-circle-outline"></span>
+						Добавить
+					</button>
 
-						<div class="path-creation__chekbox-block">
-							<input type="checkbox" class="checkbox" id="checkbox" />
-							<label for="checkbox">Я переключаю чекбокс</label>
-						</div>
+					<ul class="path-creation__list">
+						<li class="path-creation__elem">
+							<div class="path-creation__elem-block">Название пункта 1</div>
+							<a href="#" class="path-creation__elem-close">
+								<span class="mdi mdi-close"></span>
+							</a>
+						</li>
+						<li class="path-creation__elem">
+							<div class="path-creation__elem-block">Название пункта 2</div>
+							<a href="#" class="path-creation__elem-close">
+								<span class="mdi mdi-close"></span>
+							</a>
+						</li>
+					</ul>
 
-						<div class="path-creation__text">Пункт маршрута (улица, станция метро)</div>
-						<button class="btn btn_orange btn_medium">
-							<span class="mdi mdi-plus-circle-outline"></span>
-							Добавить
-						</button>
-
-						<ul class="path-creation__list">
-							
-						</ul>
-					</div>
 				</div>
-
-			</div>
-
-			<div class="popup__block popup__block_gray popup__block_border-top popup__block_border-bottom">
-				<div class="popup__form">
-					<div>
-						<div class="popup__form-title popup__form-title_black">Комментарий</div>
-						<textarea name="textarea" id="textarea" class="popup__form-textarea"></textarea>
+				<div class="path-creation__right">
+					<div class="path-creation__title">Путь из офиса</div>
+					<div class="path-creation__time">
+						<div class="path-creation__time-title">Время</div>
+						<div class="path-creation__time-block">
+							<select class="select path-creation__time-input">
+								<option>08.00</option>
+								<option>09.00</option>
+								<option>10.00</option>
+								<option>11.00</option>
+								<option>12.00</option>
+								<option>13.00</option>
+							</select>
+							<span class="path-creation__time-dash">&mdash;</span>
+							<select class="select path-creation__time-input">
+								<option>08.00</option>
+								<option>12.00</option>
+							</select>
+						</div>
 					</div>
-				</div>
-			</div>
 
-			<div class="popup__block">
-				<div class="btn__block btn__block_center">
-					<buttun class="btn btn_blue-dark btn_medium">
-						Отмена
-					</buttun>
-					<buttun class="btn btn_medium">
-						Сохранить
-					</buttun>
+
+					<div class="path-creation__chekbox-block">
+						<input type="checkbox" class="checkbox" id="checkbox" />
+						<label for="checkbox">Я переключаю чекбокс</label>
+					</div>
+
+					<div class="path-creation__text">Пункт маршрута (улица, станция метро)</div>
+					<button class="btn btn_orange btn_medium">
+						<span class="mdi mdi-plus-circle-outline"></span>
+						Добавить
+					</button>
+
+					<ul class="path-creation__list">
+
+					</ul>
 				</div>
 			</div>
 
 		</div>
+
+		<div class="popup__block popup__block_gray popup__block_border-top popup__block_border-bottom">
+			<div class="popup__form">
+				<div>
+					<div class="popup__form-title popup__form-title_black">Комментарий</div>
+					<textarea name="textarea" id="textarea" class="popup__form-textarea"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup__block">
+			<div class="btn__block btn__block_center">
+				<buttun class="btn btn_blue-dark btn_medium">
+					Отмена
+				</buttun>
+				<buttun class="btn btn_medium">
+					Сохранить
+				</buttun>
+			</div>
+		</div>
+
 	</div>
+</div>
