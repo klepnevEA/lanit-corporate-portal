@@ -22,6 +22,10 @@
 		&_width-700 {
 			width: 700px;
 		}
+
+		&_width-440 {
+			width: 440px;
+		}
 	}
 
 	&__close {
@@ -97,6 +101,10 @@
 		&_pt-0 {
 			padding-top: 0;
 		}
+
+		&_pb-5 {
+			padding-bottom: 5px;
+		}
 	}
 
 	&__form {
@@ -135,6 +143,68 @@
 			&:-moz-placeholder { /* Firefox 18- */
 			  color: pink;
 			}
+		}
+	}
+
+	&__align-center {
+		text-align: center;
+	}
+
+	&__link-big {
+		display: inline-block;
+		position: relative;
+		color: @blue;
+		font-family: 'PFBeauSansPro-SemiBold';
+		font-size: 14px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		
+		&:hover {
+			color: lighten(@blue, 10%);
+		}
+		
+		&__undefline {
+			text-decoration: underline;
+		}
+		
+		.mdi {
+			position: relative;
+			top: 8px;
+			font-size: 33px;
+			margin-right: 5px;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		margin-bottom: @sp;
+		line-height: 1.5;
+		font-family: 'PFBeauSansPro-Regular';
+	}
+
+	&__link {
+		font-size: 14px;
+		font-family: 'PFBeauSansPro-Regular';
+		text-decoration: underline;
+		color: @blue;
+		
+		&:hover {
+			color: lighten(@blue, 10%);
+		}
+	}
+
+	&__elem {
+		position: relative;
+		margin-left: 40px;
+		margin-bottom: 13px;
+		
+		&:after {
+			content: "—";
+			position: absolute;
+			left: -25px;
+			top: 0px;
+			color: @blue;
 		}
 	}
 }
