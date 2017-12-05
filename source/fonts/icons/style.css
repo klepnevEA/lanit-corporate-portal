@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-lanit';
-  src:  url('icon-lanit.eot?ptenj6');
-  src:  url('icon-lanit.eot?ptenj6#iefix') format('embedded-opentype'),
-    url('icon-lanit.ttf?ptenj6') format('truetype'),
-    url('icon-lanit.woff?ptenj6') format('woff'),
-    url('icon-lanit.svg?ptenj6#icon-lanit') format('svg');
+  src:  url('icon-lanit.eot?shnjsn');
+  src:  url('icon-lanit.eot?shnjsn#iefix') format('embedded-opentype'),
+    url('icon-lanit.ttf?shnjsn') format('truetype'),
+    url('icon-lanit.woff?shnjsn') format('woff'),
+    url('icon-lanit.svg?shnjsn#icon-lanit') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,34 +25,34 @@
 }
 
 .icon-camera:before {
-  content: "\e907";
+  content: "\e900";
   color: #009edf;
 }
-.icon-ellipsis:before {
-  content: "\e900";
-  color: #b2b2b2;
-}
-.icon-eye:before {
+.icon-coins:before {
   content: "\e901";
-  color: #b2b2b2;
+  color: #cacaca;
 }
-.icon-heard:before {
+.icon-ellipsis:before {
   content: "\e902";
   color: #b2b2b2;
 }
-.icon-logo:before {
+.icon-eye:before {
   content: "\e903";
-  color: #fff;
+  color: #b2b2b2;
 }
-.icon-logo-mini:before {
+.icon-fire:before {
   content: "\e904";
-  color: #00aeff;
+  color: #ff8b00;
+}
+.icon-heard:before {
+  content: "\e905";
+  color: #b2b2b2;
 }
 .icon-paper:before {
-  content: "\e905";
+  content: "\e906";
   color: #b9b9b9;
 }
 .icon-sale:before {
-  content: "\e906";
+  content: "\e907";
   color: #b9b9b9;
 }

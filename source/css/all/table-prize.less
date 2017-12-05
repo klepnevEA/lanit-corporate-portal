@@ -1,0 +1,53 @@
+.table-prize {
+	border-spacing: 3px;
+	margin: -3px;
+	margin-bottom: @sp*2;
+	
+	&__td {
+		background-color: @bg;
+		padding: 20px;
+		vertical-align: top;
+	}
+
+	&__first-td {
+		width: 195px;
+		padding: 35px;
+		padding-top: 33px;
+		padding-bottom: 0;
+		background-color: @bg;
+		vertical-align: top;
+	}
+
+	&__icon {
+		font-size: 30px;
+		margin-bottom: @sp/3;
+	}
+
+	&__title {
+		font-size: 17px;
+		font-family: 'PFBeauSansPro-Bold';
+		text-transform: uppercase;
+	}
+
+	&__price {
+		font-size: 18px;
+		font-family: 'PFBeauSansPro-Bold';
+		white-space: nowrap;
+		
+		span {
+			font-size: 24px;
+		}
+
+		&_orange {
+			color: @orange;
+		}
+
+		&_blue {
+			color: @blue;
+		}
+	}
+
+	.text {
+		margin-bottom: 0;
+	}
+}

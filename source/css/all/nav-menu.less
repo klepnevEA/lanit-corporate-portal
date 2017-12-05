@@ -6,7 +6,6 @@
 	
 
 	
-	
 	&__turn {
 		display: inline-block;
 		position: absolute;	
@@ -79,6 +78,7 @@
 
 			&-main {
 				overflow-y: auto;
+			    overflow-x: hidden;
 				max-height: calc(~'100vh - 135px');
 				
 				&::-webkit-scrollbar-button { 
@@ -157,3 +157,9 @@
 		padding: 20px 25px;
 	}
 }
+
+
+	@supports (-ms-ime-align:auto)
+	and (-webkit-text-stroke:initial) {
+	  .nav-menu {position: relative; } 
+	}
