@@ -79,6 +79,10 @@
 			font-family: 'PFBeauSansPro-Regular';
 			margin-bottom: @sp;
 		}
+
+		&_margin-bottom-20 {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__btn {
@@ -133,6 +137,11 @@
 
 		&_pb-5 {
 			padding-bottom: 5px;
+		}
+
+		&_padding-0 {
+			padding-top: 0;
+			padding-bottom: 0;
 		}
 	}
 
@@ -210,6 +219,26 @@
 		margin-bottom: @sp;
 		line-height: 1.5;
 		font-family: 'PFBeauSansPro-Regular';
+		
+		&_center {
+			text-align: center;
+		}
+
+		&_comment {
+			position: relative;
+			padding-left: 20px;
+			
+			i {
+				position: absolute;
+				top: 2px;
+				left: -10px;
+				font-size: 20px;
+			}
+		}
+
+		&_mb-0 {
+			margin-bottom: 0;
+		}
 	}
 
 	&__link {
@@ -235,5 +264,14 @@
 			top: 0px;
 			color: @blue;
 		}
+	}
+
+	&__alert {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		color: @orange;
+		font-size: 100px;
+		margin-bottom: 5px;
 	}
 }

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-lanit';
-  src:  url('icon-lanit.eot?shnjsn');
-  src:  url('icon-lanit.eot?shnjsn#iefix') format('embedded-opentype'),
-    url('icon-lanit.ttf?shnjsn') format('truetype'),
-    url('icon-lanit.woff?shnjsn') format('woff'),
-    url('icon-lanit.svg?shnjsn#icon-lanit') format('svg');
+  src:  url('icomoon.eot?crdq27');
+  src:  url('icomoon.eot?crdq27#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?crdq27') format('truetype'),
+    url('icomoon.woff?crdq27') format('woff'),
+    url('icomoon.svg?crdq27#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-info:before {
+  content: "\e908";
+  color: #cacaca;
+}
 .icon-camera:before {
   content: "\e900";
   color: #009edf;
