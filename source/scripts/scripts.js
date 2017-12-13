@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	 $('.user-info__wpap').click(function() {
+	 	$('.user-info__dropdovn').toggleClass('active');
+	 });
+
 
 var elements = document.querySelectorAll('.sticky');
 Stickyfill.add(elements);
