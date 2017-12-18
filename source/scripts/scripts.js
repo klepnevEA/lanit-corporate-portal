@@ -103,62 +103,38 @@ Stickyfill.refreshAll();
 		$('#' + thisVal).addClass('active');
 	});
 
-	// круговая  диаграмма
-
-			var dataset = [
-			{
-			    value: 85,
-			    color: '#ff8b00'
-			  }, {
-			    value: 10,
-			    color: '#00aeff'
-			  },  {
-			    value: 5,
-			    color: '#adadad'
-			  }
-			];
-
-			var maxValue = 25;
-			var container = $('.circle');
-
-			var addSector = function(data, startAngle, collapse) {
-			  var sectorDeg = 3.6 * data.value;
-			  var skewDeg = 90 + sectorDeg;
-			  var rotateDeg = startAngle;
-			  if (collapse) {
-			    skewDeg++;
-			  }
-
-			  var sector = $('<div>', {
-			    'class': 'sector'
-			  }).css({
-			    'background': data.color,
-			    'transform': 'rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)'
-			  });
-			  container.append(sector);
-
-			  return startAngle + sectorDeg;
-			};
-
-			dataset.reduce(function (prev, curr) {
-			  return (function addPart(data, angle) {
-			    if (data.value <= maxValue) {
-			      return addSector(data, angle, false);
-			    }
-
-			    return addPart({
-			      value: data.value - maxValue,
-			      color: data.color
-			    }, addSector({
-			      value: maxValue,
-			      color: data.color,
-			    }, angle, true));
-			  })(curr, prev);
-			}, 0);
 
 
-			// // включаем скроллы
-			// jQuery('.food__wrap').scrollbar();
+
+	// // круговая  диаграмма
+
+	function r1() {
+		$a = 60					//длинна первой полосы
+		$c = 25; 				//длинна второй полосы	
+		$e = 15; 				//длинна третье полосы 
+
+								//в сумме а,b,с - должны давать 100
+
+		$b = 100 - $a;			//пропуск первой полосы в сумме a,b 100
+		$d = 100 - $c; 			//пропуск второй полосы в сумме d,c 100
+		$f = 100 - $e;			//пропуск третьей полосы в сумме e,f 100
+		$cd = 100 - $a + 25;	//смещение относительно стартовой позиции второй полосы
+		$ef = $cd - $c; 		//смещение относительно стартовой позиции третьей полосы
+			
+		$('.donut-segment-1').attr('stroke-dasharray', [$a, $b]); //передаем значения в сегмент 1
+
+		$('.donut-segment-2').attr('stroke-dasharray', [$c, $d]); //передаем значения в сегмент 2
+		$('.donut-segment-2').attr('stroke-dashoffset', $cd); // смещаем второй элемент
+			
+		$('.donut-segment-3').attr('stroke-dasharray', [$e, $f]); //передаем значения в сегмент 3
+		$('.donut-segment-3').attr('stroke-dashoffset', $ef); // смещаем третий элемент
+	};
+	r1(); //вызвыаем функцию при загрузке страницы
+
+	
+
+	// // включаем скроллы
+	jQuery('.food__wrap').scrollbar();
 
 	/*инпуты*/
 
