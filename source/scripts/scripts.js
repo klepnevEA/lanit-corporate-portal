@@ -1,7 +1,57 @@
 $(document).ready(function() {
-	 $('.user-info__wpap').click(function() {
-	 	$('.user-info__dropdovn').toggleClass('active');
-	 });
+
+
+
+
+	// мультиселект
+	function bindSelectedItemsToInput() {
+		var selectedItemsAsString = "";
+		var selectedItems = $('.ml-mselect__item.active');
+		var selectedItemsCount = selectedItems.length;
+
+		selectedItems.each(function(index) {
+			selectedItemsAsString += $(this).text();
+			if(index != selectedItemsCount - 1)
+				selectedItemsAsString += ', ';
+		});
+		$('.ml-mselect__input').val(selectedItemsAsString);
+	}
+
+	bindSelectedItemsToInput();
+	$( '.ml-mselect__input').click(function() {
+		$(this).toggleClass('active');
+		$('.ml-mselect__dropbox').toggleClass('active');
+	});
+	$( '.ml-mselect__item').click(function() {
+		$(this).toggleClass('active');
+		bindSelectedItemsToInput();
+	});
+
+
+
+
+
+
+	// всплывающие меню в хедере
+	$('.user-info__wpap').click(function() {
+		$('.user-info__dropdovn').toggleClass('active');
+	});
+
+	$('.your-office__dropdown').click(function() {
+		$('.your-office__dropdown-box').toggleClass('active');
+		$(this).toggleClass('active');
+	});
+	$('.your-office__dropdown-item').click(function() {
+		$('.your-office__dropdown-item').removeClass('active');
+		$(this).addClass('active');
+		var SelectText = $(this).text();
+		$('.your-office__dropdown-btn > span').text(SelectText);
+	});
+
+
+
+	
+
 
 
 var elements = document.querySelectorAll('.sticky');
@@ -220,6 +270,7 @@ Stickyfill.refreshAll();
 		});		
 
 	});
+
 }); 
 
 
