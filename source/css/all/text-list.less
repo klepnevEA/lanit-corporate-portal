@@ -1,0 +1,21 @@
+.text-list {
+	margin-bottom: 33px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&__elem {
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 7px;
+		font-size: 14px;
+		font-family: 'PFBeauSansPro-Regular';
+		
+		&:after {
+			content: "—";
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+	}
+}
