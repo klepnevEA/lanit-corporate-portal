@@ -96,6 +96,9 @@
 			background-color: @bg;
 			padding-top: 20px;
 			padding-bottom: @sp;
+			margin-left: -30px;
+			width: calc(~"100% + 60px");
+			margin-bottom: -30px;
 			.clearfix;
 			
 			&__diagram {
@@ -184,34 +187,7 @@
 				
 			}
 
-			.circle {
-				margin: 0 auto;
-				width: 130px;
-				height: 130px;
-				overflow: hidden;
-				border-radius: 50%;
-				position: relative;
-			}
-
-			.sector {
-				width: 50%;
-				height: 50%;
-				position: absolute;
-				left: 50%;
-				top: 0;
-				transform-origin: left bottom;
-			}
-
-			.circle:after {
-				content: '';
-				position: absolute;
-				width: 73%;
-				height: 73%;
-				background: #fff;
-				border-radius: 50%;
-				top: 14%;
-				left: 14%;
-			}
+			
 		}
 
 		
