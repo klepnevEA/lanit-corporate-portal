@@ -19,14 +19,48 @@ $(document).ready(function() {
 
 	bindSelectedItemsToInput();
 	$( '.ml-mselect__input').click(function() {
-		$(this).toggleClass('active');
 		$('.ml-mselect__dropbox').toggleClass('active');
+		$('.ml-mselect').toggleClass('active');
 	});
 	$( '.ml-mselect__item').click(function() {
 		$(this).toggleClass('active');
 		bindSelectedItemsToInput();
 	});
 
+	$('.ml-mselect .mdi-chevron-down').click(function() {
+		$('.ml-mselect__dropbox').toggleClass('active');
+		$('.ml-mselect').toggleClass('active');
+	});
+
+	// селект
+	function SelectbindSelectedItemsToInput() {
+		
+		var selectTextActive = $('.ml-select__item.active').text();
+		$('.ml-select__input').val(selectTextActive);
+	}
+
+	$( '.ml-select__input').click(function() {
+		$('.ml-select__dropbox').toggleClass('active');
+		$('.ml-select').toggleClass('active');
+	});
+	$('.ml-select .mdi-chevron-down').click(function() {
+		$('.ml-select__dropbox').toggleClass('active');
+		$('.ml-select').toggleClass('active');
+	});
+	
+	$('.ml-select__item').click(function() {
+		$('.ml-select__item').removeClass('active');
+		$(this).addClass('active');
+		SelectbindSelectedItemsToInput();
+
+		$('.ml-select__dropbox').removeClass('active');
+		$('.ml-select').removeClass('active');
+	});
+	
+
+	SelectbindSelectedItemsToInput();
+
+	
 
 
 

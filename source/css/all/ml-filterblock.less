@@ -1,6 +1,17 @@
 .ml-filterblock {
 	&__calendar {
 		flex: 0 0 245px;
+		position: relative;
+		&:before {
+			content: "\F0F6";
+			font-family: "Material Design Icons";
+			position: absolute;
+			top: 15px;
+			right: 12px;
+			color: #9fa9ad; 
+			font-size: 22px;  
+
+		}
 	}
 	&__sections {
 		flex: 1;
