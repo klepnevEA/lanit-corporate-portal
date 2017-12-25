@@ -18,18 +18,22 @@ $(document).ready(function() {
 	}
 
 	bindSelectedItemsToInput();
-	$( '.ml-mselect__input').click(function() {
-		$('.ml-mselect__dropbox').toggleClass('active');
-		$('.ml-mselect').toggleClass('active');
+
+	$('.ml-mselect__input, .ml-mselect .mdi-chevron-down').click(function() {
+		var $mlDropbox = $(this).siblings('.ml-mselect__dropbox');
+		var $mlContainer = $(this).closest('.ml-mselect');
+		if(!$mlDropbox.hasClass("active"))
+		{
+			$('.ml-mselect__dropbox, .ml-mselect').removeClass("active");
+		}
+
+		$mlDropbox.toggleClass('active');
+		$mlContainer.toggleClass('active');
 	});
+
 	$( '.ml-mselect__item').click(function() {
 		$(this).toggleClass('active');
 		bindSelectedItemsToInput();
-	});
-
-	$('.ml-mselect .mdi-chevron-down').click(function() {
-		$('.ml-mselect__dropbox').toggleClass('active');
-		$('.ml-mselect').toggleClass('active');
 	});
 
 	// селект
@@ -39,19 +43,23 @@ $(document).ready(function() {
 		$('.ml-select__input').val(selectTextActive);
 	}
 
-	$( '.ml-select__input').click(function() {
-		$('.ml-select__dropbox').toggleClass('active');
-		$('.ml-select').toggleClass('active');
-	});
-	$('.ml-select .mdi-chevron-down').click(function() {
-		$('.ml-select__dropbox').toggleClass('active');
-		$('.ml-select').toggleClass('active');
+	
+	$('.ml-select .mdi-chevron-down, .ml-select__input').click(function() {
+		$(this).siblings('.ml-select__dropbox').toggleClass('active');
+		$(this).closest('.ml-select').toggleClass('active');
 	});
 	
 	$('.ml-select__item').click(function() {
-		$('.ml-select__item').removeClass('active');
-		$(this).addClass('active');
-		SelectbindSelectedItemsToInput();
+		if ($(this).hasClass('active')) {
+			$('.ml-select__item').removeClass('active');
+			SelectbindSelectedItemsToInput();
+		}
+		else {
+			$('.ml-select__item').removeClass('active');
+			$(this).addClass('active');
+			SelectbindSelectedItemsToInput();
+		}
+		
 
 		$('.ml-select__dropbox').removeClass('active');
 		$('.ml-select').removeClass('active');
@@ -248,7 +256,7 @@ Stickyfill.refreshAll();
 			selectOption = $this.find('option'),
 			selectOptionLength = selectOption.length,
 			selectedOption = selectOption.filter(':selected'),
-			dur = 500;
+			dur = 200;
 
 		$this.hide();
 		// Wrap all in select box
@@ -305,6 +313,20 @@ Stickyfill.refreshAll();
 
 	});
 
+	// календарь
+	$( function() {
+		$( "#datepicker" ).datepicker({
+			showOtherMonths: true,
+			selectOtherMonths: true,
+			range: "period",
+			onSelect: function(dateText, inst, exstRange) {
+				$("#datepicker").val(exstRange.startDateText + "-" + exstRange.endDateText);
+			}
+		});
+	} );
+	
 }); 
+
+
 
 
