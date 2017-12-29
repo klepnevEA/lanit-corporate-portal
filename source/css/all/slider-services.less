@@ -16,6 +16,15 @@
 		height: 100%;
 		background-color: @bg;
 		padding: @sp 10px 10px;
+		transition: all 0.2s;
+		&.active {
+			background: @orange;
+			color: white;
+			.slider-services__text, .slider-services__icon {
+				color: white;
+				text-decoration: none !important;
+			}
+		}
 	}
 
 	&__icon {

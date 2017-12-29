@@ -37,36 +37,44 @@ $(document).ready(function() {
 	});
 
 	// селект
-	function SelectbindSelectedItemsToInput() {
+	function initCustomSelectControls() {
+		$('.ml-select__item.active').each(function() {
+			var $container = $(this).closest(".ml-select");
+			$container.find('.ml-select__input').val($(this).text());
+		});
+
+		$('.ml-select .mdi-chevron-down, .ml-select__input').click(function() {
+			var $container = $(this).closest('.ml-select');
+
+			if(!$container.hasClass("active"))
+			{
+				$('.ml-select.active, .ml-select__dropbox.active').removeClass('active');
+			}
+
+			$container.find('.ml-select__dropbox').toggleClass('active');
+			$container.toggleClass('active');
+		});
 		
-		var selectTextActive = $('.ml-select__item.active').text();
-		$('.ml-select__input').val(selectTextActive);
+		$('.ml-select__item').click(function() {
+			var $container = $(this).closest(".ml-select");
+			if ($(this).hasClass('active')) {
+				$container.find('.ml-select__item').removeClass('active');
+			}
+			else {
+				$container.find('.ml-select__item').removeClass('active');
+				$(this).addClass('active');
+			}
+			
+			var secletedText = $container.find('.ml-select__item.active').text();
+			$container.find('.ml-select__input').val(secletedText);
+
+			$container.find('.ml-select__dropbox').removeClass('active');
+			$container.removeClass('active');
+		});
 	}
-
-	
-	$('.ml-select .mdi-chevron-down, .ml-select__input').click(function() {
-		$(this).siblings('.ml-select__dropbox').toggleClass('active');
-		$(this).closest('.ml-select').toggleClass('active');
-	});
-	
-	$('.ml-select__item').click(function() {
-		if ($(this).hasClass('active')) {
-			$('.ml-select__item').removeClass('active');
-			SelectbindSelectedItemsToInput();
-		}
-		else {
-			$('.ml-select__item').removeClass('active');
-			$(this).addClass('active');
-			SelectbindSelectedItemsToInput();
-		}
-		
-
-		$('.ml-select__dropbox').removeClass('active');
-		$('.ml-select').removeClass('active');
-	});
 	
 
-	SelectbindSelectedItemsToInput();
+	initCustomSelectControls();
 
 	
 
