@@ -6,8 +6,8 @@ $(function(){
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true,
-		autoplay: false,
-		
+		autoplay: true,
+		autoplaySpeed: 5000,		
 	});
 
 	$(".ml-photo-modal__slider").slick({
@@ -15,8 +15,7 @@ $(function(){
 		slidesToScroll: 1,
 		dots: true,
 		arrows: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplay: false,		
 	});
 
 
