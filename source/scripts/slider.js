@@ -6,6 +6,15 @@ $(function(){
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true,
+		autoplay: false,
+		
+	});
+
+	$(".ml-photo-modal__slider").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
 		autoplay: true,
 		autoplaySpeed: 5000,
 	});
