@@ -332,6 +332,33 @@ Stickyfill.refreshAll();
 			}
 		});
 	} );
+
+	$("#fileupload").fileupload({
+		change : function(e, data) {
+			$.each(data.files, function (index, file) {
+            	appendFile(file);
+        	});
+		},
+		drop: function (e, data) {
+        	$.each(data.files, function (index, file) {
+            	appendFile(file);
+        	});
+
+        	$(e.target).closest(".fileinput-button").removeClass("dragover");
+    	},
+		add: function (e, data) {
+       	 	e.preventDefault();
+    	},
+    	dragover : function (e, data) {
+    		$(e.target).closest(".fileinput-button").addClass("dragover");
+    	},
+
+	});
+
+	function  appendFile(file) {
+		var fileDivHtml = "<div class='fileinput-files__line'><a href='#'>" + file.name + "</a> <span>" + (file.size / 1024) + "КБ</span> <i class='mdi mdi-close'></i></div>";
+		$(".fileinput-files").append(fileDivHtml);
+	}
 	
 }); 
 

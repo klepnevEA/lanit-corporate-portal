@@ -1,0 +1,103 @@
+.fileinput {
+	&-button {
+		background: none;
+		padding: 22px 22px 22px 77px;
+		width: 100%;
+		box-sizing: border-box;
+		border: 1px dashed #a6a6a6;
+		border-radius: 4px;
+		cursor: pointer;
+		position: relative;
+		&:before {
+			content: "\F24D";
+			font-family: "Material Design Icons";
+			position: absolute;
+			left: 17px;
+			top: 0;
+			height: 77px;
+			line-height: 77px;
+			font-size: 40px;
+			color: #dedddd;
+		}
+		&__text {
+			font-size: 14px;
+			color: #a6a6a6;
+		}
+		input {
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    margin: 0;
+		    opacity: 0;
+		    -ms-filter: 'alpha(opacity=0)';
+		    font-size: 200px !important;
+		    direction: ltr;
+		    cursor: pointer;
+		}
+		&__orange {
+			background: @orange;
+			padding: 7px 17px 8px;
+			color: white;
+			float: left;
+			font-size: 16px;
+			text-transform: uppercase;
+			font-family: 'PFBeauSansPro-SemiBold';
+			margin-top: 10px;
+			i {
+				font-size: 22px;
+				position: relative;
+				top: 2px;
+			}
+
+		}
+	}
+	&-files {
+		
+		margin-top: @sp;
+		.clearfix;
+		&__line {
+			margin-bottom: 5px;
+			.clearfix;
+			a {
+					padding-left: 33px;
+					display: inline-block;
+					position: relative;
+					font-size: 13px;
+					color: @blue;
+					text-decoration: underline;
+					&:before {
+						content: "\F2E9";
+						font-family: "Material Design Icons";
+						width: 20px;
+						height: 30px;
+						color: #d04318;
+						position: absolute;
+						left: 0;
+						top: -10px;
+						font-size: 28px;
+					}
+				}
+			span {
+				display: inline-block;
+				position: relative;
+				color: #a6a6a6;
+				font-size: 13px;
+				margin-left: 10px;
+				margin-right: 10px;
+				
+			}
+			i {
+				color: #afb7ba;
+				position: relative;
+				font-size: 22px;
+				transition: color 0.2s;
+				cursor: pointer;
+				top: 3px;
+				&:hover {
+					color: @red;
+				}
+			}
+		}
+	}
+
+}
