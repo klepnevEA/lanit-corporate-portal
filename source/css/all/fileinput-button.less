@@ -27,12 +27,15 @@
 		    position: absolute;
 		    top: 0;
 		    right: 0;
+		    bottom: 0;
+		    left: 0;
 		    margin: 0;
 		    opacity: 0;
+		    width: 100%;
 		    -ms-filter: 'alpha(opacity=0)';
-		    font-size: 200px !important;
 		    direction: ltr;
 		    cursor: pointer;
+		    font-size: 0 !important;
 		}
 		&__orange {
 			background: @orange;
@@ -43,6 +46,7 @@
 			text-transform: uppercase;
 			font-family: 'PFBeauSansPro-SemiBold';
 			margin-top: 10px;
+			cursor: pointer;
 			i {
 				font-size: 22px;
 				position: relative;

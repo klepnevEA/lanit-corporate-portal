@@ -1,6 +1,15 @@
 $(document).ready(function() {
 
-
+	//вызов прелоадера
+	$('.preloader__on').click(function() {
+		$('.preloader__wrap').addClass('active');
+	});
+	$('.preloader__wrap').click(function () {
+		$(this).addClass('closed');
+		setTimeout(function() {
+			$('.preloader__wrap').removeClass('closed active');
+		}, 500);
+	});
 
 
 	// мультиселект
