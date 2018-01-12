@@ -63,10 +63,18 @@
 			font-family: 'PFBeauSansPro-SemiBold';
 			margin-top: 10px;
 			cursor: pointer;
+			transition: all 0.2s;
 			i {
 				font-size: 22px;
 				position: relative;
 				top: 2px;
+			}
+			&_st {
+				margin-bottom: @sp;
+				margin-top: 0;
+			}
+			&:hover {
+				background: darken(@orange, 5%);
 			}
 
 		}
