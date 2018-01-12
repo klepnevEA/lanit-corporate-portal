@@ -8,6 +8,22 @@
 		border-radius: 4px;
 		cursor: pointer;
 		position: relative;
+		transition: all 0.2s;
+		&.dragover {
+			background: white;
+			border: 1px transparent;
+			box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.06);
+			background: #ede8ea78; 
+			color: white;
+			.fileinput-button__text {
+				color:  darken(#a6a6a6, 5%);
+
+			}
+			&:before {
+				color:  darken(#a6a6a6, 5%);
+			}
+			
+		}
 		&:before {
 			content: "\F24D";
 			font-family: "Material Design Icons";
