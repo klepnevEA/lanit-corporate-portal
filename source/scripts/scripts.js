@@ -243,7 +243,7 @@ Stickyfill.refreshAll();
 	
 
 	// // включаем скроллы
-	jQuery('.food__wrap').scrollbar();
+	jQuery('.scrollbar-style').scrollbar();
 
 	/*инпуты*/
 

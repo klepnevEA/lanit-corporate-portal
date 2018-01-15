@@ -15,11 +15,15 @@
 		overflow-y: auto;
 		max-height: calc(~'100vh - 265px');
 		
-		&::-webkit-scrollbar { width: 0; }
+		// &::-webkit-scrollbar { width: 0; }
 
-		-ms-overflow-style: none;
+		// -ms-overflow-style: none;
 
-		overflow: -moz-scrollbars-none;
+		// overflow: -moz-scrollbars-none;
+		
+		&.scrollbar-style > .scroll-element.scroll-y {
+			right: 3px;
+		}
 	}
 	
 	&__wrap {
