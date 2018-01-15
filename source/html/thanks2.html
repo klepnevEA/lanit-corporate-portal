@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+					
+					@@include('./file-include/header-2.html')
+
+					@@include('./file-include/bread-crumbs.html')
+
+					<!-- популярные сервисы-->
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 class="title title_fsz-30">Хочу сказать спасибо!</h2>
+
+
+
+						</div>
+					</div>
+					<!-- популярные сервисы конец-->
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="ml-thanks">
+								<div class="ml-thanks__left">
+									<div class="ml-thanks__left-title">
+										Это так просто
+									</div>
+									<div class="ml-thanks__left-string">123</div>
+									<div class="ml-thanks__left-string">123</div>
+									<div class="ml-thanks__left-string">123</div>
+									<div class="ml-thanks__left-string">
+										<button class="btn">Отправить</button>
+									</div>
+								</div>
+								<div class="ml-thanks__right">345</div>
+							</div>
+						</div>
+					</div>
+
+					
+
+					@@include('./file-include/footer.html')
+
+				</div><!--container-main-->		
+
+			</div><!--container-wrap-->
+				
+		</div>	 <!--container-->		
+		<!-- <div class="footer__before"></div> -->
+	
+	</div> <!--wrapper-->
+
+
+	<!-- popups -->
+	@@include('./file-include/popup-mood-office.html')
+	@@include('./file-include/popup-thanks-for-trips.html')
+	@@include('./file-include/popup-drive-add-new.html')	
+
+	
+</body>
+</html>
+
