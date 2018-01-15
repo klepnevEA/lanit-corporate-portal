@@ -53,3 +53,11 @@
 .scrollbar-style > .scroll-element.scroll-draggable .scroll-bar { background-color: #c2c2c2; }
  
  
+/* update scrollbar offset if both scrolls are visible */
+ 
+.scrollbar-style > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
+.scrollbar-style > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+ 
+ 
+.scrollbar-style > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
+.scrollbar-style > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }

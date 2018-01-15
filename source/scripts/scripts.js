@@ -113,17 +113,17 @@ $(document).ready(function() {
 
 
 
-var elements = document.querySelectorAll('.sticky');
-Stickyfill.add(elements);
-Stickyfill.refreshAll();
+	var elements = document.querySelectorAll('.sticky');
+	Stickyfill.add(elements);
+	Stickyfill.refreshAll();
 
 	//открытие/зактытие пунктов в боковом меню
 	var openMenu = function(e) {
 		e.preventDefault();
 		var thisEl = $(this),
-			parentEl = thisEl.closest('.nav-menu__menu-elem-main');
+		parentEl = thisEl.closest('.nav-menu__menu-elem-main');
 
-			parentEl.toggleClass('active');
+		parentEl.toggleClass('active');
 	}
 
 	$('.nav-menu__menu-link-main').on('click', openMenu);
@@ -208,7 +208,7 @@ Stickyfill.refreshAll();
 		console.log('!!!');
 		e.preventDefault();
 		var thisEl = $(this),
-			thisVal = thisEl.data('popup');
+		thisVal = thisEl.data('popup');
 		$('#' + thisVal).addClass('active');
 	});
 
@@ -229,12 +229,12 @@ Stickyfill.refreshAll();
 		$f = 100 - $e;			//пропуск третьей полосы в сумме e,f 100
 		$cd = 100 - $a + 25;	//смещение относительно стартовой позиции второй полосы
 		$ef = $cd - $c; 		//смещение относительно стартовой позиции третьей полосы
-			
+
 		$('.donut-segment-1').attr('stroke-dasharray', [$a, $b]); //передаем значения в сегмент 1
 
 		$('.donut-segment-2').attr('stroke-dasharray', [$c, $d]); //передаем значения в сегмент 2
 		$('.donut-segment-2').attr('stroke-dashoffset', $cd); // смещаем второй элемент
-			
+
 		$('.donut-segment-3').attr('stroke-dasharray', [$e, $f]); //передаем значения в сегмент 3
 		$('.donut-segment-3').attr('stroke-dashoffset', $ef); // смещаем третий элемент
 	};
@@ -267,13 +267,13 @@ Stickyfill.refreshAll();
 	});	
 
 // Select
-	$('.select').each(function(){
+$('.select').each(function(){
 		// Variables
 		var $this = $(this),
-			selectOption = $this.find('option'),
-			selectOptionLength = selectOption.length,
-			selectedOption = selectOption.filter(':selected'),
-			dur = 200;
+		selectOption = $this.find('option'),
+		selectOptionLength = selectOption.length,
+		selectedOption = selectOption.filter(':selected'),
+		dur = 200;
 
 		$this.hide();
 		// Wrap all in select box
@@ -285,7 +285,7 @@ Stickyfill.refreshAll();
 		}).insertAfter($this);
 		
 		var selectGap = $this.next('.select__gap'),
-			caret = selectGap.find('.caret');
+		caret = selectGap.find('.caret');
 		// Add ul list
 		$('<ul>',{
 			class: 'select__list'
@@ -345,22 +345,22 @@ Stickyfill.refreshAll();
 	$("#fileupload").fileupload({
 		change : function(e, data) {
 			$.each(data.files, function (index, file) {
-            	appendFile(file);
-        	});
+				appendFile(file);
+			});
 		},
 		drop: function (e, data) {
-        	$.each(data.files, function (index, file) {
-            	appendFile(file);
-        	});
+			$.each(data.files, function (index, file) {
+				appendFile(file);
+			});
 
-        	$(e.target).closest(".fileinput-button").removeClass("dragover");
-    	},
+			$(e.target).closest(".fileinput-button").removeClass("dragover");
+		},
 		add: function (e, data) {
-       	 	e.preventDefault();
-    	},
-    	dragover : function (e, data) {
-    		$(e.target).closest(".fileinput-button").addClass("dragover");
-    	},
+			e.preventDefault();
+		},
+		dragover : function (e, data) {
+			$(e.target).closest(".fileinput-button").addClass("dragover");
+		},
 
 	});
 
@@ -368,6 +368,11 @@ Stickyfill.refreshAll();
 		var fileDivHtml = "<div class='fileinput-files__line'><a href='#'>" + file.name + "</a> <span>" + (file.size / 1024) + "КБ</span> <i class='mdi mdi-close'></i></div>";
 		$(".fileinput-files").append(fileDivHtml);
 	}
+
+	var msnry = new Masonry( '.photo-grid__list', {
+
+	  itemSelector: '.photo-grid__item'
+	});
 	
 }); 
 
