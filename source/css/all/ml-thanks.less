@@ -1,0 +1,115 @@
+.ml-thanks {
+	display: flex;
+	margin-bottom: 50px;
+	&__left {
+		flex: 0 0 50%;
+		background: gray;
+		color: white;
+		padding: @sp*2;
+		margin-right: @sp*2;
+		.input-block {
+			width: 100%;
+			position: relative;
+			 i {
+			 	position: absolute;
+			 	font-size: 24px;
+			 	color: #bdc2c5;
+			 	right: 5px;
+			 	top: 13px;
+			 	cursor: pointer;
+
+			 }
+			 &_search {
+			 	.input {
+			 		padding-right: 35px;
+			 	}
+			 	.input-block__text {
+			 		text-transform: none;
+			 		font-family: 'PFBeauSansPro-Regular';
+			 	}
+			 }
+		}
+		 .textarea {
+		 	height: 130px !important;
+		 }
+		 .btn {
+		 	float: right;
+		 	height: 40px;
+		 	padding: 0 10px;
+		 	line-height: 43px;
+
+		 	i {
+		 		font-size: 22px;
+		 		position: relative;
+		 		top: 0;
+		 		height: 40px;
+		 		line-height: 40px;
+		 		margin-right: 5px;
+		 		display: inline-block;
+		 	}
+		 	span {
+		 		position: relative;
+			    top: -3px;
+		 	}
+		 }
+		
+		&-title {
+			font-family: 'PFBeauSansPro-Bold';
+			font-size: 24px;
+			margin-bottom: @sp;
+			text-transform: uppercase;
+			margin-top: 10px;
+		}
+		&-string {
+			margin-bottom: 10px;
+			.clearfix;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__right {
+		flex: 1;
+		&-text {
+			font-size: 14px;
+			color: black;
+			line-height: 1.8;
+			p {
+				margin-bottom: 20px;
+			}
+		}
+		&-info {
+			font-size: 13px;
+			color: #afafaf;
+			padding-left: 32px;
+			position: relative;
+			line-height: 1.8;
+			margin-top: 30px;
+			a {
+				color: @blue;
+				text-decoration: underline;
+			}
+			&:before {
+				content: "\F2FC";
+				font-family: "Material Design Icons";
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-size: 24px;
+				height: 25px;
+				width: 25px;
+				line-height: 1;
+				color: #9fa8af;
+			}
+		}
+	}
+	&__title  {
+		font-family: 'PFBeauSansPro-Bold';
+		font-size: 24px;
+		color: black;
+		text-transform: uppercase;
+		span {
+			color: @orange;
+		}
+	}
+}
