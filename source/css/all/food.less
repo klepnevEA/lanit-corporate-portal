@@ -1,9 +1,12 @@
 .food {
 	background-color: @bg;
-	padding: 0 @sp;
+	//padding: 0 @sp;
 	margin-bottom: @sp*2;
+	overflow: hidden;
 	
-
+	&__tabs {
+		padding: 0 15px;
+	}
 	
 	&__tab {
 		display: inline-block;
@@ -27,10 +30,13 @@
 		overflow-y: auto;
 		border-top: 1px solid @light-gray;
 		border-bottom: 1px solid @light-gray;
+		padding: 0px !important;
+
 	}
 
 	&__blok {
 		display: none;
+		padding: 0 15px;
 		
 		&.active {
 			display: block;
