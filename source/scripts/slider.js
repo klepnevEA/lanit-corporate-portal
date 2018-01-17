@@ -17,6 +17,13 @@ $(function(){
 		arrows: true,
 		autoplay: false,		
 	});
+	$(".ml-photo-modal-contests__gallery").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		autoplay: false,		
+	});
 
 
 	$(".slider-services").slick({
