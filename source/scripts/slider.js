@@ -17,7 +17,7 @@ $(function(){
 		arrows: true,
 		autoplay: false,		
 	});
-	$(".ml-photo-modal-contests__gallery").slick({
+	$(".ml-photo-modal-contests__gallery-box").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
