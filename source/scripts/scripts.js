@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+	//табы на странице food
+	$('.food-page__tabs-item').click(function() {
+		$('.food-page__tabs-item').removeClass('active');
+		$(this).toggleClass('active');
+	});
+
+	//сендвичи в разделе food
+	$('.food-page__sandwich-title').click(function() {
+		$(this).parent('.food-page__sandwich').toggleClass('active');
+		
+	});
+
 	//вызов прелоадера
 	$('.preloader__on').click(function() {
 		$('.preloader__wrap').addClass('active');
@@ -374,6 +386,10 @@ $('.select').each(function(){
 	  itemSelector: '.photo-grid__item'
 	});
 	
+
+
+
+
 }); 
 
 
