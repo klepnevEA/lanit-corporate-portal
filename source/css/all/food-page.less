@@ -62,13 +62,14 @@
 			}
 		}
 		&-block {
-			
+			margin-bottom: @sp*2;
 			
 		}
 		&-table {
 			width: 100%;
 			margin-bottom: 20px;
 			border: 1px solid #e7e6e6;
+			
 			tbody {
 				tr {
 					
@@ -90,6 +91,25 @@
 					&:last-child {
 						td {
 							border-bottom: none;
+						}
+					}
+				}
+			}
+			&_geo {
+				tbody {
+					tr {
+						td {
+							text-align: left;
+							background: #f8f7f7;
+							border: none;
+							padding: 15px 20px;
+							border-bottom: 1px solid #e7e6e6;
+							vertical-align: top;
+							&:last-child {
+								width: 170px;
+								text-align: right;
+
+							}
 						}
 					}
 				}
@@ -143,11 +163,42 @@
 					background: @blue;
 				}
 			}
+			&-link {
+				margin-top: @sp/2;
+				color: @blue;
+				display: inline-block;
+				font-size: 14px;
+				text-decoration: underline;
+			}
 			&-title {
 				font-size: 16px;
 				color: black;
 				font-family: 'PFBeauSansPro-Bbook';
 				margin-bottom: 5px;
+				&-wrap {
+					display: flex;
+					align-items: center;
+					margin-bottom: @sp/2;
+					.food-page__tabs-table-title {
+						margin-bottom: 0;
+						position: relative;
+						top: 2px;
+					}
+				}
+				&-number {
+					width: 26px;
+					height: 26px;
+					background: @orange;
+					color: white;
+					font-size: 15px;
+					font-family: 'PFBeauSansPro-SemiBold';
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin-right: @sp/2;
+					border-radius: 50%;
+					line-height: 1;
+				}
 			}
 			&-description {
 				color: #adadad;
@@ -178,7 +229,7 @@
 		&-title {
 			padding-bottom: 12px;
 			position: relative;
-			padding-left: 22px;
+			padding-left: @sp + 10px;
 			text-transform: uppercase;
 			font-size: 17px;
 			color: black;
@@ -202,9 +253,71 @@
 				color: #a0aaae;
 				transition: all 0.2s;
 			}
+			&_geo {
+				display: flex;
+				align-items: center;
+				&:before {
+					top: 2px;
+				}
+			}
+			
+			&-points {
+				
+				display: flex;
+				
+			}
+			&-point {
+				width: 26px;
+				height: 26px;
+				background: #e7e6e6;
+				text-align: center;
+				line-height: 1;
+				color: #949fa3;
+				font-size: 15px;
+				margin-left: @sp/3;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			span {
+				flex: 1;
+				
+			}
+			&-time {
+				text-transform: none;
+				color: #a6a6a6;
+				font-size: 15px;
+				font-family: 'PFBeauSansPro-Regular';
+				i {
+					margin-left: @sp - 5px;
+					position: relative;
+					margin-right: 3px;
+					font-size: 18px;
+
+
+				}
+				span {
+					text-transform: uppercase;
+					font-size: 12px;
+				}
+			}
 		}
 	}
 	&__services {
+		a {
+			color: @blue;
+			text-decoration: underline;
+			cursor: pointer;
+		}
+		p {
+			margin-bottom: 10px;
+			font-size: 14px;
+			color: black;
+			line-height: 1.4;
+			.clearfix;
+		}
+
 		&-string {
 			margin-bottom: 40px;
 			display: flex;
@@ -219,11 +332,9 @@
 		}
 		&-text {
 			font-size: 14px;
-			color: black;
-			line-height: 1.4;
-			p {
-				margin-bottom: 5px;
-				.clearfix;
+			strong {
+				font-size: 14px;
+				font-family: 'PFBeauSansPro-SemiBold';
 			}
 		}
 		&-imgs {
@@ -234,12 +345,76 @@
 			width: 105px;
 			height: 110px;
 			background: red;
+			background-size: auto 105px;
+			background-position: center center !important;
+			&_fast-food {
+				background: url(../img/fast-fod.png) no-repeat;
+				
+			}
+			&_barbecue {
+				background: url(../img/barbecue.png) no-repeat;
+			}
 		}
 		&-info {
 			flex: 1;
 			padding-top: 15px;
 		}
-
+		&-list {
+			
+			&-wrap {
+				display: flex;
+				margin-top: @sp*2;
+			}
+			&-coll {
+				flex: 0 0 33%;
+				max-width: 33%;
+			}
+			li {
+				font-size: 14px;
+				margin-bottom: @sp - 8px;
+				display: block;
+			}
+		}
+		&-wishes {
+			background: #f8f7f7;
+			width: 100%;
+			padding: 35px 35px 25px 135px;
+			&-wrap {
+				position: relative;
+				&:before {
+					content: "\F1EE";
+					font-family: "Material Design Icons";
+					position: absolute;
+					top: -3px;
+					left: -65px;
+					width: 40px;
+					height: 40px;
+					color: @blue;
+					font-size: 40px;
+					line-height: 1;
+				}
+			}
+		}
+	}
+	&__nearest {
+		.clearfix;
+		&-title {
+			font-size: 30px;
+			font-family: 'PFBeauSansPro-Bold';
+			color: black;
+			margin-bottom: 25px;
+		}
+		&-map {
+			
+			height: 570px;
+			border: 1px solid #e7e6e6;
+			margin-bottom: @sp;
+		}
+	}
+	&__geo {
+		margin-bottom: @sp*4 - 5px;
+		.clearfix;
+		
 	}
 
 }

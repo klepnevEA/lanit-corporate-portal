@@ -1,7 +1,23 @@
 .comments {
 	.clearfix;
 	margin-bottom: 120px;
-	
+
+	&__title-text {
+		font-size: 13px;
+		color: #a6a6a6;
+		line-height: 1.2;
+		margin-bottom: @sp*2;
+		margin-top: 1 - @sp;
+		.clearfix;
+	}
+	&__all {
+		color: @blue;
+		margin-top: @sp*2;
+		display: inline-block;
+		text-decoration: underline;
+		font-size: 13px;
+		.clearfix;
+	}
 	&__elem {
 		.clearfix;
 		border-top: 1px solid  @light-gray;

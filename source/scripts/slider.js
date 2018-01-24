@@ -1,5 +1,16 @@
 // слайдер
 $(function(){
+	//слайдер для виджета - приятного аппетита
+	$(".food__tabs").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		autoplay: false,
+		// variableWidth: true,
+			
+	});
+
 	//слайдер отзывов
 	$(".slider-concur").slick({
 		slidesToShow: 1,
