@@ -1,0 +1,74 @@
+.text {
+	font-size: 13px;
+	font-family: 'PFBeauSansPro-Regular';
+	line-height: 1.7;
+	margin-bottom: @sp*2;
+	
+	&_bold {
+		font-family: 'PFBeauSansPro-SemiBold';
+	}
+
+	&-marker {
+		background-color: @blue;
+		width: 65px;
+		height: 60px;
+		text-align: center;
+		color: #fff;
+		font-size: 34px;
+		padding-top: 10px;
+		margin-top: 5px;
+		margin-right: @sp;
+		float: left;
+	}
+
+	a {
+		color: @blue;
+		text-decoration: underline;
+		
+		&:hover {
+			color: lighten(@blue, 10%);
+		}
+	}
+
+	p {
+		margin-bottom: @sp;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&_footnote {
+		position: relative;
+		color: @gray;
+		margin-left: 10px;
+		
+		&:after {
+			content: '*';
+			position: absolute;
+			left: -10px;
+			font-size: 14px;
+			top: 0;
+		}
+	}
+
+	&_margin-bottom-0 {
+		margin-bottom: 0;
+	}
+
+	&_margin-bottom-15 {
+		margin-bottom: @sp;
+	}
+
+	&_margin-bottom-40 {
+		margin-bottom: 40px;
+	}
+
+	&_gray {
+		color: #a6a6a6;
+	}
+
+	&_margin-bottom-30 {
+		margin-bottom: @sp*2;
+	}
+}

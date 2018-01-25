@@ -1,0 +1,64 @@
+.link {
+	position: relative;
+	color: @blue;
+	font-size: 14px;
+	text-decoration: underline;
+	font-family: 'PFBeauSansPro-Regular';
+	margin-left: 25px;
+	white-space: nowrap;
+	
+	.mdi {
+		position: absolute;
+		top: 9px;
+		left: -27px;
+		font-size: 22px;
+		line-height: 0;
+		color: @blue;
+	}
+
+	.icon {
+		position: absolute;
+		top: 10px;
+		left: -@sp;
+		font-size: 13px;
+		line-height: 0;
+		
+		&:before {
+			color: @blue;
+		}
+	}
+
+
+	
+	
+	&:hover {
+		color: lighten(@blue, 10%);
+	}
+
+	&__margin-top {
+		display: inline-block;
+		margin-top: 10px;
+		float: right;
+		
+	}
+
+	&_margin-left-0 {
+		margin-left: 0;
+	}	
+
+	&_margin-bottom {
+		margin-bottom: @sp*2;
+	}
+
+	&_float-right {
+		float: right;
+	}
+
+	&_dashed {
+		text-decoration-style:dashed;
+	}
+
+	&_right {
+		float: right;
+	}
+}

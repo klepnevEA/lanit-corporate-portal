@@ -1,0 +1,32 @@
+.ml-filterblock {
+	&__calendar {
+		flex: 0 0 245px;
+		position: relative;
+		&:before {
+			content: "\F0F6";
+			font-family: "Material Design Icons";
+			position: absolute;
+			top: 15px;
+			right: 12px;
+			color: #9fa9ad; 
+			font-size: 22px; 
+			transition: all 0.2s;
+			cursor: pointer;
+		}
+		&:hover:before {
+			color: @blue;
+		} 
+	}
+	&__sections {
+		flex: 1;
+		margin-right: 10px;
+	}
+	.btn {
+		display: flex;
+		align-items: center;
+		line-height: 1;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+}

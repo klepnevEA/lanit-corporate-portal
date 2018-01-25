@@ -1,0 +1,30 @@
+.ml-privateads {
+	width: 700px;
+	background: #f8f6f7;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	padding: 23px 30px;
+	max-height: calc(~'100vh - 200px');
+	overflow: auto;
+	
+	&.scrollbar-style > .scroll-element.scroll-y {
+		right: 3px;
+	}
+	
+	&__line {
+		margin-bottom: 7px;
+		.clearfix;
+		.input-block__text {
+			text-transform: capitalize;
+		}
+		.input-block {
+			&.active {
+				.input-block__text {
+					text-transform: capitalize;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+}

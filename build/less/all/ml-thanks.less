@@ -1,0 +1,278 @@
+.ml-thanks {
+	display: flex; 
+	margin-bottom: 50px;
+	&__left {
+		flex: 0 0 50%;
+		background: url(../img/photo-thanks.png) no-repeat;
+		background-size: cover;
+		color: white;
+		padding: @sp*2;
+		margin-right: @sp*2;
+		.input-block {
+			width: 100%;
+			position: relative;
+			 i {
+			 	position: absolute;
+			 	font-size: 24px;
+			 	color: #bdc2c5;
+			 	right: 5px;
+			 	top: 13px;
+			 	cursor: pointer;
+
+			 }
+			 &_search {
+			 	.input {
+			 		padding-right: 35px;
+			 	}
+			 	.input-block__text {
+			 		text-transform: none;
+			 		font-family: 'PFBeauSansPro-Regular';
+			 	}
+			 }
+		}
+		 .textarea {
+		 	height: 130px !important;
+		 }
+		 .btn {
+		 	float: right;
+		 	height: 40px;
+		 	padding: 0 10px;
+		 	line-height: 43px;
+
+		 	i {
+		 		font-size: 22px;
+		 		position: relative;
+		 		top: 0;
+		 		height: 40px;
+		 		line-height: 40px;
+		 		margin-right: 5px;
+		 		display: inline-block;
+		 	}
+		 	span {
+		 		position: relative;
+			    top: -3px;
+		 	}
+		 }
+		
+		&-title {
+			font-family: 'PFBeauSansPro-Bold';
+			font-size: 24px;
+			margin-bottom: @sp;
+			text-transform: uppercase;
+			margin-top: 10px;
+
+		}
+		&-string {
+			margin-bottom: 10px;
+			.clearfix;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__right {
+		flex: 1;
+		&-text {
+			font-size: 14px;
+			color: black;
+			line-height: 1.8;
+			p {
+				margin-bottom: 20px;
+			}
+		}
+		&-info {
+			font-size: 13px;
+			color: #afafaf;
+			padding-left: 32px;
+			position: relative;
+			line-height: 1.8;
+			margin-top: 30px;
+			a {
+				color: @blue;
+				text-decoration: underline;
+			}
+			&:before {
+				content: "\F2FC";
+				font-family: "Material Design Icons";
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-size: 24px;
+				height: 25px;
+				width: 25px;
+				line-height: 1;
+				color: #9fa8af;
+			}
+		}
+	}
+	&__title  {
+		font-family: 'PFBeauSansPro-Bold';
+		font-size: 24px;
+		color: black;
+		text-transform: uppercase;
+		.clearfix; 
+
+		span {
+			color: @orange;
+		}
+	}
+	&__said {
+		display: block;
+		flex: 1;
+		&-all {
+			border-top: 1px solid #e6e6e6;
+			padding-top: 20px;
+			margin-bottom: 85px;
+			a {
+				color: @blue;
+				font-size: 12px;
+				text-decoration: none;
+				border-bottom: 1px dotted @blue;
+				
+			}
+		}
+		&-list {
+			margin-bottom: 50px;
+			margin-top: 25px;
+		}
+		&-item {
+			display: flex;
+			border-top: 1px solid #e6e6e6;
+			
+			
+			
+			padding: 20px 0 15px 0;
+
+		}
+		&-left {
+			flex: 0 0  270px;
+			display: flex;
+			position: relative;
+			margin-top: 10px;
+			flex-direction: column;
+			&:before {
+				content: "\F04D";
+				font-family: "Material Design Icons";
+				font-size: 24px;
+				position: absolute;
+				top: 0;
+				right: 15px;
+				color: @orange;
+			}
+			&-user {
+				flex: 1;
+				display: flex;
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&-right {
+			flex: 1;
+		}
+		&-avatar {
+			width: 72px;
+			height: 72px;
+			background: red;
+			border-radius: 50%;
+			margin-right: 13px;
+			background-size: cover !important;
+			background-repeat: no-repeat !important;
+
+		}
+		&-name {
+			text-transform: uppercase;
+			color: black;
+			padding-right: 60px;
+			font-family: 'PFBeauSansPro-Bold'; 
+			font-size: 14px;
+			margin-top: 5px;
+			&-wrap {
+				display: block;
+				flex: 1;
+			}
+			
+		}
+		&-like {
+			background: @blue;
+			color: white;
+			border-radius: 3px;
+			float: left;
+			padding: 2px 5px;
+			margin-top: 5px;
+			span {
+				font-size: 11px; 
+			}
+			i {
+				font-size: 16px;
+			}
+		}
+		&-message {
+			background: #f8f6f7;
+			padding: 20px;
+			border-radius: 3px;
+			position: relative;
+			&:before {
+				content: '';
+				background: url(../img/triangle-gray.svg) no-repeat;
+				top: 100%;
+				right: 12px;
+				width: 35px;
+				height: 13px;
+				position: absolute;
+			}
+		}
+		&-title {
+			text-transform: uppercase;
+			color: black;
+			font-family: 'PFBeauSansPro-Bold'; 
+			font-size: 14px;
+			margin-bottom: 5px;
+			.clearfix;
+		}
+		&-text {
+			font-size: 12px;
+			color: #4f4f4f;
+			line-height: 1.6;
+		}
+		&-info {
+			margin-top: @sp;
+			font-size: 12px;
+			text-align: right;
+			color: #adadad;
+			.clearfix;
+			&-date {
+				display: inline-block;
+			}
+			&-autor {
+				display: inline-block;
+				a {
+					color: @blue;
+					text-decoration: underline;
+				}
+			}
+
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,149 @@
+.nav-menu {
+  	position: fixed;
+	top: 0px;
+	height: 100%;
+	z-index: 1000;
+	
+	&.sticky {
+		width: 240px;
+	}
+	
+
+	
+	&__turn {
+		display: inline-block;
+		position: absolute;	
+		right: 0;
+		bottom: 0;	
+		color: #fff;
+		padding: 10px;
+		width: 70px;
+		font-size: 	25px;
+		text-align: center;	
+	}
+	
+	&__menu {
+		top: 0;
+		width: 	100%;
+		min-height: 100vh;
+		background-color: @bg;
+		transition: .3s;
+		overflow: hidden;
+		
+		&-logo {
+			position: absolute;	
+			top: 25px;
+			left: 	25px;
+			right: auto;
+			width: 70px;
+			transition: .3s;
+
+			&-wrap {
+				position: relative;
+				width: 100%;
+				height: 135px;		
+				padding: 25px @sp*2;
+				background-color: @blue;
+			}
+
+			&-mini {
+				position: relative;	
+				top: -5px;	
+			}
+		}
+
+		&-elem {
+			&-main {
+				border-bottom: 1px solid @light-gray;
+				
+				&:last-child {
+					border-bottom:0px;
+				}
+				
+				&.active {
+					.nav-menu__menu-list-drop {
+						max-height: 1000px;
+					}
+
+					.mdi-chevron-down {
+						transform: translate(0, -50%) rotate(180deg);
+					}
+				}
+			}
+		}
+
+		&-list {
+			&-drop {
+				position: relative;	
+				max-height: 0;
+				overflow: hidden;
+				transition: .3s;
+			}
+
+			&-main {
+				overflow-y: auto;
+			    overflow-x: hidden;
+				max-height: calc(~'100vh - 135px');
+				
+				&.scrollbar-style > .scroll-element .scroll-bar{
+					opacity: 0;
+				}
+			}
+		}
+
+		&-link {
+			&-main {
+				display: inline-block;
+				position: relative;	
+				width: 100%;
+				min-width: 240px;
+				max-height: 60px;
+				padding: 20px 25px;
+				font-size: 	17px;
+				color: #000;
+				font-family: 'PFBeauSansPro-Bold';
+				text-transform: uppercase;
+				
+				& .mdi-chevron-down {
+					position: absolute;	
+					top: 50%;
+					right: @sp*2;
+					transform: translate(0, -50%);
+					font-size: 	18px;
+					transition: .3s;
+				}
+				
+			}
+
+			&-drop {
+				display: inline-block;
+				width: 100%;
+				padding:0 25px 13px;
+				font-family: 'PFBeauSansPro-Bbook';
+				font-size: 	14px;
+				color: #000;
+			}
+
+			&-mobile-screen {
+				position: relative;	
+				left: -7px;	
+				top: 6px;	
+				display: none;
+				color: @blue;
+				font-size: 	29px;
+				line-height: 0;	
+			}
+		}
+
+	}
+
+	&__search-wrap {
+		padding: 20px 25px;
+	}
+}
+
+
+/* 	@supports (-ms-ime-align:auto)
+	and (-webkit-text-stroke:initial) {
+	  .nav-menu {position: relative; } 
+	} */

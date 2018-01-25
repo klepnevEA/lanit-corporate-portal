@@ -1,0 +1,122 @@
+.routes {
+	margin-bottom: @sp*2;
+	
+
+	
+	&__elem {
+		display: block;
+	}
+
+	&__list {
+		height: 400px;
+		overflow-y: auto;
+		padding-right: @sp/5;
+		background-color: @blue;
+		margin-bottom: 0;
+		border-bottom: 1px solid #59caff;
+	}
+
+	&__link {
+		display: inline-block;
+		width: 100%;
+		padding: 10px @sp;
+		background-color: @blue;
+		border-bottom: 1px solid #59caff;
+		
+		
+		
+		&_title {
+			padding: 20px @sp;
+		}
+	}
+
+	&__text {
+		font-family: 'PFBeauSansPro-Regular';
+		color: #fff;
+		font-size: 14px;
+		margin-bottom: @sp/3;
+	}
+
+	&__dropdown {
+		display: inline-block;
+		position: relative;
+		color: #fff;
+		font-family: 'PFBeauSansPro-Bold';
+		font-size: 20px;
+		text-transform: uppercase;
+		
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			width: 84%;
+			
+			border-bottom: 1px dashed #fff;
+		}
+	}
+
+	&__place {
+		font-family: 'PFBeauSansPro-Regular';
+		color: #005578;
+		font-size: 14px;
+		margin-bottom: @sp/3;
+	}
+
+	&__time {
+		font-family: 'PFBeauSansPro-SemiBold';
+		color: #fff;
+		font-size: 13px;
+		margin-bottom: @sp/3;
+	}
+
+	&__comment {
+		font-family: 'PFBeauSansPro-Italic';
+		color: #fff;
+		font-size: 13px;
+	}
+
+	&__schedule {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		font-family: 'PFBeauSansPro-Regular';
+		color: #fff;
+		font-size: 14px;
+		text-decoration: underline;
+	}
+
+
+
+	::-webkit-scrollbar-button { 
+		width:5px; 
+		height:0px 
+	} 
+
+	::-webkit-scrollbar-track { 
+		background-color: transparent; 
+	} 
+
+	::-webkit-scrollbar-thumb { 
+		-webkit-border-radius: 10px; 
+		border-radius: 10px; 
+		background-color:#005578; 
+	} 
+
+	::-webkit-resizer{ 
+		width:5px; 
+		height:0px 
+	} 
+
+	::-webkit-scrollbar{ 
+		width: 4px; 
+	}
+
+
+	.scrollbar-style > .scroll-element .scroll-element_track { background-color: transparent; }
+	.scrollbar-style > .scroll-element .scroll-bar { background-color: #005578; }
+	.scrollbar-style > .scroll-element:hover .scroll-bar { background-color: #005578; }
+	.scrollbar-style > .scroll-element.scroll-draggable .scroll-bar { background-color: #005578; }
+
+
+}

@@ -1,0 +1,187 @@
+.mood {
+    &-office {
+
+        &__link {
+            display: flex;
+            align-items: center;
+        }
+
+        &__icon {
+            color: @orange;
+            font-size: 40px;
+            margin-right: 10px;
+        }
+
+        &__info {
+            float: left;
+        }
+
+        &__text {
+            font-family: 'PFBeauSansPro-Regular';
+            color: @gray;
+            font-size: 13px;
+        }
+
+        &__status {
+            font-family: 'PFBeauSansPro-Regular';
+            color: @orange;
+            font-size: 13px;
+        }
+    }
+
+    &-popup {
+        &-buttons-wrap {
+            display: block;
+            padding: 0 25px;
+            margin-bottom: @sp;
+            .clearfix;
+        }
+
+        &-button {
+            display: inline-block;
+            float: left;
+            width: 100px;
+            height: 80px;
+            text-align: center;
+            color: @gray;
+            background-color: @bg;
+            margin-right: @sp;
+            padding: 10px;
+            transition: 0.3s;
+
+            &:hover, &.active {
+                color: #fff !important;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            i {
+                display: block;
+                font-size: 37px;
+            }
+
+            &__text {
+                font-size: 13px;
+                font-family: 'PFBeauSansPro-Regular';
+            }
+
+            &_merry {
+                color: @orange !important;
+
+                &:hover, &.active {
+                    background-color: @orange;
+                }
+            }
+
+            &_neutral {
+                color: @blue !important;
+
+                &:hover, &.active {
+                    background-color: @blue;
+                }
+            }
+
+            &_sad {
+                color: @gray !important;
+
+                &:hover, &.active {
+                    background-color: @gray;
+                }
+            }
+        }
+
+        &-statistics {
+            background-color: @bg;
+            padding-top: 20px;
+            padding-bottom: @sp;
+            margin-left: -30px;
+            width: calc(~"100% + 60px");
+            margin-bottom: -30px;
+            .clearfix;
+
+            &__diagram {
+                position: relative;
+                float: left;
+                width: 50%;
+                min-height: 100px;
+
+                &-vote {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+
+                &-counter {
+                    font-family: 'PFBeauSansPro-Bold';
+                    font-size: 35px;
+                    line-height: 1;
+                }
+
+                &-text {
+                    font-family: 'PFBeauSansPro-Regular';
+                    font-size: 12px;
+                    color: @gray;
+                    line-height: 1;
+                }
+            }
+
+            &__info {
+                float: left;
+                width: 50%;
+                min-height: 100px;
+                color: @gray;
+
+                &-elem {
+                    padding: 0 10px 0 0;
+                    .clearfix;
+
+                    &_merry {
+                        i {
+                            color: @orange;
+                        }
+
+                        .mood-popup-statistics__info-title {
+                            color: @orange;
+                        }
+                    }
+
+                    &_neutral {
+                        i {
+                            color: @blue;
+                        }
+
+                        .mood-popup-statistics__info-title {
+                            color: @blue;
+                        }
+                    }
+                }
+
+                &-text {
+                    float: left;
+                }
+
+                i {
+                    float: left;
+                    font-size: 43px;
+                    margin-right: 5px;
+                    line-height: 1;
+                }
+
+                &-title {
+                    font-size: 13px;
+                    font-family: 'PFBeauSansPro-Regular';
+                    margin-top: 10px;
+                }
+
+                &-counter {
+                    font-size: 13px;
+                    font-family: 'PFBeauSansPro-Regular';
+                }
+            }
+        }
+    }
+}

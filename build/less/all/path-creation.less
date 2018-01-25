@@ -1,0 +1,121 @@
+.path-creation {
+	.clearfix;
+	
+	&__left {
+		width: 50%;
+		padding: 20px 15px 20px 0;
+		float: left;
+		border-right: 1px solid @light-gray;
+	}
+
+	&__right {
+		width: 50%;
+		float: right;
+		padding: 20px 0 20px @sp*2;
+	}
+
+	&__title {
+		font-family: 'PFBeauSansPro-SemiBold';
+		font-size: 15px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+
+	&__time-title {
+		color: @gray;
+		font-family: 'PFBeauSansPro-Regular';
+		color: #a6a6a6;
+		margin-bottom: 5px;
+		
+	}
+
+	&__time-block {
+		display: flex;
+		width: 100%;
+	}
+
+	&__time-input {
+		width: 95px;
+		border:1px solid @gray-border-table;
+		font-size: 14px;
+		font-family: 'PFBeauSansPro-Regular';
+		padding: 10px;
+	}
+
+	&__time-dash {
+		padding-top: 6px;
+		margin: 0 7px;
+	}
+
+	&__text {
+		font-size: 14px;
+		color: @gray;
+		font-family: 'PFBeauSansPro-Regular';
+		margin-bottom: 10px;
+	}
+
+	&__chekbox-block {
+		min-height: 55px;
+		padding-top: @sp;
+	}
+
+	&__list {
+		padding: 10px 0;
+		margin: 0;
+		max-height: 110px;
+		overflow-y: auto;
+		
+	&::-webkit-scrollbar-button { 
+		width:4px; 
+		height:0px 
+	} 
+
+	&::-webkit-scrollbar-track { 
+		background-color: transparent; 
+	} 
+
+	&::-webkit-scrollbar-thumb { 
+		-webkit-border-radius: 5px; 
+		border-radius: 5px; 
+		background-color:#a1adb2; 
+	} 
+
+	&::-webkit-resizer{ 
+		width:4px; 
+		height:0px 
+	} 
+
+	&::-webkit-scrollbar{ 
+		width: 4px; 
+	}
+		
+	}
+
+	&__elem {
+		display: flex;
+		
+		margin-bottom: 10px;
+		
+		&:last-child {
+			margin-bottom: 0px;
+		}
+		
+		&-block {
+			flex: 1 1 auto;
+			background-color: @bg;
+			border: 1px solid @gray;
+			padding: 10px;
+			font-size: 14px;
+			font-family: 'PFBeauSansPro-Regular';
+			color: @gray;
+		}
+
+		&-close {
+			width: 35px;
+			text-align: center;
+			padding-top: 5px;
+			color: @gray;
+			font-size: 25px;
+		}
+	}
+}

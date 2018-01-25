@@ -1,0 +1,29 @@
+.list-checked {
+
+	list-style-position: inside;
+	-moz-column-count: 2; 
+	-webkit-column-count: 2; 
+	column-count: 2;
+	list-style-type: decimal;
+	margin-bottom: 45px;
+	
+	&__elem {
+		position: relative;
+		margin-left: @sp*2;
+		margin-right: 30px;
+		width: 355px;
+		margin-bottom: @sp;
+		
+		.mdi {
+			position: absolute;
+			top: 0px;
+			left: -30px;
+			font-size: 23px;
+			color: @blue;
+		}
+
+		.text {
+			margin-bottom: 0;
+		}
+	}
+}

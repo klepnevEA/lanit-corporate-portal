@@ -1,0 +1,337 @@
+.ml-photo-modal {
+	background: #4f6773; 
+	width: 980px;
+	height: 470px;
+	margin-bottom: 3px;
+	.clearfix;
+	&__scroll {
+		max-height: calc(~'100vh - 200px');
+		overflow: auto;
+		
+		&.scrollbar-style > .scroll-element.scroll-y {
+			right: 3px;
+		}
+	}
+	&__text {
+		text-align: center;
+		margin-bottom: 22px;
+		margin-top: 10px;
+		text-transform: uppercase;
+		font-size: 16px;
+		color: black;
+		font-family: 'PFBeauSansPro-Bold';
+		.clearfix;
+		span {
+			color: @orange;
+			text-transform: lowercase;
+		}
+	}
+	&__slider {
+		position: relative;
+		height: 515px;
+		transition: 0.3s;
+	}
+	&__slide {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		
+	}
+	&__img {
+		// position: absolute;
+		width: 100%;
+		height: 470px;
+		background-repeat: no-repeat !important;
+		background-size: contain !important;
+		background-position: center center !important;
+	}
+	.slick-next {
+		&:after {
+			content: "\F054";
+			font-size: 37px;
+			line-height: 75px;
+		}
+	}
+	.slick-prev {
+		&:after {
+			content: "\F04D";
+			font-size: 37px;
+			line-height: 75px;
+		}
+	}
+	.slick-dots {
+		display: flex;
+		height: 5px;
+		width: calc(~'100% + 2px');
+		margin-left: -2px;
+		margin-top: 3px;
+		padding: 0; 
+		box-sizing: border-box;
+		li {
+			flex: 1;
+			margin-left: 2px;
+			position: relative;
+			padding: 0;
+
+			&:before {
+				background: #ebebeb;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+				transition: all 0.2s;
+				border-radius: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 0;
+				margin: 0;
+			}
+			&.slick-active {
+				&:before {
+					background: @blue;
+					
+
+
+				}
+			}
+		}
+	}
+	//вторая модалка 
+	&-contests {
+		width: 980px;
+		height: 470px;
+		margin-bottom: 3px;
+		display: flex;
+		.clearfix;
+		&__gallery {
+			flex: 1;
+			background: #4f6773;  
+			&-box {
+				width: 695px;
+				overflow: hidden;
+			}
+			.slick-next {
+				&:after {
+					content: "\F054";
+					font-size: 37px;
+					line-height: 75px;
+				}
+			}
+			.slick-prev {
+				&:after {
+					content: "\F04D";
+					font-size: 37px;
+					line-height: 75px;
+				}
+			}
+			.slick-dots {
+				display: flex;
+				height: 5px;
+				width: calc(~'100% + 2px');
+				margin-left: -2px;
+				margin-top: 3px;
+				padding: 0; 
+				box-sizing: border-box;
+				li {
+					flex: 1;
+					margin-left: 2px;
+					position: relative;
+					padding: 0;
+
+					&:before {
+						background: #ebebeb;
+						width: 100%;
+						height: 100%;
+						cursor: pointer;
+						transition: all 0.2s;
+						border-radius: 0;
+						position: absolute;
+						top: 0;
+						left: 0;
+						padding: 0;
+						margin: 0;
+					}
+					&.slick-active {
+						&:before {
+							background: @blue;
+							
+
+
+						}
+					}
+				}
+			}
+
+		}
+		&__info {
+			flex: 0 0 255px;
+			margin-left: @sp*2;
+		}
+		&__title {
+			text-transform: uppercase;
+			font-family: 'PFBeauSansPro-Bold'; 
+			font-size: 24px;
+			margin-bottom: 2px;
+		}
+		&__value {
+			color: @orange;
+			font-family: 'PFBeauSansPro-Bold'; 
+			margin-bottom: 35px;
+			font-size: 24px;
+		}
+		&__text {
+			font-size: 13px;
+			color: #4e4e4e;
+			line-height: 1.6;
+			margin-bottom: 25px;
+			&-title {
+				font-family: 'PFBeauSansPro-SemiBold';
+				color: black;
+				font-size: 14px;
+				margin-bottom: 10px;
+				line-height: 1.2;
+				text-transform: uppercase;
+			}
+		}
+
+		&__links {
+			color: #adadad;
+			font-size: 13px;
+			margin-bottom: 5px;
+			span {
+				min-width: 55px;
+				display: inline-block;
+			}
+			a {
+				color: @blue;
+				text-decoration: underline;
+			}
+		}
+		&__like {
+			margin-top: 25px;
+			display: flex;
+			&-value {
+				flex: 0 0 50%;
+				font-size: 18px;
+				color: @orange;
+				align-items: center;
+				display: flex;
+				i {
+					font-size: 28px;
+				}
+				span {
+					font-size: 18px;
+					display: block;
+					margin-left: 5px;
+
+				}
+			}
+			&-btn {
+				flex: 1;
+				text-align: right;
+				justify-content: flex-end;
+				i {
+					color: @blue;
+				}
+				display: flex;
+				align-items: center;
+				a {
+					color: @blue;
+					font-size: 13px;
+					text-decoration: none;
+					border-bottom: 1px dotted;
+					margin-left: 5px;
+
+				}
+			}
+		}
+		&__comments {
+			padding: 0 43px 43px 43px;
+			&-title {
+				color: black;
+				font-size: 17px;
+				font-family: 'PFBeauSansPro-SemiBold';
+				text-transform: uppercase;
+				margin-top: 12px;
+			}
+			&-list {
+				margin-top: 20px;
+				margin-bottom: 5px;
+			}
+			&-item {
+				display: flex;
+				
+				align-items: flex-start;
+				border-top: 1px #eaeaea solid;
+				padding-top: 13px;
+				padding-bottom: 13px;
+
+			}
+			&-left {
+				flex: 0 0 230px;
+				display: flex;
+				align-items: center;
+
+			}
+			&-right {
+				flex: 1;
+				font-size: 13px;
+				color: #4e4e4e;
+				margin-top: 4px;
+				line-height: 1.6;
+			}
+			&-ava {
+				width: 48px;
+				height: 48px;
+				&-img {
+					width: 48px;
+					height: 48px;
+					border-radius: 50%;
+					background-size: cover !important;
+					background-position: center !important;
+				}
+			}
+			&-info {
+				margin-left: @sp;
+				font-size: 14px;
+
+			}
+			&-name {
+				text-transform: uppercase;
+				font-family: 'PFBeauSansPro-Bold'; 
+				color: black;
+				font-size: 14px;
+				margin-bottom: 3px;
+			}
+			&-date {
+				font-size: 13px;
+				color: #a6a6a6;
+			}
+			&-post {
+				padding: 20px;
+				background: #f8f7f7;
+				box-sizing: border-box;
+				display: flex;
+			}
+			&-inputbox {
+				flex: 1;
+				margin-right: @sp;
+			}
+			&-btnbox {
+				flex: 0 0 105px;
+				.btn {
+					padding: 0 15px;
+					line-height: 43px;
+					align-items: center;
+					height: 40px;
+				}
+			}
+			
+		}
+	}
+	
+
+
+
+
+}
