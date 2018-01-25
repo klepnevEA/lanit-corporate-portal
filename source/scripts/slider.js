@@ -7,7 +7,8 @@ $(function(){
 		dots: false,
 		arrows: true,
 		autoplay: false,
-		// variableWidth: true,
+		variableWidth: true,
+		infinity: true
 			
 	});
 
