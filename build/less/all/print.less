@@ -1,0 +1,77 @@
+.print {
+	font-family: 'Roboto';
+	&-box {
+		
+		margin: 0 auto;
+		box-sizing: border-box;
+		padding-top: 120px;
+		width: 1200px;
+	}
+	&__logo {
+		flex: 0 0 170px;
+		&-link {
+			display: block;
+			background: url(../img/logo-l-print.svg) no-repeat;
+			width: 105px;
+			height: 220px;
+			background-size: contain;
+		}
+	}
+	
+	&__header {
+		
+		display: flex;
+		&-h1 {
+			font-size: 52px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		&-text {
+			font-size: 30px;
+		}
+		&-left {
+			flex: 1;
+		}
+		&-right {
+			flex: 0 0 225px;
+		}
+	}
+}
+
+@media print {
+	.print {	
+		&-box {
+			font-family: 'PFBeauSansPro-Regular';
+			margin: 0 auto;
+			box-sizing: border-box;
+			padding-top: 120px;
+			width: 1200px;
+		}
+		
+		&__header {
+			background: red;
+			display: flex;
+			&-h1 {
+				font-size: 26pt;
+				text-transform: uppercase;
+				font-family: 'PFBeauSansPro-Bold'; 
+			}
+			&-text {
+				font-size: 35px;
+			}
+			&-left {
+				flex: 1;
+			}
+			&-right {
+				flex: 0 0 225px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
