@@ -59,6 +59,19 @@
 	}
 
 	&__input-block {
-		display: flex;
+		display: table;
+		width: 100%;
+		box-sizing: border-box;
+		.input-block {
+			display: table-cell;
+			width: calc(~'(100% / 3) - 10px');
+			
+			&:last-child {
+				margin-right: 0;
+				
+
+
+			}
+		}
 	}
 }

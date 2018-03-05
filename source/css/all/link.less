@@ -61,4 +61,17 @@
 	&_right {
 		float: right;
 	}
+
+	&_orange {
+		color: @orange;
+		
+		&:hover {
+			color: lighten(@orange, 10%);
+		}
+		
+		.mdi {
+			color: @orange;
+			font-size: 20px;
+		}
+	}
 }

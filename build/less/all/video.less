@@ -1,0 +1,27 @@
+.video {
+	min-height: 570px;
+	background-color: @bg;
+	display: flex;
+    flex-direction: column;
+    margin-bottom: @sp*2;
+    
+    &__content {
+    	display: flex;
+    	flex-direction: column;
+    	flex: 1 1 auto;
+    	
+    	iframe {
+    		width: 100%;
+    		flex: 1 1 auto;
+    	}
+    }
+	
+	&__info {
+		padding: @sp*2;
+		min-height: @sp*6;
+	}
+
+	&__text {
+		
+	}
+}

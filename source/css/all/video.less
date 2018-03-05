@@ -1,0 +1,30 @@
+.video {
+	min-height: 570px;
+	background-color: @bg;
+	display: flex;
+    flex-direction: column;
+    margin-bottom: @sp*2;
+    
+    &__content {
+    	display: flex;
+    	flex-direction: column;
+    	flex: 1 1 auto;
+    	height: 480px;
+    	
+    	iframe {
+    		width: 100%;
+    		flex: 1 1 auto;
+    	}
+    }
+	
+	&__info {
+		padding: 20px 25px;
+		height: @sp*6;
+	}
+
+	&__text {
+		font-family: 'PFBeauSansPro-SemiBold';
+		font-size: 17px;
+		margin-bottom: @sp;
+	}
+}

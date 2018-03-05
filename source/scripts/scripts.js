@@ -6,6 +6,13 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 	});
 
+		//сендвичи в разделе видео
+	$('.title_comments').click(function(e) {
+		e.preventDefault();
+		$(this).closest('.comments-wrap').toggleClass('active');
+		
+	});
+
 	//сендвичи в разделе food
 	$('.food-page__sandwich-title').click(function() {
 		$(this).parent('.food-page__sandwich').toggleClass('active');

@@ -1,6 +1,10 @@
 .comments {
 	.clearfix;
 	margin-bottom: 120px;
+	
+	.btn {
+		background-color: @orange;
+	}
 
 	&__title-text {
 		font-size: 13px;
@@ -17,6 +21,14 @@
 		text-decoration: underline;
 		font-size: 13px;
 		.clearfix;
+		
+		&_right {
+			float: right;
+		}
+
+		&_dashed {
+			text-decoration-style: dashed;
+		}
 	}
 	&__elem {
 		.clearfix;
@@ -82,5 +94,27 @@
 			font-family: 'PFBeauSansPro-Italic';
 			color: @gray;
 		}
+	}
+
+	&-wrap {
+		.comments {
+			display: none;
+		}
+
+		&.active {
+			.comments {
+				display: block;
+			}
+
+			.title_comments:before {
+				transform: rotate(-180deg);
+				transform-origin: center;
+				top: 2px;
+			}
+		}
+	}
+
+	&_mb-30 {
+		margin-bottom: @sp*2;
 	}
 }
