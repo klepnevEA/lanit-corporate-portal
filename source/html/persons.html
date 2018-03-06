@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+					
+					@@include('./file-include/header-2.html')
+
+					@@include('./file-include/bread-crumbs.html')
+
+					<!-- популярные сервисы-->
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 class="title title_fsz-30">Поиск сотрудников</h2>
+
+							<!-- форма поиска -->
+							<div class="block block_gray block__drive-group"> 
+                                <div>
+                                    <div class="input-block input-block_allattr"> 
+                                        <input class="input" type="text" value=""/>
+                                        <div class="input-block__text">Поиск по всем атрибутам</div>
+                                    </div>
+                                    <div class="input-block input-block_division active">
+                                        <div class="ml-select" >
+                                            <div class="ml-select__title">Подразделение</div>
+                                            <i class="mdi mdi-chevron-down"></i>
+                                            <input class="input ml-select__input" type="text" value=""/ placeholder="Все">
+                                            <div class="ml-select__dropbox">
+                                                <div class="ml-select__item">10:30</div>
+                                                <div class="ml-select__item">10:30</div>
+                                                <div class="ml-select__item">11:30</div>
+                                                <div class="ml-select__item">12:30</div>
+                                                <div class="ml-select__item">13:30</div>
+                                                <div class="ml-select__item">14:30</div>
+                                                <div class="ml-select__item">15:30</div>
+                                                <div class="ml-select__item">16:30</div>
+                                                <div class="ml-select__item">10:30</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-block input-block_position active">
+                                        <div class="ml-select" >
+                                            <div class="ml-select__title">Должность</div>
+                                            <i class="mdi mdi-chevron-down"></i>
+                                            <input class="input ml-select__input" type="text" value=""/ placeholder="Все">
+                                            <div class="ml-select__dropbox">
+
+                                                <div class="ml-select__item">10:30</div>
+                                                <div class="ml-select__item">10:30</div>
+                                                <div class="ml-select__item">11:30</div>
+                                                <div class="ml-select__item">12:30</div>
+                                                <div class="ml-select__item">13:30</div>
+                                                <div class="ml-select__item">14:30</div>
+                                                <div class="ml-select__item">15:30</div>
+                                                <div class="ml-select__item">16:30</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="input-block input-block__chkbox input-block_allattr">
+                                        <div class="input-block__string-chkbox">
+                                            <input type="checkbox" class="checkbox" id="checkbox">
+                                            <label for="checkbox">Выполнить точный поиск</label>
+                                        </div>
+                                        <div class="input-block__string-chkbox">
+                                            <input type="checkbox" class="checkbox" id="checkbox">
+                                            <label for="checkbox">Только те, кто сейчас в офисе</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-block input-block__chkbox">
+                                        <div class="input-block__string-chkbox">
+                                            <input type="checkbox" class="checkbox" id="checkbox">
+                                            <label for="checkbox">Отмечен (а) наградой Ланит</label>
+                                        </div>
+                                        <div class="input-block__string-chkbox">
+                                            <input type="checkbox" class="checkbox" id="checkbox">
+                                            <label for="checkbox">Есть упоминание в статье на Портале</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-block input-block__btn">
+                                        <button class="btn">Найти</button>
+                                    </div>
+                                </div>
+								
+							</div>
+							<!-- форма поиска -->
+
+						</div>
+					</div>
+					<!-- популярные сервисы конец-->
+                    
+                    
+                    
+                    <div class="ml-table">
+                        <table class="ml-table__table" cellpadding="0" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>ФИО</th>
+                                    <th>Контакты</th>
+                                    <th>Подразделение/Должность</th>
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+                                            <span>Иванов Владимир Вадимович</span>
+                                            <div class="table-order__icons">
+                                                <ul class="table-order__icon-list">
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                </ul>
+										    </div>
+										</div>
+                                    </td>
+                                    <td class="table-order__contacts">
+                                        <ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+                                    </td>
+                                    <td class="table-order__division">
+                                        <div class="table-order__division-blk">
+                                            <span>Подразделение:</span>
+                                            Онланта
+                                        </div>
+                                        <div class="table-order__division-blk">
+                                            <span>Должность:</span>
+                                            Консультант-аналитик
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											<span>Иванов Владимир Вадимович</span>
+                                            <div class="table-order__icons  table-order__icons_more">
+                                                <ul class="table-order__icon-list">
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                </ul>
+										    </div>
+                                        </div>
+                                    </td>
+                                    <td class="table-order__contacts">
+                                        <ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+                                    </td>
+                                    <td class="table-order__division">
+                                        <div class="table-order__division-blk">
+                                            <span>Подразделение:</span>
+                                            Онланта
+                                        </div>
+                                        <div class="table-order__division-blk">
+                                            <span>Должность:</span>
+                                            Консультант-аналитик
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											<span>Иванов Владимир Вадимович</span>
+                                            <div class="table-order__icons">
+                                                <ul class="table-order__icon-list">
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                </ul>
+										    </div>
+										</div>
+                                    </td>
+                                    <td class="table-order__contacts">
+                                        <ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+                                    </td>
+                                    <td class="table-order__division">
+                                        <div class="table-order__division-blk">
+                                            <span>Подразделение:</span>
+                                            Онланта
+                                        </div>
+                                        <div class="table-order__division-blk">
+                                            <span>Должность:</span>
+                                            Консультант-аналитик
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											<span>Иванов Владимир Вадимович</span>
+                                            <div class="table-order__icons">
+                                                <ul class="table-order__icon-list">
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                </ul>
+										    </div>
+										</div>
+                                    </td>
+                                    <td class="table-order__contacts">
+                                        <ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+                                    </td>
+                                    <td class="table-order__division">
+                                        <div class="table-order__division-blk">
+                                            <span>Подразделение:</span>
+                                            Онланта
+                                        </div>
+                                        <div class="table-order__division-blk">
+                                            <span>Должность:</span>
+                                            Консультант-аналитик
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											<span>Иванов Владимир Вадимович</span>
+                                            <div class="table-order__icons">
+                                                <ul class="table-order__icon-list">
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                </ul>
+										    </div>
+										</div>
+                                    </td>
+                                    <td class="table-order__contacts">
+                                        <ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+                                    </td>
+                                    <td class="table-order__division">
+                                        <div class="table-order__division-blk">
+                                            <span>Подразделение:</span>
+                                            Онланта
+                                        </div>
+                                        <div class="table-order__division-blk">
+                                            <span>Должность:</span>
+                                            Консультант-аналитик
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											<span>Иванов Владимир Вадимович</span>
+                                            <div class="table-order__icons">
+                                                <ul class="table-order__icon-list">
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                </ul>
+										    </div>
+										</div>
+                                    </td>
+                                    <td class="table-order__contacts">
+                                        <ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+                                    </td>
+                                    <td class="table-order__division">
+                                        <div class="table-order__division-blk">
+                                            <span>Подразделение:</span>
+                                            Онланта
+                                        </div>
+                                        <div class="table-order__division-blk">
+                                            <span>Должность:</span>
+                                            Консультант-аналитик
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-order__customer">
+										<div class="table-order__photo" style="background-image:url('../img/birthdays-slider/photo-3.png')">
+											<div class="table-order__customer-status active"></div>
+										</div>
+										<div class="table-order__name">
+											<span>Иванов Владимир Вадимович</span>
+                                            <div class="table-order__icons__more">
+                                                <ul class="table-order__icon-list">
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                    <li class="table-order__icon-elem">
+                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img">
+                                                    </li>
+                                                </ul>
+										    </div>
+										</div>
+                                    </td>
+                                    <td class="table-order__contacts">
+                                        <ul class="table-order__list">
+											<li class="table-order__elem">
+												<span class="mdi mdi-email-outline"></span>
+												<a href="#">ivanov-vladimir@lanit.ru</a>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-phone-in-talk"></span>
+												<span>43334</span>
+											</li>
+											<li class="table-order__elem">
+												<span class="mdi mdi-cellphone"></span>
+												<span>+904 000 10 01</span>
+											</li>
+										</ul>
+                                    </td>
+                                    <td class="table-order__division">
+                                        <div class="table-order__division-blk">
+                                            <span>Подразделение:</span>
+                                            Онланта
+                                        </div>
+                                        <div class="table-order__division-blk">
+                                            <span>Должность:</span>
+                                            Консультант-аналитик
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+
+					@@include('./file-include/footer.html')
+
+				</div><!--container-main-->		
+
+			</div><!--container-wrap-->
+				
+		</div>	 <!--container-->		
+		<!-- <div class="footer__before"></div> -->
+	
+	</div> <!--wrapper-->
+
+
+	<!-- popups -->
+	@@include('./file-include/popup-mood-office.html')
+	@@include('./file-include/popup-thanks-for-trips.html')
+	@@include('./file-include/popup-drive-add-new.html')	
+
+	
+</body>
+</html>
+

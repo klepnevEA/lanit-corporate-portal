@@ -39,9 +39,19 @@
 		&_geo {
 			width: 230px;
 		}
+        &_allattr {
+			width: calc(~"40% - 20px");
+		}
+        &_division {
+			width: 30%;
+		}
+        &_position {
+			width: 30%;
+		}
 
 		
 		&.active {
+
 			.input-block__text {
 				top: 12px;
 				left: 13px;
@@ -50,6 +60,15 @@
 			}
 
 		}
+        
+        &__chkbox {
+            margin-top: 16px;
+        }
+        
+        &__btn {
+            margin-top: 12px;
+            float: right;
+        }
 		
 		&__text {
 			position: absolute;
@@ -71,6 +90,9 @@
 				line-height: 0;
 			}
 		}
+        &__string-chkbox {
+            margin-bottom: 6px;
+        }
 	}
 
 	&_comments {
