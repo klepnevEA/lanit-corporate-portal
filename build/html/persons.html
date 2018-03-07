@@ -29,7 +29,8 @@
 	<script src="../scripts/jquery.scrollbar.js"></script>
 
 </head>
-<body>
+
+    <body>
 
 	<div class="wrapper">
 
@@ -393,22 +394,22 @@
                                 <div>
                                     <div class="input-block input-block__chkbox input-block_allattr">
                                         <div class="input-block__string-chkbox">
-                                            <input type="checkbox" class="checkbox" id="checkbox">
-                                            <label for="checkbox">Выполнить точный поиск</label>
+                                            <input type="checkbox" class="checkbox" id="checkbox_1">
+                                            <label for="checkbox_1">Выполнить точный поиск</label>
                                         </div>
                                         <div class="input-block__string-chkbox">
-                                            <input type="checkbox" class="checkbox" id="checkbox">
-                                            <label for="checkbox">Только те, кто сейчас в офисе</label>
+                                            <input type="checkbox" class="checkbox" id="checkbox_2">
+                                            <label for="checkbox_2">Только те, кто сейчас в офисе</label>
                                         </div>
                                     </div>
                                     <div class="input-block input-block__chkbox">
                                         <div class="input-block__string-chkbox">
-                                            <input type="checkbox" class="checkbox" id="checkbox">
-                                            <label for="checkbox">Отмечен (а) наградой Ланит</label>
+                                            <input type="checkbox" class="checkbox" id="checkbox_3">
+                                            <label for="checkbox_3">Отмечен (а) наградой Ланит</label>
                                         </div>
                                         <div class="input-block__string-chkbox">
-                                            <input type="checkbox" class="checkbox" id="checkbox">
-                                            <label for="checkbox">Есть упоминание в статье на Портале</label>
+                                            <input type="checkbox" class="checkbox" id="checkbox_4">
+                                            <label for="checkbox_4">Есть упоминание в статье на Портале</label>
                                         </div>
                                     </div>
                                     <div class="input-block input-block__btn">
@@ -441,23 +442,23 @@
 											<div class="table-order__customer-status active"></div>
 										</div>
 										<div class="table-order__name">
-                                            <span>Иванов Владимир Вадимович</span>
+                                            <span>Иванов Владимир Вадимович-Вадимович</span>
                                             <div class="table-order__icons">
                                                 <ul class="table-order__icon-list">
                                                     <li class="table-order__icon-elem">
-                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img">
+                                                        <img src="../img/header-icons/icon-5.png" alt="icon" class="table-order__icon-img tooltip" title="Медалька 1">
                                                     </li>
                                                     <li class="table-order__icon-elem">
-                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img">
+                                                        <img src="../img/header-icons/icon-4.png" alt="icon" class="table-order__icon-img tooltip" title="Медалька 2">
                                                     </li>
                                                     <li class="table-order__icon-elem">
-                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img">
+                                                        <img src="../img/header-icons/icon-3.png" alt="icon" class="table-order__icon-img tooltip" title="Медалька 3">
                                                     </li>
                                                     <li class="table-order__icon-elem">
-                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img">
+                                                        <img src="../img/header-icons/icon-2.png" alt="icon" class="table-order__icon-img tooltip" title="Медалька 4">
                                                     </li>
                                                     <li class="table-order__icon-elem">
-                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img">
+                                                        <img src="../img/header-icons/icon-1.png" alt="icon" class="table-order__icon-img tooltip" title="Медалька 5">
                                                     </li>
                                                 </ul>
 										    </div>
@@ -1412,7 +1413,16 @@
 	</div>
 </div>	
 
-	
+        <script>
+        $( function() {
+            $( document ).tooltip({
+                tooltipClass: "custom-tooltip-styling",
+                show:{effect:'drop', duration: 700},
+                hide:{effect:'drop', duration: 500},
+                position:{my:'left top', at:'center bottom'}
+            });
+        });
+    </script>
 </body>
 </html>
 

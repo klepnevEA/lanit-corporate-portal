@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="ru">
+@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+					
+					@@include('./file-include/header.html')
+					
+
+
+					@@include('./file-include/bread-crumbs.html')
+                    
+                    
+                    <!-- Карточка сотрудника -->
+                    <div class="row">
+						<div class="col-xs-12 person-card">
+							<h2 class="title">Карточка сотрудника</h2>
+                            <h3 class="title title_orange">Анна Владимировна Азизова</h3>
+                            <div class="block block_flex block_gray">
+                                <div class="person-card__photo-block">
+                                    <div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')"></div>
+                                    <button class="btn btn_medium btn_orange" data-popup="drive-add-new">
+                                        <span class="mdi mdi-upload"></span>
+                                        загрузить фотографию
+                                    </button>
+                                    <div class="person-card__photo-desc">
+                                        Загрузите, пожалуйста, портретную фотографию, где большую часть фотографии занимает Ваше лицо
+                                    </div>
+                                </div>
+                                <div class="person-card__data-block">
+                                    <table class="person-card__table">
+                                        <tr>
+                                            <td class="text text_gray">Начало работы в компании:</td>
+                                            <td class="text">16.06.2010</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">Подразделение:</td>
+                                            <td class="text">Департамент корпортивных систем</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">Должность:</td>
+                                            <td class="text">Руководитель сектора</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">Телефон:</td>
+                                            <td class="text">+7 (911) 345-23-87</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">Мобильный телефон:</td>
+                                            <td class="text">
+                                                <input class="input" type="text" value="+7 (911) 345-23-87" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">Кабинет:</td>
+                                            <td class="text">363</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">E-mail:</td>
+                                            <td class="text"><a href="mailto:azizova@lanit.ru">azizova@lanit.ru</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">Адрес офиса:</td>
+                                            <td class="text">Мурманский проезд</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">ICQ:</td>
+                                            <td class="text">
+                                                <input class="input" type="text" value="12345678" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text text_gray">Skype:</td>
+                                            <td class="text">
+                                                <input class="input" type="text" value="azizova" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                             </div>
+                        </div>
+					</div>
+                    <!-- Карточка сотрудника -->
+                    
+                    <!-- Информация о сотруднике -->
+                    <div class="row">
+						<div class="col-xs-12 person-card">
+							<h2 class="title">Информация о сотруднике</h2>
+                            <form class="person-card__form">
+                                <div class="text text_gray">Опишите Ваше образование, Ваш опыт работы, награды и хобби</div>
+                                <textarea name="textarea2" id="textarea2" class="person-card__form-textarea" placeholder=""></textarea>
+                            </form>
+                            <div class="btn__block btn_right">
+                                <a href="#" class="btn btn_blue-dark btn_medium btn_width-160 btn_txtalign-cntr">
+                                    Отмена
+                                </a>
+                                <a href="#" class="btn btn_medium btn_width-160 btn_txtalign-cntr">
+                                    Сохранить
+                                </a>
+                            </div>
+                        </div>
+					</div>
+                    <!-- Информация о сотруднике -->
+                
+					@@include('./file-include/footer.html')
+				</div><!--container-main-->		
+
+			</div><!--container-wrap-->
+			
+		</div>	 <!--container-->		
+		<!-- <div class="footer__before"></div> -->
+		
+	</div> <!--wrapper-->
+
+
+	<!-- popups -->
+	@@include('./file-include/popup-mood-office.html')
+    
+</body>
+</html>
+
