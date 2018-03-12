@@ -1,0 +1,30 @@
+.ui {
+    &-tooltip {
+        padding: 8px 12px;
+        position: absolute;
+        z-index: 9999;
+        max-width: 300px;
+        border-width: 0px;
+    }
+    /* Corner radius */
+    &-corner-all,
+    &-corner-top,
+    &-corner-left,
+    &-corner-tl {
+        border-radius: 4px;
+    }
+    &-widget {
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 14px;
+        &-shadow {
+            -webkit-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.15);
+            -moz-box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.15);
+            box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.15);
+        }
+        &-content {
+            border: none;
+            background: #ffffff;
+            color: #b3b3b3;
+        }
+    }
+}

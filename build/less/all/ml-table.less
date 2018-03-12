@@ -1,0 +1,95 @@
+.ml-table {
+    &__table {
+        display: table;
+        width: 100%;
+        margin-bottom: 50px;
+        
+        thead tr {
+            background: #e6eaed;
+            th {
+                text-align: left;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #828e93;
+                font-family: 'PFBeauSansPro-Bold';
+                padding: 20px 0 20px 24px;
+            }
+            th:first-child {
+                /*width: 55px;*/
+            }
+        }
+        
+        tbody tr {
+            &:nth-child(2n+1) {
+                background: #f8f7f7;
+            }
+            td {
+                text-align: left;
+                padding: 16px 0 16px 24px;
+                font-size: 13px;
+                color: #4e4e4e;
+                border-bottom: 1px solid #eaeaea;
+            }
+        }
+    }
+    .table-order {
+        &__customer {
+            width: 35%;
+            border-top: 1px solid #e7e6e6;
+        }
+        &__contacts {
+            border-top: 1px solid #e7e6e6;
+        }
+        &__division {
+            border-top: 1px solid #e7e6e6;
+            &-blk {
+                font-size: 14px;
+                font-family: 'PFBeauSansPro-Regular';
+                span {
+                    color: #adadad;
+                    display: block;
+                }
+            }
+            &-blk:first-child {
+                margin-bottom: 10px;
+            }
+        }
+        &__name {
+            padding-top: 0px;
+            &:after {
+                content: none;
+            }
+        }
+        &__icon-list {
+            justify-content: flex-start;
+            display: flex
+        }
+        &__icon-elem {
+            width: 38px;
+            height: 38px;
+        }
+        &__icons {
+            /*width: 200px;*/
+            &_more {
+                .table-order__icon-list {
+                    display: flex;
+                    /* width: 200px; */
+                    padding-right: 38px;
+                    margin-bottom: 0px;
+                    justify-content: space-between;
+                    padding-right: 38px;
+                    .table-order__icon-elem {
+                        width: 1px;
+                        height: 38px;
+                        img {
+                            /*width: 32px;*/
+                        }
+                    }
+            
+                }
+            }
+        }
+    }
+}
+
+
