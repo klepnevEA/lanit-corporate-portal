@@ -1,0 +1,146 @@
+<div class="popup search-meetingroom" id="popup-call-win-add">
+    <div class="popup__wrap popup__wrap_width-700">
+        <a href="#" class="popup__close">
+            <i class="mdi mdi-close"></i>
+        </a>
+        <div class="popup__head">
+            <div class="popup__title">
+                Создание брони
+            </div>
+        </div>
+        <div class="popup__body">
+            <div class="popup__block popup__block_gray">
+                <table class="search-meetingroom__table">
+                    <tr>
+                        <td>Тема</td>
+                        <td><input class="input search-meetingroom__input" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="vrtclalign-top">Расположение</td>
+                        <td>
+                            <div class="ml-select search-meetingroom__ml-select">
+                                <i class="mdi mdi-chevron-down"></i>
+                                <input class="input ml-select__input search-meetingroom__input" type="text" value="" placeholder="Расположение">
+                                <div class="ml-select__dropbox">
+                                    <div class="ml-select__item active">1 «с»</div>
+                                    <div class="ml-select__item">2 «с»</div>
+                                    <div class="ml-select__item">3 «с»</div>
+                                    <div class="ml-select__item">4 «с»</div>
+                                    <div class="ml-select__item">5 «с»</div>
+                                    <div class="ml-select__item">6 «с»</div>
+                                    <div class="ml-select__item">7 «с»</div>
+                                    <div class="ml-select__item">8 «с»</div>
+                                </div>
+                            </div>
+                            <div class="search-meetingroom__desc"><span>Количество мест:</span> 6</div>
+                            <div class="search-meetingroom__desc"><span>Техническое оснащение:</span> Видеопанель, VGA, без управления, тел. 18883</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Дата и время начала <sup>*</sup></td>
+                        <td>
+                            <div class="ml-datepeaker search-meetingroom__ml-datepeaker">
+                                <span class="mdi mdi-calendar-today"></span>
+                                <input type="text" id="datepicker" class="input ml-select__input search-meetingroom__input_date alert" placeholder="">
+                            </div>
+                            <div class="ml-select search-meetingroom__ml-select_flt-lft">
+                                <i class="mdi mdi-chevron-down"></i>
+                                <input class="input ml-select__input search-meetingroom__input_time" type="text" value="" placeholder="Время начала">
+                                <div class="ml-select__dropbox">
+                                    <div class="ml-select__item active">16:30</div>
+                                    <div class="ml-select__item">17:00</div>
+                                    <div class="ml-select__item">17:30</div>
+                                    <div class="ml-select__item">18:00</div>
+                                    <div class="ml-select__item">18:30</div>
+                                    <div class="ml-select__item">19:00</div>
+                                    <div class="ml-select__item">19:30</div>
+                                    <div class="ml-select__item">20:00</div>
+                                    <div class="ml-select__item">20:30</div>
+                                </div>
+                            </div>
+                            <div class="search-meetingroom__alert">
+                                <span class="mdi mdi-alert-circle-outline"></span>
+                                Обязательное поле
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Дата и время окончания <sup>*</sup></td>
+                        <td>
+                            <div class="ml-datepeaker search-meetingroom__ml-datepeaker">
+                                <span class="mdi mdi-calendar-today"></span>
+                                <input type="text" id="datepicker" class="input ml-select__input search-meetingroom__input_date" placeholder="06.02.2018">
+                            </div>
+                            <div class="ml-select search-meetingroom__ml-select_flt-lft">
+                                <i class="mdi mdi-chevron-down"></i>
+                                <input class="input ml-select__input search-meetingroom__input_time" type="text" value="" placeholder="Время окончания">
+                                <div class="ml-select__dropbox">
+                                    <div class="ml-select__item active">18:00</div>
+                                    <div class="ml-select__item">18:30</div>
+                                    <div class="ml-select__item">19:00</div>
+                                    <div class="ml-select__item">19:30</div>
+                                    <div class="ml-select__item">20:00</div>
+                                    <div class="ml-select__item">20:30</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="vrtclalign-top">Участники</td>
+                        <td>
+                            <div class="ml-select">
+                                <div class="ml-select__title">
+                                    Введите фамилию и имя сотрудника
+                                </div>
+                                <input class="input ml-select__input search-meetingroom__input_hght-100" type="text" value="" placeholder="">
+                                <div class="ml-select__dropbox">
+                                    <div class="ml-select__item active">Алек</div>
+                                    <div class="ml-select__item">Алексей Иванов</div>
+                                    <div class="ml-select__item">Алексей Рачков</div>
+                                    <div class="ml-select__item">Алексей Сидоренко</div>
+                                    <div class="ml-select__item">Алексей Скворцов</div>
+                                    <div class="ml-select__item">Алексей Ушаков</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="vrtclalign-top">Внешние участники</td>
+                        <td>
+                            <div class="ml-select">
+                                <div class="ml-select__title">
+                                    Введите адрес электронной почты для внешних участников встречи
+                                </div>
+                                <input class="input ml-select__input search-meetingroom__input_hght-100" type="text" value="" placeholder="">
+                                <div class="ml-select__dropbox">
+                                    <div class="ml-select__item active"></div>
+                                    <div class="ml-select__item">Алексей Иванов</div>
+                                    <div class="ml-select__item">Алексей Рачков</div>
+                                    <div class="ml-select__item">Алексей Сидоренко</div>
+                                    <div class="ml-select__item">Алексей Скворцов</div>
+                                    <div class="ml-select__item">Алексей Ушаков</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="vrtclalign-top">Комментарий</td>
+                        <td>
+                            <textarea name="textarea" id="textarea" class="popup__form-textarea search-meetingroom__textarea_hght-100"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="popup__footer">
+            <div class="popup__footer-btn">
+                <button class="btn btn_medium btn_blue-dark btn_width-160">
+                    Отмена
+                </button>
+                <button class="btn btn_medium btn_width-160">
+                    Сохранить
+                </button>
+            </div>
+        </div>
+	</div>
+</div>

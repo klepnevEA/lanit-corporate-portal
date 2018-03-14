@@ -1,0 +1,150 @@
+<div class="popup search-meetingroom" id="popup-call-win-search">
+    <div class="popup__wrap popup__wrap_width-700">
+        <a href="#" class="popup__close">
+            <i class="mdi mdi-close"></i>
+        </a>
+        <div class="popup__head">
+            <div class="popup__title">
+                Поиск переговорных
+            </div>
+        </div>
+        <div class="popup__body">
+            <div class="popup__block popup__block_gray">
+                <table class="search-meetingroom__table">
+                    <tr>
+                        <td>Этаж</td>
+                        <td>
+                            <div class="ml-select search-meetingroom__ml-select_wdth-240px">
+                                <i class="mdi mdi-chevron-down"></i>
+                                <input class="input ml-select__input search-meetingroom__input" type="text" value="" placeholder="Этаж">
+                                <div class="ml-select__dropbox">
+                                    <div class="ml-select__item active">Все</div>
+                                    <div class="ml-select__item">1</div>
+                                    <div class="ml-select__item">2</div>
+                                    <div class="ml-select__item">3</div>
+                                    <div class="ml-select__item">4</div>
+                                    <div class="ml-select__item">5</div>
+                                    <div class="ml-select__item">6</div>
+                                    <div class="ml-select__item">7</div>
+                                    <div class="ml-select__item">8</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Номер переговорной</td>
+                        <td>
+                            <div class="ml-select search-meetingroom__ml-select_wdth-240px">
+                                <i class="mdi mdi-chevron-down"></i>
+                                <input class="input ml-select__input search-meetingroom__input" type="text" value="" placeholder="" disabled="disabled" />
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Количество мест</td>
+                        <td>
+                            <div class="search-meetingroom__ml-select_wdth-240px">
+                                <input class="input search-meetingroom__input" type="text">
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Дата и время начала <sup>*</sup></td>
+                        <td>
+                            <div class="ml-datepeaker search-meetingroom__ml-datepeaker">
+                                <span class="mdi mdi-calendar-today"></span>
+                                <input type="text" id="datepicker" class="input ml-select__input search-meetingroom__input_date" placeholder="06.02.2018">
+                            </div>
+                            <div class="ml-select search-meetingroom__ml-select_flt-lft">
+                                <i class="mdi mdi-chevron-down"></i>
+                                <input class="input ml-select__input search-meetingroom__input_time" type="text" value="" placeholder="Время начала">
+                                <div class="ml-select__dropbox">
+                                    <div class="ml-select__item active">16:30</div>
+                                    <div class="ml-select__item">17:00</div>
+                                    <div class="ml-select__item">17:30</div>
+                                    <div class="ml-select__item">18:00</div>
+                                    <div class="ml-select__item">18:30</div>
+                                    <div class="ml-select__item">19:00</div>
+                                    <div class="ml-select__item">19:30</div>
+                                    <div class="ml-select__item">20:00</div>
+                                    <div class="ml-select__item">20:30</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Дата и время окончания <sup>*</sup></td>
+                        <td>
+                            <div class="ml-datepeaker search-meetingroom__ml-datepeaker">
+                                <span class="mdi mdi-calendar-today"></span>
+                                <input type="text" id="datepicker" class="input ml-select__input search-meetingroom__input_date" placeholder="06.02.2018">
+                            </div>
+                            <div class="ml-select search-meetingroom__ml-select_flt-lft">
+                                <i class="mdi mdi-chevron-down"></i>
+                                <input class="input ml-select__input search-meetingroom__input_time" type="text" value="" placeholder="Время окончания">
+                                <div class="ml-select__dropbox">
+                                    <div class="ml-select__item active">18:00</div>
+                                    <div class="ml-select__item">18:30</div>
+                                    <div class="ml-select__item">19:00</div>
+                                    <div class="ml-select__item">19:30</div>
+                                    <div class="ml-select__item">20:00</div>
+                                    <div class="ml-select__item">20:30</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="search-meetingroom__table_txtalign-right">
+                            <button class="btn btn_medium btn_blue">
+                                Найти переговорные
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="popup__block">
+                <table class="search-meetingroom__table-result">
+                    <tr>
+                        <th>Название</th>
+                        <th>Номер</th>
+                        <th>Кол-во мест</th>
+                        <th>Техническое оснащение</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="link">Конференц зал МУР</a></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="link">Переговорная МУР-01</a></td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>Видео-панель, VGA, без управления, тел.18882</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="link">Переговорная 1</a></td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>Проектор</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="link">Переговорная МУР-02</a></td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td><span class="search-meetingroom__table-result_italic">Нет оборудования</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="link">Переговорная МУР-03</a></td>
+                        <td>2</td>
+                        <td>6</td>
+                        <td>Видео-стенка, ВКС, HDMI, VGA, панель управления</td>
+                    </tr>
+                </table>
+                @@include('./pagination.html')
+            </div>
+        </div>
+	</div>
+</div>

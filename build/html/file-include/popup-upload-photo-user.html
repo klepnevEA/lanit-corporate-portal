@@ -1,0 +1,77 @@
+<div class="popup" id="upload-photo-user">
+	<div class="popup__wrap popup__wrap_width-560">
+		<a href="#" class="popup__close">
+			<i class="mdi mdi-close"></i>
+		</a>
+		<div class="popup__block popup__block_pt-0 popup__block_border-bottom">
+			<div class="popup__head">
+				<div class="popup__title popup__title_upload-photo">
+					Добавление фотографии
+				</div>
+                <div class="path-creation__text_center">Размещать фотографии можно в форматах: jpg, jpeg, gif, png.</div>
+			</div>
+		</div>
+
+		<div class="popup__overflow-scroll">
+
+			<div class="popup__block popup__block_gray popup__block_border-bottom">
+                
+                <!--
+                <div class="upload-photo">
+                    
+                    <div class="upload-photo__icon">
+                        <span class="mdi mdi-folder-move"></span>
+                    </div>
+                    <div class="upload-photo__text">
+                        <div class="path-creation__text">
+                            Перетащите файл фотографии, чтобы прикрепить ее к своей карточке сотрудника, или воспользуйтесь кнопкой ниже.
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                <button class="btn btn_orange btn_medium">
+                    <span class="mdi mdi-plus-circle-outline"></span>
+                    Загрузите фотографию
+                </button>
+                <div class="upload-files">
+                    <div class="upload-files__icon">
+                        <span class="mdi mdi-image-area"></span>
+                    </div>
+                    <div class="upload-files__text">
+                        Файл не выбран
+                    </div>
+                </div>
+                -->
+                <div class="fileinput-button">
+                    <div class="fileinput-button__text">Перетащите файлы фотографий, чтобы прикрепить их к объявлению, или воспользуйтесь кнопкой ниже.</div>
+                    <input id="fileupload" type="file" name="files[]" multiple="">
+                </div>
+                
+                <div class="ml-privateads__line">
+                    <div class="fileinput-button__orange">
+                        <i class="mdi mdi-plus-circle-outline"></i> Добавить изображение
+                    </div>
+                </div>
+
+                <div class="ml-privateads__line">
+                    <div class="fileinput-files"></div>
+                </div>
+			</div>
+		</div>
+		<!-- overflow-scroll -->
+
+		<div class="popup__block popup__block_border-top">
+			<div class="btn__block btn__block_center">
+				<a href="#" class="btn btn_blue-dark btn_medium">
+					Отмена
+				</a>
+				<a href="#" class="btn btn_medium">
+					Добавить
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>

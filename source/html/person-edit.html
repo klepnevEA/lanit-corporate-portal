@@ -22,14 +22,15 @@
                     
                     
                     <!-- Карточка сотрудника -->
+                    <form>
                     <div class="row">
 						<div class="col-xs-12 person-card">
 							<h2 class="title title_fsz-30">Карточка сотрудника</h2>
                             <h3 class="title title_orange_fsz-24">Анна Владимировна Азизова</h3>
                             <div class="block block_flex block_gray">
                                 <div class="person-card__photo-block">
-                                    <div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')"></div>
-                                    <button class="btn btn_medium btn_orange" data-popup="drive-add-new">
+                                    <div class="photo-user" style="background-image:url('../img/userpic.jpg')"></div>
+                                    <button class="btn btn_medium btn_orange popup-open" data-popup="upload-photo-user">
                                         <span class="mdi mdi-upload"></span>
                                         загрузить фотографию
                                     </button>
@@ -96,10 +97,10 @@
                     <div class="row">
 						<div class="col-xs-12 person-card">
 							<h2 class="title">Информация о сотруднике</h2>
-                            <form class="person-card__form">
+                            <div class="person-card__form">
                                 <div class="text text_gray">Опишите Ваше образование, Ваш опыт работы, награды и хобби</div>
                                 <textarea name="textarea2" id="textarea2" class="person-card__form-textarea" placeholder=""></textarea>
-                            </form>
+                            </div>
                             <div class="btn__block btn_right">
                                 <a href="#" class="btn btn_blue-dark btn_medium btn_width-160 btn_txtalign-cntr">
                                     Отмена
@@ -110,6 +111,7 @@
                             </div>
                         </div>
 					</div>
+                    </form>
                     <!-- Информация о сотруднике -->
                 
 					@@include('./file-include/footer.html')
@@ -124,7 +126,9 @@
 
 
 	<!-- popups -->
-	@@include('./file-include/popup-mood-office.html')
+    @@include('./file-include/popup-mood-office.html')
+    @@include('./file-include/popup-thanks-for-trips.html')
+	@@include('./file-include/popup-upload-photo-user.html')
     
 </body>
 </html>

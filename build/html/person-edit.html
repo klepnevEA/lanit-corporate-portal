@@ -24,9 +24,16 @@
 	<script src="../scripts/stickyfill.js"></script>
 	<script src="../scripts/slick.min.js"></script>
   	<script src="../scripts/slider.js"></script>
+    
+    <!-- fullcalendar -->
+    <script src="../scripts/moment.min.js"></script>
+	<script src="../scripts/fullcalendar.min.js"></script>
+    <script src="../scripts/locale-all.js"></script>
+    <!-- fullcalendar -->
   
 	<script src="../scripts/scripts.js"></script>
 	<script src="../scripts/jquery.scrollbar.js"></script>
+
 
 </head>
 <body>
@@ -333,14 +340,15 @@
                     
                     
                     <!-- Карточка сотрудника -->
+                    <form>
                     <div class="row">
 						<div class="col-xs-12 person-card">
 							<h2 class="title title_fsz-30">Карточка сотрудника</h2>
                             <h3 class="title title_orange_fsz-24">Анна Владимировна Азизова</h3>
                             <div class="block block_flex block_gray">
                                 <div class="person-card__photo-block">
-                                    <div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')"></div>
-                                    <button class="btn btn_medium btn_orange" data-popup="drive-add-new">
+                                    <div class="photo-user" style="background-image:url('../img/userpic.jpg')"></div>
+                                    <button class="btn btn_medium btn_orange popup-open" data-popup="upload-photo-user">
                                         <span class="mdi mdi-upload"></span>
                                         загрузить фотографию
                                     </button>
@@ -407,10 +415,10 @@
                     <div class="row">
 						<div class="col-xs-12 person-card">
 							<h2 class="title">Информация о сотруднике</h2>
-                            <form class="person-card__form">
+                            <div class="person-card__form">
                                 <div class="text text_gray">Опишите Ваше образование, Ваш опыт работы, награды и хобби</div>
                                 <textarea name="textarea2" id="textarea2" class="person-card__form-textarea" placeholder=""></textarea>
-                            </form>
+                            </div>
                             <div class="btn__block btn_right">
                                 <a href="#" class="btn btn_blue-dark btn_medium btn_width-160 btn_txtalign-cntr">
                                     Отмена
@@ -421,6 +429,7 @@
                             </div>
                         </div>
 					</div>
+                    </form>
                     <!-- Информация о сотруднике -->
                 
 					<footer class="footer">
@@ -452,7 +461,7 @@
 
 
 	<!-- popups -->
-	<div class="popup" id="mood-office">
+    <div class="popup" id="mood-office">
 		<div class="popup__wrap">
 			<a href="#" class="popup__close">
 				<i class="mdi mdi-close"></i>
@@ -559,6 +568,200 @@
 
 		</div>
 	</div>
+    <div class="popup" id="thanks-for-trips">
+		<div class="popup__wrap popup__wrap_width-700">
+			<a href="#" class="popup__close">
+				<i class="mdi mdi-close"></i>
+			</a>
+			<div class="popup__block popup__block_pt-0 popup__block_border-bottom">
+				<div class="popup__head">
+					<div class="popup__title">
+						Благодарность за поездки
+					</div>
+				</div>
+			</div>
+
+			<div class="popup__overflow-scroll">
+
+				<div class="popup__block popup__block_gray">
+						<div class="person-block">
+							<div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')">
+								<div class="photo-user__status active"></div>
+							</div>
+
+							<div class="person-block__info">
+								<div class="person-block__title-small">Водитель:</div>
+								<div class="person-block__title-big">Александра Владиславовна Берская</div>
+								<div class="person-block__submit">Временный помощник главного бухгалтера</div>
+							</div>
+						</div>
+				</div>
+
+				<div class="popup__block popup__block_blue">
+					<table class="table-thanks">
+						<tr>
+							<td class="table-thanks__first-td">
+								<span class="mdi mdi-thumb-up-outline"></span>
+							</td>
+							<td>
+								<div class="table-thanks__number">16</div>
+								<div class="table-thanks__text">благодарностей<br> всего</div>
+							</td>
+							<td>
+								<div class="table-thanks__number">0</div>
+								<div class="table-thanks__text">благодарностей<br> в этом месяце</div>
+							</td>
+						</tr>
+
+					</table>
+				</div>
+
+				<div class="popup__block popup__block_padding">
+					<ul class="person-list">
+						
+						<li class="person-list__elem">
+							<div class="person-block">
+								<div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')">
+									<div class="photo-user__status"></div>
+								</div>
+
+								<div class="person-block__info">
+									<div class="person-block__title">Александра Владиславовна Берская</div>
+									<div class="person-block__text">Большое спасибо за поездку! александра очень пунктуальна и аккуратна, ездить с ней одно удовольстие, да и музыка в машне всегда приятная. В общем езжу постоянно и вам рекомендую, второго такого душевного и просто вежливого человека трудно найти, Саша - единственная и неповторимая!!</div>
+									<div class="person-block__date">02.10.2017</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="person-list__elem">
+							<div class="person-block">
+								<div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')">
+									<div class="photo-user__status active"></div>
+								</div>
+
+								<div class="person-block__info">
+									<div class="person-block__title">Александра Владиславовна Берская</div>
+									<div class="person-block__text">Потрясающая поездка! Спасибо!</div>
+									<div class="person-block__date">02.10.2017</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="person-list__elem">
+							<div class="person-block">
+								<div class="photo-user" style="background-image:url('../img/birthdays-slider/photo-1.png')">
+									<div class="photo-user__status active"></div>
+								</div>
+
+								<div class="person-block__info">
+									<div class="person-block__title">Александра Владиславовна Берская</div>
+									<div class="person-block__text">Потрясающая поездка! Спасибо!</div>
+									<div class="person-block__date">02.10.2017</div>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div> 
+			<!-- overflow scroll -->
+
+			<div class="popup__block popup__block_gray popup__block_border-top">
+				<div class="popup__form">
+					<form>
+						<div>
+							<div class="popup__form-title">Оставьте благодарность</div>
+							<textarea name="textarea6" id="textarea6" class="popup__form-textarea" placeholder="Ввести текст благодарности"></textarea>
+						</div>
+						<buttun class="btn btn_blue btn_right btn_medium">
+							<span class="mdi mdi-thumb-up-outline"></span> 
+							Отблагодарить
+						</buttun>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="popup" id="upload-photo-user">
+	<div class="popup__wrap popup__wrap_width-560">
+		<a href="#" class="popup__close">
+			<i class="mdi mdi-close"></i>
+		</a>
+		<div class="popup__block popup__block_pt-0 popup__block_border-bottom">
+			<div class="popup__head">
+				<div class="popup__title popup__title_upload-photo">
+					Добавление фотографии
+				</div>
+                <div class="path-creation__text_center">Размещать фотографии можно в форматах: jpg, jpeg, gif, png.</div>
+			</div>
+		</div>
+
+		<div class="popup__overflow-scroll">
+
+			<div class="popup__block popup__block_gray popup__block_border-bottom">
+                
+                <!--
+                <div class="upload-photo">
+                    
+                    <div class="upload-photo__icon">
+                        <span class="mdi mdi-folder-move"></span>
+                    </div>
+                    <div class="upload-photo__text">
+                        <div class="path-creation__text">
+                            Перетащите файл фотографии, чтобы прикрепить ее к своей карточке сотрудника, или воспользуйтесь кнопкой ниже.
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+                <button class="btn btn_orange btn_medium">
+                    <span class="mdi mdi-plus-circle-outline"></span>
+                    Загрузите фотографию
+                </button>
+                <div class="upload-files">
+                    <div class="upload-files__icon">
+                        <span class="mdi mdi-image-area"></span>
+                    </div>
+                    <div class="upload-files__text">
+                        Файл не выбран
+                    </div>
+                </div>
+                -->
+                <div class="fileinput-button">
+                    <div class="fileinput-button__text">Перетащите файлы фотографий, чтобы прикрепить их к объявлению, или воспользуйтесь кнопкой ниже.</div>
+                    <input id="fileupload" type="file" name="files[]" multiple="">
+                </div>
+                
+                <div class="ml-privateads__line">
+                    <div class="fileinput-button__orange">
+                        <i class="mdi mdi-plus-circle-outline"></i> Добавить изображение
+                    </div>
+                </div>
+
+                <div class="ml-privateads__line">
+                    <div class="fileinput-files"></div>
+                </div>
+			</div>
+		</div>
+		<!-- overflow-scroll -->
+
+		<div class="popup__block popup__block_border-top">
+			<div class="btn__block btn__block_center">
+				<a href="#" class="btn btn_blue-dark btn_medium">
+					Отмена
+				</a>
+				<a href="#" class="btn btn_medium">
+					Добавить
+				</a>
+			</div>
+		</div>
+
+	</div>
+</div>
     
 </body>
 </html>

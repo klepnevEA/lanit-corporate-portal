@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="ru">
+@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+					
+					@@include('./file-include/header.html')
+					@@include('./file-include/bread-crumbs.html')
+                    
+                    
+                    <!-- Поиск по сайту -->
+                    <div class="row">
+						<div class="col-xs-12 ml-call">
+                            <h2 class="title title_fsz-30">Бронирование переговорных</h2>
+                            <div class="ml-call__doc-list">
+                                <div class="ml-call__doc-list_block">
+                                    <span class="mdi mdi-clipboard-text"></span>
+                                    <div class="ml-call__doc-list_elem"><a href="#" class="link">Инструкция по работе с сервисом «Бронирование переговорных»</a></div>
+                                </div>
+                                <div class="ml-call__doc-list_block">
+                                    <span class="mdi mdi-clipboard-text"></span>
+                                    <div class="ml-call__doc-list_elem"><a href="#" class="link">Регламент заказа переговорных комнат на Мурманском</a></div>
+                                </div>
+                            </div>
+                            <div class="block_flex block_gray ml-call__block">
+                                <div class="ml-select ml-call__srch-meetingroom">
+                                    <i class="mdi mdi-chevron-down"></i>
+                                    <input class="input ml-select__input ml-call__srch-meetingroom_input" type="text" value="" placeholder="">
+                                    <div class="ml-select__dropbox">
+                                        <div class="ml-select__item">1 этаж</div>
+                                        <div class="ml-select__item">2 этаж</div>
+                                        <div class="ml-select__item active">3 этаж</div>
+                                        <div class="ml-select__item">4 этаж</div>
+                                        <div class="ml-select__item">5 этаж</div>
+                                        <div class="ml-select__item">6 этаж</div>
+                                        <div class="ml-select__item">7 этаж</div>
+                                        <div class="ml-select__item">8 этаж</div>
+                                    </div>
+                                </div>
+                                <button class="btn btn_medium btn_blue">
+                                    <span class="mdi mdi-magnify"></span>
+                                    Найти свободные переговорные
+                                </button>
+                            </div>
+                            <div class="block_flex block_gray ml-call__meetingroom-list">
+                                <div class="ml-call__meetingroom-list_elem active">Переговорная МУР-01</div>
+                                <div class="ml-call__meetingroom-list_elem">Переговорная МУР-02</div>
+                                <div class="ml-call__meetingroom-list_elem">Переговорная МУР-03</div>
+                                <div class="ml-call__meetingroom-list_elem">Переговорная ДВСБС МУР-208</div>
+                                <div class="ml-call__meetingroom-list_elem">Конференц-зал МУР</div>
+                            </div>
+                            <div class="block_flex ml-call__booking-room">
+                                <div class="ml-call__booking-room_tech">
+                                    <div class="search-meetingroom__desc"><span>Количество мест:</span> 6</div>
+                                    <div class="search-meetingroom__desc"><span>Техническое оснащение:</span> Видеопанель, VGA, без управления, тел. 18883</div>
+                                </div>
+                                <button class="btn btn_medium btn_blue">
+                                    <span class="mdi mdi-check"></span>
+                                    Забронировать
+                                </button>
+                            </div>
+                            <div class="block_flex ml-call__filter-list">
+                                <div class="ml-call__filter-list_elem green">Мои брони</div>
+                                <div class="ml-call__filter-list_elem blue">Я участник</div>
+                                <div class="ml-call__filter-list_elem orange">Уже забронировано</div>
+                            </div>
+                            <div class="block_flex ml-call__calendar">
+                                <div id='calendar'></div>
+                            </div>
+							
+							<button class="btn btn_medium btn_blue popup-open" data-popup="popup-call-win-main">
+                                <span class="mdi mdi-pencil"></span>
+                                Просмотр брони
+                            </button>
+                            <button class="btn btn_medium btn_blue popup-open" data-popup="popup-call-win-search">
+                                <span class="mdi mdi-pencil"></span>
+                                Поиск переговорных
+                            </button>
+                            <button class="btn btn_medium btn_blue popup-open" data-popup="popup-call-win-add">
+                                <span class="mdi mdi-pencil"></span>
+                                Создание брони
+                            </button>
+
+						</div>
+					</div>
+                    <!-- Поиск по сайту -->
+                
+					@@include('./file-include/footer.html')
+				</div><!--container-main-->		
+
+			</div><!--container-wrap-->
+			
+		</div>	 <!--container-->		
+		<!-- <div class="footer__before"></div> -->
+		
+	</div> <!--wrapper-->
+
+
+	<!-- popups -->
+    @@include('./file-include/popup-mood-office.html')
+    @@include('./file-include/popup-call-win-main.html')
+	@@include('./file-include/popup-call-win-search.html')
+    @@include('./file-include/popup-call-win-add.html')
+</body>
+</html>
+

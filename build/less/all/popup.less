@@ -34,13 +34,20 @@
 		transform: translate(-50%, -50%);
 		background-color: #fff;
 		
-		&_width-700 {
-			width: 700px;
-		}
-
 		&_width-440 {
 			width: 440px;
-		}		
+		}
+        
+        &_width-560 {
+			width: 560px;
+		}
+        
+        &_width-700 {
+			width: 700px;
+		}
+        &-block {
+            max-height: calc(~'100vh - 350px');
+        }
 	}
 
 	&__close {
@@ -73,7 +80,18 @@
 		&_text-transform {
 			text-transform: inherit;
 		}
+        
+        &_upload-photo {
+            margin-bottom: 5px;
+        }
 	}
+    
+    &__desc {
+        color: #ff8b00;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
 
 	&__btn {
 		display: inline-block;

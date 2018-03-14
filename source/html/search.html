@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html lang="ru">
+@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+					
+					@@include('./file-include/header.html')
+					@@include('./file-include/bread-crumbs.html')
+                    
+                    
+                    <!-- Поиск по сайту -->
+                    <div class="row">
+						<div class="col-xs-12 ml-search">
+							<h2 class="title title_fsz-30">Поиск по сайту</h2>
+							<!-- форма поиска -->
+							<div class="ml-search__block block_gray"> 
+								<div class="ml-search__input-block">
+									<input class="ml-search__input" type="text" value="Новости" />
+								</div>
+								<button class="btn">Найти</button>
+							</div>
+                            <div class="ml-search__num-result">
+                                Найдено: <span class="ml-search__num-result_bold">5-10</span> <span class="ml-search__num-result_grey">из примерно 3 400</span>
+                            </div>
+							<!-- форма поиска -->
+                            
+                            <!-- Поисковая выдача -->
+                            <div class="ml-search__result">
+                                <div class="ml-search__result-block">
+                                    <div class="ml-search__result-title">
+                                        О компании
+                                    </div>
+                                    <div class="ml-search__result-text">
+                                        Ланит - «ЛАборатория Новых Информационных Технологий» - ведущая в России и СНГ многопрофильная группа ИТ-компаний. Сегодня ЛАНИТ является крупнейшим российским системным интегратором и генератором <span class="ml-search__find">новости</span> ...
+                                    </div>
+                                    <div class="ml-search__result-data">
+                                        Дата: 24.07.2017
+                                    </div>
+                                    <div class="ml-search__result-link">
+                                        <a href="#" class="link">https://mylanit.ru/about</a>
+                                    </div>
+                                </div>
+                                <div class="ml-search__result-block">
+                                    <div class="ml-search__result-title">
+                                        РИА <span class="ml-search__find">Новости</span> внедрило систему управления взаимоотношениями с клиентами
+                                    </div>
+                                    <div class="ml-search__result-text">
+                                        РИА <span class="ml-search__find">Новости</span> и компания «НОРБИТ» завершили первый этап работ в рамках проекта по внедрению автоматизированной системы управления взаимоотношениями с контрагентами. Создание CRM-системы призвано оптимизировать систему продаж всего...
+                                    </div>
+                                    <div class="ml-search__result-data">
+                                        Дата: 24.07.2017
+                                    </div>
+                                    <div class="ml-search__result-link">
+                                        <a href="#" class="link">https://mylanit.ru/news/Doc2Lib/2016</a>
+                                    </div>
+                                </div>
+                                <div class="ml-search__result-block">
+                                    <div class="ml-search__result-title">
+                                        Агентство «РИА <span class="ml-search__find">Новости</span>» первым внедрило систему «NORBIT4MEDIA: управление медиакомпанией»
+                                    </div>
+                                    <div class="ml-search__result-text">
+                                        Компания НОРБИТ, входящая в ГК ЛАНИТ, завершила проект в «РИА <span class="ml-search__find">Новости</span>» по переводу решения для медиакомпаний с Microsoft Dynamics CRM 4.0 на Microsoft Dynamics CRM 2011. Группа «РИА <span class="ml-search__find">Новости</span>» стала первым партнером компании НОРБИТ, которая...
+                                    </div>
+                                    <div class="ml-search__result-data">
+                                        Дата: 24.07.2017
+                                    </div>
+                                    <div class="ml-search__result-link">
+                                        <a href="#" class="link">https://mylanit.ru/about</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Поисковая выдача -->
+						</div>
+					</div>
+                    <!-- Поиск по сайту -->
+
+                   @@include('./file-include/pagination.html')
+                    
+					@@include('./file-include/footer.html')
+				</div><!--container-main-->		
+
+			</div><!--container-wrap-->
+			
+		</div>	 <!--container-->		
+		<!-- <div class="footer__before"></div> -->
+		
+	</div> <!--wrapper-->
+
+
+	<!-- popups -->
+	@@include('./file-include/popup-mood-office.html')
+	
+</body>
+</html>
+

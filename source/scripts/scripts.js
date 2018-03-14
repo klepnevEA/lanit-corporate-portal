@@ -219,7 +219,14 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).closest('.popup').removeClass('active');
 	});
-
+    
+    // закрыть попап при клике по фону
+    /*
+    $('.popup').on('click', function(e) {
+		e.preventDefault();
+		$(this).closest('.popup').removeClass('active');
+	});
+    */
 
 	// настроение в офисе попап
 
@@ -395,7 +402,89 @@ $('.select').each(function(){
 	
 
 
+    
+    
+    // fullcalendar
+    
+    var initialLocaleCode = 'ru';
+    
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'today',
+        center: 'prev title next',
+        right: 'month agendaWeek agendaDay' //,listMonth
+      },
+      defaultDate: '2018-03-12',
+      locale: initialLocaleCode,
+      //buttonIcons: true, // show the prev/next text
+      //weekNumbers: true,
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+            title: 'Сухаев Яков',
+            start: '2018-03-01T11:00:00'
+        },
+        {
+            title: 'Евграфова Марина',
+            start: '2018-03-01T14:30:00'
+        },
+        {
+            title: 'Евграфова Марина',
+            start: '2018-03-01T15:30:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-03-09T16:00:00'
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-03-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2018-03-11',
+          end: '2018-03-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T10:30:00',
+          end: '2018-03-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2018-03-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2018-03-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2018-03-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2018-03-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2018-03-28'
+        }
+      ]
+    });
+    
 
+    
+    
 
 }); 
 

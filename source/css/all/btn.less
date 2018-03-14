@@ -71,19 +71,34 @@
 		}
 	}
 
-	&__block_center {
-		text-align: center;
-		padding: 20px;
-		
-		.btn {
-			margin: 0 3px;
-		}
+	&__block {
+        &_center {
+            text-align: center;
+            padding: 20px;
+
+            .btn {
+                margin: 0 3px;
+            }
+        }
+        &_text-center {
+            color: @gray;
+            text-align: center;
+            font-size: 14px;
+            margin: 10px 0;
+        }
 	}
     &_width-160 {
         width: 160px;
     }
+    &_width-280 {
+        width: 280px;
+    }
     &_txtalign-cntr {
         text-align: center;
+    }
+    
+    &_fsz-14 {
+        font-size: 14px;
     }
 }
 
