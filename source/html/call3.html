@@ -47,7 +47,7 @@
                                         <div class="ml-select__item">8 этаж</div>
                                     </div>
                                 </div>
-                                <button class="btn btn_medium btn_blue">
+                                <button class="btn btn_medium btn_blue popup-open" data-popup="popup-call-win-search">
                                     <span class="mdi mdi-magnify"></span>
                                     Найти свободные переговорные
                                 </button>
@@ -64,7 +64,7 @@
                                     <div class="search-meetingroom__desc"><span>Количество мест:</span> 6</div>
                                     <div class="search-meetingroom__desc"><span>Техническое оснащение:</span> Видеопанель, VGA, без управления, тел. 18883</div>
                                 </div>
-                                <button class="btn btn_medium btn_blue">
+                                <button class="btn btn_medium btn_blue popup-open" data-popup="popup-call-win-add">
                                     <span class="mdi mdi-check"></span>
                                     Забронировать
                                 </button>
@@ -77,35 +77,15 @@
                             <div class="block_flex ml-call__calendar">
                                 <div id='calendar'></div>
                             </div>
-							
-							<button class="btn btn_medium btn_blue popup-open" data-popup="popup-call-win-main">
-                                <span class="mdi mdi-pencil"></span>
-                                Просмотр брони
-                            </button>
-                            <button class="btn btn_medium btn_blue popup-open" data-popup="popup-call-win-search">
-                                <span class="mdi mdi-pencil"></span>
-                                Поиск переговорных
-                            </button>
-                            <button class="btn btn_medium btn_blue popup-open" data-popup="popup-call-win-add">
-                                <span class="mdi mdi-pencil"></span>
-                                Создание брони
-                            </button>
-
 						</div>
 					</div>
                     <!-- Поиск по сайту -->
-                
 					@@include('./file-include/footer.html')
 				</div><!--container-main-->		
-
 			</div><!--container-wrap-->
-			
 		</div>	 <!--container-->		
 		<!-- <div class="footer__before"></div> -->
-		
 	</div> <!--wrapper-->
-
-
 	<!-- popups -->
     @@include('./file-include/popup-mood-office.html')
     @@include('./file-include/popup-call-win-main.html')
@@ -113,4 +93,3 @@
     @@include('./file-include/popup-call-win-add.html')
 </body>
 </html>
-
