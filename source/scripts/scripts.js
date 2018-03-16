@@ -449,7 +449,7 @@ $('.select').each(function(){
         ],
         fixedWeekCount: false,
         defaultDate: '2018-03-12',
-        noEventsMessage: 'wwww',
+        noEventsMessage: '',
         displayEventTime: true,
         displayEventEnd: true,
         locale: 'ru',
@@ -461,6 +461,9 @@ $('.select').each(function(){
         contentHeight : 250,
         //aspectRatio: 12,
         height: 'auto',
+        slotLabelFormat: [
+          'HH:mm'
+        ],
         events: [
             {
                 id: 1,

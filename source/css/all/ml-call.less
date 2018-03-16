@@ -324,150 +324,189 @@
     }
     &__calendar {
         margin: 40px 0 60px 0;
-        h2 {
-            font-family: 'PFBeauSansPro-Bold';
-            font-size: 24px;
-            text-transform: uppercase;
-            line-height: 34px;
-        }
-        .fc-toolbar .fc-right,
-        .fc-toolbar .fc-left {
-            width: 27%;
-        }
-        .fc-right {
-            padding: 2px 0;
-        }
-        .fc-left {
-            padding: 10px 0;
-        }
-        .fc-icon-left-single-arrow:after,
-        .fc-icon-right-single-arrow:after {
-            content: "\F141";
-            display: inline-block;
-            font: normal normal normal 24px/1 "Material Design Icons";
-            font-size: inherit;
-            text-rendering: auto;
-            line-height: inherit;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .fc-icon-left-single-arrow:after {
-            content: "\F141";
-        }
-        .fc-icon-right-single-arrow:after {
-            content: "\F142";
-        }
-        .fc-state-default {
-            border: 0px solid;
-            background: none;
-            border-color: transparent;
-            color: @blue;
-            text-shadow: none;
-            box-shadow: none;
-        }
-        .fc-icon {
-            font-size: 46px;
-        }
-        .fc button {
-            padding: 0;
-        }
-        .fc button .fc-icon {
-            margin: 0;
-        }
-        .fc-toolbar.fc-header-toolbar {
+        .fc-toolbar {
             margin-bottom: 20px;
-        }
-        .fc .fc-toolbar .fc-agendaDay-button,
-        .fc .fc-toolbar .fc-agendaWeek-button,
-        .fc .fc-toolbar .fc-month-button {
-            font-family: 'PFBeauSansPro-SemiBold';
-            font-size: 14px;
-            text-transform: uppercase;
-            padding: 0px 18px 0px;
-            margin: 0 10px 0 0;
-            border-radius: 20px;
-            color: #000;
-            float: right;
-            border: 1px solid #fff;
-            &.fc-state-active {
-                background-color: @orange;
-                color: #fff;
-                &:hover {
-                    border: 1px solid #fff;
-                    /*background-color: #ed8203;*/
+            .fc-right {
+                width: 26%;
+                padding: 2px 0;
+            }
+            .fc-left {
+                width: 24%;
+                padding: 10px 0;
+                .fc-state-default {
+                    &.fc-CustomButtonOpenAll-button,
+                    &.fc-CustomButtonCloseAll-button {
+                        font-family: 'PFBeauSansPro-Regular';
+                        color: @blue;
+                        font-size: 13px;
+                        text-decoration: none;
+                        border-bottom: 1px dashed @blue;
+                        height: 16px;
+                        border-radius: 0px;
+                        padding: 0;
+                    }
+                    &.fc-CustomButtonCloseAll-button {
+                        margin-left: 15px;
+                    }
                 }
             }
-            &:hover {
-                border: 1px solid @orange;
+            .fc-center {
+                h2 {
+                    font-family: 'PFBeauSansPro-Bold';
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    line-height: 34px;
+                }
+            }
+            
+            .fc-agendaDay-button,
+            .fc-agendaWeek-button,
+            .fc-month-button {
+                font-family: 'PFBeauSansPro-SemiBold';
+                font-size: 14px;
+                text-transform: uppercase;
+                padding: 0px 18px 0px;
+                margin: 0 5px 0 0;
+                border-radius: 20px;
+                color: #000;
+                float: right;
+                border: 1px solid #fff;
+                &.fc-state-active {
+                    background-color: @orange;
+                    color: #fff;
+                    &:hover {
+                        border: 1px solid #fff;
+                        /*background-color: #ed8203;*/
+                    }
+                }
+                &:hover {
+                    border: 1px solid @orange;
+                }
+            }
+            .fc-month-button {
+                margin-right: 0;
+            }
+            .fc-state-default {
+                border: 0px solid;
+                background: none;
+                border-color: transparent;
+                /*color: @blue;*/
+                text-shadow: none;
+                box-shadow: none;
+                border: 1px solid #fff;
+                .fc-icon {
+                    color: #00aeff;
+                    margin: 0;
+                    font-size: 46px;
+                    &-left-single-arrow:after,
+                    &-right-single-arrow:after {
+                        content: "\F141";
+                        display: inline-block;
+                        font: normal normal normal 24px/1 "Material Design Icons";
+                        font-size: inherit;
+                        text-rendering: auto;
+                        line-height: inherit;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                    }
+                    &-left-single-arrow:after {
+                        content: "\F141";
+                    }
+                    &-right-single-arrow:after {
+                        content: "\F142";
+                    }
+                }
+            }
+            .fc button {
+                padding: 0;
             }
         }
-        .fc .fc-toolbar .fc-month-button {
-            margin-right: 0;
-        }
-        .fc-head {
+        .fc-head,
+        .fc-axis {
             font-family: 'PFBeauSansPro-SemiBold';
             font-size: 18px;
             text-transform: uppercase;
             color: #b2b9be;
             line-height: 30px;
         }
-        .fc-day-top.fc-other-month .fc-day-number {
-            font-family: 'PFBeauSansPro-SemiBold';
-            font-size: 18px;
-            text-transform: uppercase;
-            color: #b2b9be;
-            line-height: 30px;
-        }
-        .fc-day-top .fc-day-number {
-            font-family: 'PFBeauSansPro-SemiBold';
-            font-size: 18px;
-            text-transform: uppercase;
-            color: #32393e;
-            line-height: 30px;
-        }
-        .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
-            float: none;
+        .fc-ltr .fc-axis {
+            text-align: center;
         }
         .fc-day-top {
             text-align: center;
             /*background-color: rgba(0,0,0,0.05);*/
+            .fc-day-number {
+                font-family: 'PFBeauSansPro-SemiBold';
+                font-size: 18px;
+                text-transform: uppercase;
+                color: #32393e;
+                line-height: 30px;
+            }
+            &.fc-other-month .fc-day-number {
+                font-family: 'PFBeauSansPro-SemiBold';
+                font-size: 18px;
+                text-transform: uppercase;
+                color: #b2b9be;
+                line-height: 30px;
+            }
         }
-        .fc .fc-row .fc-content-skeleton td.fc-day-top {
-            background-color: rgba(0,0,0,0.05);
-            border-color: transparent;
-            border-bottom: 1px solid @light-gray;
+        .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+            float: none;
         }
-        .fc-row .fc-content-skeleton {
-            padding-bottom: 0px;
-        }
-        .fc-row .fc-content-skeleton table tr:last-child td a {
-            border-bottom: 0px;
-        }
-        .fc-row .fc-content-skeleton table tr:nth-child(4) td a {
-            border-bottom: 0px;
-        }
-        .fc-unthemed .fc-content,
-        .fc-unthemed .fc-divider,
-        .fc-unthemed .fc-list-heading td,
-        .fc-unthemed .fc-list-view,
-        .fc-unthemed .fc-popover,
-        .fc-unthemed .fc-row,
-        .fc-unthemed tbody,
-        .fc-unthemed td,
-        .fc-unthemed th,
-        .fc-unthemed thead {
-            border-color: @light-gray;
+        .fc-row {
+            .fc-content-skeleton {
+                padding-bottom: 0px;
+                border-color: @light-gray;
+                min-height: 92px;
+                table tr {
+                    &:last-child td a {
+                        border-bottom: 0px;
+                    }
+                    &:nth-child(4) td a {
+                        border-bottom: 0px;
+                    }
+                }
+                .fc-day-top {
+                    background-color: rgba(0,0,0,0.05);
+                    border-color: transparent;
+                    border-bottom: 1px solid @light-gray;
+                }
+                td {
+                    min-height: 60px;
+                }
+            }
         }
         .fc-sun, .fc-sat {
             background-color: rgba(0,0,0,0.02);
             width: 75px;
         }
+
+        .fc-unthemed {
+            .fc-content,
+            .fc-divider,
+            .fc-list-heading td,
+            .fc-list-view,
+            .fc-popover,
+            .fc-row,
+            tbody,
+            td,
+            th,
+            thead {
+                border-color: @light-gray;
+            }
+        }
+        
         tr:first-child > td > .fc-day-grid-event {
             margin-top: 0px;
         }
         .fc-day-grid-event {
             margin: 0;
             padding: 0;
+            .fc-content {
+                white-space: nowrap;
+                overflow: hidden;
+                padding: 11px 6px;
+            }
         }
         .fc-event {
             font-family: 'PFBeauSansPro-Regular';
@@ -487,6 +526,7 @@
                 bottom: 0;
                 .fc-content {
                     padding: 22px 6px;
+                    background-color: #f8f7f7;
                 }
             }
             &-orange {
@@ -523,25 +563,23 @@
                 }
             }
         }
-        .fc-event:hover {
-            color: #000;
-        }
-        .fc-day-grid-event .fc-content {
-            white-space: nowrap;
-            overflow: hidden;
-            padding: 11px 6px;
-        }
-        .fc-event .fc-title,
-        .fc-event .fc-time {
-            display: block;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-        }
-        .fc-event .fc-time {
-            margin: 0 0 4px 0;
-            font-family: 'PFBeauSansPro-SemiBold';
-            font-size: 14px;
+
+        .fc-event {
+            &:hover {
+                color: #000;
+            }
+            .fc-title,
+            .fc-time {
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .fc-time {
+                margin: 0 0 4px 0;
+                font-family: 'PFBeauSansPro-SemiBold';
+                font-size: 14px;
+            }
         }
         .fc-more-cell {
             height: 60px;
@@ -553,19 +591,7 @@
                 border-bottom: 1px dashed @blue;
             }
         }
-        .fc-CustomButtonOpenAll-button.fc-state-default,
-        .fc-CustomButtonCloseAll-button.fc-state-default {
-            font-family: 'PFBeauSansPro-Regular';
-            color: @blue;
-            font-size: 13px;
-            text-decoration: none;
-            border-bottom: 1px dashed @blue;
-            height: 16px;
-            border-radius: 0px;
-        }
-        .fc-CustomButtonCloseAll-button.fc-state-default {
-            margin-left: 20px;
-        }
+        
         .fc-event-container {
             position: relative;
         }
