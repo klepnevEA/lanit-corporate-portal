@@ -113,7 +113,10 @@
         &_txtalign-right {
             text-align: right;
         }
-        .ml-select {
+        .ml-mselect {
+            .popup__form-textarea {
+                padding-top: 25px;
+            }
         }
         .vrtclalign-top {
             vertical-align: top;
@@ -217,6 +220,15 @@
     .pagination {
         margin-top: 30px;
         margin-bottom: 20px;
+    }
+    .popup__block_add {
+        max-height: calc(~'100vh - 275px');
+    }
+    .popup__block_search {
+        max-height: calc(~'100vh - 510px');
+    }
+    .popup__title {
+        margin-bottom: 25px;
     }
 }
 
@@ -327,7 +339,7 @@
         .fc-toolbar {
             margin-bottom: 20px;
             .fc-right {
-                width: 26%;
+                width: 24%;
                 padding: 2px 0;
             }
             .fc-left {
@@ -365,7 +377,7 @@
                 font-family: 'PFBeauSansPro-SemiBold';
                 font-size: 14px;
                 text-transform: uppercase;
-                padding: 0px 18px 0px;
+                padding: 0px 15px 0px;
                 margin: 0 5px 0 0;
                 border-radius: 20px;
                 color: #000;
