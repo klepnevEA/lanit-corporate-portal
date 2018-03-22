@@ -24,4 +24,44 @@
 	    	color: @red;
 	    }
 	}
+    &::-webkit-input-placeholder {
+        color: @light-gray;
+        font-family: 'PFBeauSansPro-Italic';
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    &::-moz-placeholder {
+        color: @light-gray;
+        font-family: 'PFBeauSansPro-Italic';
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    &:-moz-placeholder {
+        color: @light-gray;
+        font-family: 'PFBeauSansPro-Italic';
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    &:-ms-input-placeholder {
+        color: @light-gray;
+        font-family: 'PFBeauSansPro-Italic';
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    &:focus::-webkit-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    &:focus::-moz-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    &:focus:-moz-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    &:focus:-ms-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
 }

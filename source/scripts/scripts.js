@@ -459,6 +459,7 @@ $('.select').each(function(){
         editable: false,
         eventLimit: 4, // allow "more" link when too many events
         contentHeight : 250,
+        allDaySlot: false,
         //aspectRatio: 12,
         height: 'auto',
         slotLabelFormat: [

@@ -2,43 +2,82 @@
 	.clearfix;
 	position: relative;
 	margin-bottom: @sp*3;
+    color: @gray;
+    font-family: 'PFBeauSansPro-Bbook';
+    font-size: 13px;
 
-		color: @gray;
-		font-family: 'PFBeauSansPro-Bbook';
-		font-size: 13px;
-		
-		span {
-			display: inline-block;
-			min-width: 50px;
-			color: @gray;
-		}
+    span {
+        display: inline-block;
+        min-width: 50px;
+        color: @gray;
+    }
 
-		i {
-			position: relative;
-			top: 1px;
-		}
+    i {
+        position: relative;
+        top: 1px;
+    }
 
-		&_float-left {
-			float: left;
-		}
+    &_float-left {
+        float: left;
+    }
 
-		&_margin-bottom-20 {
-			margin-bottom: 20px;
-		}
+    &_margin-bottom-20 {
+        margin-bottom: 20px;
+    }
 
-		&__elem {
-			&_blue {
-				i {
-					&:before {
-						color: @blue;
-					}
-				}
+    &__elem {
+        &.blue {
+            i {
+                &:before {
+                    color: @blue;
+                }
+            }
 
-				span {
-					color: @blue;
-				}
-				
-			}
-		}
+            span {
+                color: @blue;
+            }
+
+        }
+    }
+    
+    /* отображение иконок комментарии/просмотрено/лайки на разных страницах */
+    &__advt {
+        border-bottom: 1px solid @light-gray;
+        padding-bottom: 35px;
+        margin-bottom: 40px;
+    }
+    &__advs-list {
+        margin-bottom: 0px;
+    }
+    &__jobs {
+        margin-bottom: 20px;
+        float: left;
+    }
+    &__photo {
+        margin-bottom: 0;
+        padding-top: 10px;
+        span.icons-block__elem {
+            display: inline;
+        }
+    }
+    &__video-list {
+        .active span,
+        .active i,
+        .active i::before {
+            color: #fff;
+        }
+    }
+    &__news-list {
+        .icons-block__elem {
+            display: inline;
+        }
+    }
+    &_narrow {
+        .icons-block__elem span {
+            width: 35px;
+            min-width: 30px;
+        }
+    }
+    /* отображение иконок комментарии/просмотрено/лайки на разных страницах */
+    
 }
-

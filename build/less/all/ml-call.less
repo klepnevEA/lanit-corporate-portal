@@ -469,7 +469,7 @@
             .fc-content-skeleton {
                 padding-bottom: 0px;
                 border-color: @light-gray;
-                min-height: 92px;
+                min-height: 93px;
                 table tr {
                     &:last-child td a {
                         border-bottom: 0px;
@@ -484,13 +484,21 @@
                     border-bottom: 1px solid @light-gray;
                 }
                 td {
-                    min-height: 60px;
+                    /*min-height: 60px;*/
                 }
+            }
+            &.fc-week {
+                /*height: 30px;*/
+            }
+            &.fc-week .fc-axis {
+                font-family: 'PFBeauSansPro-Regular';
+                font-size: 14px;
+                text-transform: inherit;
             }
         }
         .fc-sun, .fc-sat {
             background-color: rgba(0,0,0,0.02);
-            width: 75px;
+            /*width: 75px;*/
         }
 
         .fc-unthemed {
@@ -574,9 +582,7 @@
                     background-color: #43aa16;
                 }
             }
-        }
 
-        .fc-event {
             &:hover {
                 color: #000;
             }
@@ -606,6 +612,18 @@
         
         .fc-event-container {
             position: relative;
+        }
+        
+        .fc-view.fc-agendaWeek-view,
+        .fc-view.fc-agendaDay-view {
+            .fc-row.fc-week {
+                height: 30px;
+            }
+            &.fc-week .fc-axis {
+                font-family: 'PFBeauSansPro-Regular';
+                font-size: 14px;
+                text-transform: inherit;
+            }
         }
     }
 }
