@@ -1,0 +1,75 @@
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+.radiobutton {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 14px;
+    height: 14px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.radiobutton + label {
+  cursor: pointer;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.radiobutton:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.radiobutton:not(checked) + label {
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding: 1px 0 0 24px; /* оставляем слева от label место под псевдочекбокс */
+  color: #000;
+  font-size: 14px;
+  font-family: 'PFBeauSansPro-Regular';
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.radiobutton:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 11px;
+  height: 11px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid @gray;
+  margin-top: 2px;
+}
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.radiobutton:not(checked) + label:after {
+  content: '';
+  text-align: center;
+  padding-top: 5px;
+  font-family: "Material Design Icons";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 10px;
+  width: 16px;
+  height: 15px;
+  margin-top: 2px;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 0.9;
+}
+/* Меняем фон чекбокса, когда он включен. */
+.radiobutton:checked + label:before {
+    border: 1px solid @blue;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.radiobutton:checked + label:after {
+ 	content: '';
+    width: 7px;
+    height: 2px;
+    background: #00aeff;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 10px;
+ }

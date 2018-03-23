@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="ru">
+@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+					
+					@@include('./file-include/header.html')
+					@@include('./file-include/bread-crumbs.html')
+                    
+                    
+                    <!-- Опрос -->
+                    <div class="row">
+						<div class="col-xs-12 ml-vote">
+							<h2 class="title title_fsz-30">Опросы</h2>
+                            <h3 class="title title_orange_fsz-24 title_margin-bottom-20">Каким вы видите Ланит?</h3>
+                            <div class="ml-vote__desc">Время голосования: 03.08.2017  –  13.08.2017</div>
+                            <div class="text text_margin-bottom-30">
+                                <p>Приглашаем вас принять участие в опросе «Каким вы видите ЛАНИТ?». Как сказал Ричард Брэнсон, основатель Virgin Group*, «стремится стать самым известным брендом — бесмысленно. Гораздо важнее стать самым уважаемым брендом. А для этого надо для начала самому все честно знать про себя».</p>
+                                <p>Так что же такое ЛАНИТ как бренд? Мы задаем этот вопрос вам, потому что именно мы с вами, сотрудники ЛАНИТ, формируем представление о нашей компании.</p>
+                                <p>Будем рады вашим честным ответам!</p>
+                            </div>
+                            <div class="text text_footnote text_margin-bottom-40">Virgin Group известна среди прочего тем, что состоит из более 200 различных бизнесов, объедененных одним брендом.</div>
+ 						</div>
+					</div>
+                    <!-- Опрос -->
+                    
+                    <!-- Вопрос 2 -->
+                    <div class="row">
+						<div class="col-xs-12 ml-vote">
+                            <div class="block_flex ml-vote__question-title">
+                                <h2 class="title title_fsz-17 title_margin-top-30 title_margin-bottom-0">Вопросы: 2 <span>из 3</span></h2>
+                                <div class="ml-vote__question-counter">
+                                    <div class="ml-vote__said-like">
+                                        <i class="mdi mdi-checkbox-marked-outline"></i>
+                                        <span>74</span>
+                                    </div>
+                                    сотрудников проголосовало
+                                </div>
+                            </div>
+                            <div class="block block_gray ml-vote__question-block">
+                                <div class="ml-vote__question-block-head">
+                                    <h2 class="title title_fsz-17 title_text-transform-none ml-vote__question-block-title">
+                                        <div>2.</div>
+                                        <div>
+                                            Если бы Вам понадобилась помощь по рабочим вопросам, то к кому Вы могли обратиться без каких-либо затруднений?
+                                            <p class="ml-vote__question-block-desc">Пожалуйста, выберите не больше двух вариантов</p>
+                                        </div>
+                                    </h2>
+                                </div>
+                                <div class="ml-vote__block">
+                                    <div class="ml-vote__block-elem">
+                                        <input type="checkbox" class="checkbox" id="checkbox_1" checked>
+                                        <label for="checkbox_1">Ко всем/многим коллегам</label>
+                                    </div>
+                                    <div class="ml-vote__block-elem">
+                                        <input type="checkbox" class="checkbox" id="checkbox_2">
+                                        <label for="checkbox_2">К некоторым коллегам</label>
+                                    </div>
+                                    <div class="ml-vote__block-elem">
+                                        <input type="checkbox" class="checkbox" id="checkbox_3">
+                                        <label for="checkbox_3">К коллегам в своем отделе</label>
+                                    </div>
+                                    <div class="ml-vote__block-elem">
+                                        <input type="checkbox" class="checkbox" id="checkbox_4">
+                                        <label for="checkbox_4">Только к некоторым коллегам в своем отделе</label>
+                                    </div>
+                                    <div class="ml-vote__block-elem">
+                                        <input type="checkbox" class="checkbox" id="checkbox_5" checked>
+                                        <label for="checkbox_5">Написать свой вариант ответа</label>
+                                    </div>
+                                    <div class="ml-vote__block-elem ml-vote__block-elem_pdng-lft-30">
+                                        <textarea name="textarea1" id="textarea1" class="textarea ml-vote__form-textarea" placeholder="Введите свой ответ"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn__block btn_right ml-vote__btn-block">
+                                <a href="vote_step1.html" class="btn btn_blue-dark btn_medium">
+                                    <i class="mdi mdi-arrow-left"></i>
+                                    Назад
+                                </a>
+                                <a href="vote_step3.html" class="btn btn_medium">
+                                    Далее
+                                    <i class="mdi mdi-arrow-right"></i>
+                                </a>
+                            </div>
+ 						</div>
+					</div>
+                    <!-- Вопрос 2 -->
+                    
+				    @@include('./file-include/footer.html')
+				</div><!--container-main-->		
+
+			</div><!--container-wrap-->
+			
+		</div>	 <!--container-->		
+		<!-- <div class="footer__before"></div> -->
+		
+	</div> <!--wrapper-->
+
+
+	<!-- popups -->
+	@@include('./file-include/popup-mood-office.html')
+	
+</body>
+</html>

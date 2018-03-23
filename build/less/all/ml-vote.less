@@ -1,0 +1,77 @@
+.ml-vote {
+    &__block {
+        border-top: 1px solid @light-gray;
+        padding: 20px 30px;
+        &-elem {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .text {
+        line-height: 1.7;
+        font-size: 14px;
+    }
+    .title_margin-bottom-20 {
+        margin-bottom: 20px;
+    }
+    .title_margin-top-30 {
+        /*margin-top: 30px;*/
+    }
+    .title_fsz-17 {
+        font-family: 'PFBeauSansPro-SemiBold';
+        span {
+            color: @gray;
+            text-transform: none;
+        }
+    }
+    &__desc {
+        color: @gray;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .text_footnote {
+        border-top: 1px solid @light-gray;
+        border-bottom: 1px solid @light-gray;
+        padding: 16px 0 16px 10px;
+        margin: 0;
+        &:after {
+            left: 0px;
+            padding-top: 16px;
+        }
+    }
+    &__said-like {
+        font-family: 'PFBeauSansPro-SemiBold';
+        background: #00aeff;
+        color: white;
+        border-radius: 3px;
+        float: left;
+        padding: 2px 5px;
+        margin-right: 5px;
+    }
+    &__question {
+        &-title {
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+        &-counter {
+            font-family: 'PFBeauSansPro-SemiBold';
+            color: @gray;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        &-block {
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid @light-gray;
+            border-bottom: 1px solid @light-gray;
+            &-title {
+                padding: 20px 0 20px 30px;
+                margin: 0;
+            }
+        }
+    }
+}
