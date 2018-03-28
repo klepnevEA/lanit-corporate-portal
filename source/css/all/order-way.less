@@ -1,8 +1,6 @@
 .order-way {
 	position: relative;	
-	padding: 30px 0;
-	
-	background: red;
+	padding: 30px 10px;
 	box-sizing: border-box;
 	height: auto;
 	.clearfix;
@@ -14,29 +12,59 @@
 
 	&__road {
 		position: relative;	
-		background-color: #e0e4e7;
 		width: 100%;	
-		// height: 3px;
 		display: flex;
 		justify-content: space-between;
 		.clearfix;
 		&-item {
-			border: 2px solid;
-			margin: 0 10px;
+			position: relative;	
+			flex: 1;
 			.clearfix;
+			
+			&:after {
+				content: '';
+				position: absolute;	
+				top: 8px;	
+				width: 100%;	
+				height: 3px;
+				background-color: #e0e4e7;	
+			}
+			
+			&:first-child,
+			&:last-child {
+				.order-way__point {
+					border: 8px solid @blue;
+				}
+			}
+
+			&:first-child {
+				&:after {
+					width: 50%;	
+					left: 50%;
+				}
+			}
+
+			&:last-child {
+				&:after {
+					width: 50%;	
+					right: 50%;
+				}
+			}
 
 		}
 	}
 
 	&__point {
-		position: absolute;	
-		background-color: 	#fff;
-		top: -8px;	
+		position: relative;	
+		background-color: #fff;
 		width: 20px;	
 		height: 20px;	
         border-radius: 	50%;
-        border: 8px solid @blue;
+        border: 4px solid @orange;
         color: 	#000;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        z-index: 100;
         
         &_start {
         	left: -8px;	
@@ -58,16 +86,15 @@
 	}
 
 	&__text {
-		// position: absolute;	
-		
-			
-		// left: -85px;	
 		text-align: center;	
-		// width: 170px;
 		font-family: 'PFBeauSansPro-Regular';
 		font-size: 14px;	
 		position: relative;
-		background: green;
+		margin: 0 auto;
+		padding: 0 5px;
+		max-width: 200px;
+		overflow: hidden;
+		text-overflow:	ellipsis;
 	}
 
 
