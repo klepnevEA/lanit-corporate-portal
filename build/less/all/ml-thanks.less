@@ -8,6 +8,7 @@
 		color: white;
 		padding: @sp*2;
 		margin-right: @sp*2;
+        position: relative;
 		.input-block {
 			width: 100%;
 			position: relative;
@@ -34,11 +35,12 @@
 		 	height: 130px !important;
 		 }
 		 .btn {
-		 	float: right;
-		 	height: 40px;
-		 	padding: 0 10px;
-		 	line-height: 43px;
-
+             height: 40px;
+             padding: 0 10px;
+             line-height: 43px;
+             position: absolute;
+             right: 30px;
+             bottom: 30px;
 		 	i {
 		 		font-size: 22px;
 		 		position: relative;
@@ -69,6 +71,21 @@
 				margin-bottom: 0;
 			}
 		}
+        .ml-mselect .mdi-magnify {
+            position: absolute;
+            right: 7px;
+            top: 13px;
+            font-size: 26px;
+            color: #9fa9ad;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .ml-mselect.active input {
+            border: 1Вpx solid @orange;
+        }
+        .ml-mselect {
+            height: 75px;
+        }
 	}
 	&__right {
 		flex: 1;
