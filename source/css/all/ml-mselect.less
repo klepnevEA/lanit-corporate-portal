@@ -34,6 +34,9 @@
 			transform: rotate(180deg);
 			top: 8px; 
 		}
+        .input {
+			border: 1px solid @orange;
+		}
 	}
 	&__title {
 		position: absolute;
@@ -79,6 +82,18 @@
 				top: 5px;
 			}
 		}
+        &_selected {
+            padding: 3px 5px 4px 10px;
+            background-color: #e6ecf0;
+            display: inline;
+            border-radius: 3px;
+            margin-right: 3px;
+            display: inline-block;
+            .mdi {
+                color: @gray;
+                font-size: 15px;
+            }
+        }
 	}
 	&__input {
 		text-overflow: ellipsis;
@@ -86,5 +101,38 @@
 		&.active {
 			box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14);
 		}
+        &_div {
+            background-color: #fff;
+            overflow: auto;
+            width: 375px;
+            white-space: nowrap;
+            height: 75px;
+            .scroll-wrapper {
+                height: 40px;
+            }
+            .scrollbar-style > .scroll-element.scroll-x {
+                height: 4px;
+            }
+        }
+        &-search {
+            padding: 10px 15px 10px 38px;
+            width: 100%;
+            border: none;
+        }
 	}
+    &_thanks {
+        height: 75px;
+        .mdi-magnify {
+            position: absolute;
+            right: 7px;
+            top: 4px;
+            font-size: 26px;
+            color: #9fa9ad;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        &.active input {
+            border: 1px solid @orange;
+        }
+    }
 }
