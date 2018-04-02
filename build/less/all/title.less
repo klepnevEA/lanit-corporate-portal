@@ -5,6 +5,24 @@
 	padding: 0;
 	margin-bottom: @sp*2;
 	text-transform: uppercase;
+	&__wrap {
+		position: relative;
+
+	}
+	&__link {
+		color: @blue;
+		position: absolute;
+		right: 0;
+		top: 5px;
+		font-size: 16px;
+		a {
+			text-decoration: underline;
+			color: @blue !important;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
 	
 	&_fsz-14 {
 		font-size: 14px;
