@@ -16,7 +16,9 @@
 	<script src="../scripts/masonry.js"></script>
 	<script src="../scripts/jquery-3.2.1.min.js"></script>
 
+
   	<script src="../scripts/jquery-ui.js"></script>
+ 	 <script src="../scripts/jquery.scrollbar.js"></script>
   	<script src="../scripts/jquery.datepicker.extension.range.min.js"></script>
   	
   	<script src="../scripts/jquery.fileupload.js"></script>
@@ -31,10 +33,14 @@
     <script src="../scripts/locale-all.js"></script>
     <script src="../scripts/gcal.min.js"></script>
     <!-- fullcalendar -->
-  
-	<script src="../scripts/scripts.js"></script>
-	<script src="../scripts/jquery.scrollbar.js"></script>
 
+
+
+
+
+	<script src="../scripts/scripts.js"></script>
+	
+	
 
 </head>
 <body>
@@ -365,48 +371,45 @@
 									<div class="ml-thanks__left-title">
 										Это так просто
 									</div>
-									<div class="ml-mselect ml-mselect_thanks">
+
+
+									<div class="ml-mselect-search">
                                         <div class="ml-mselect__title">
                                             Имена пользователей
                                         </div>
                                         
                                         <i class="mdi mdi-chevron-down"></i>
-                                        <div class="input ml-mselect__input ml-mselect__input_div" placeholder="Введите имя сотрудника">
-                                           <div class="scrollbar-style">
-                                                <div class="ml-mselect__item_selected">
-                                                    Леонид Петрович Ложкин
-                                                    <a href="#">
-                                                        <i class="mdi mdi-close"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="ml-mselect__item_selected">
-                                                    Михаил Семенович Петров
-                                                    <a href="#">
-                                                        <i class="mdi mdi-close"></i>
-                                                    </a>
-                                                </div>
+                                        <div class="ml-mselect-search__box ">
+                                        	<div class="ml-mselect-search__text ">Введите имя сотрудника</div>
+
+
+                                           <div class="ml-mselect-search__result scrollbar-style">
+												
                                             </div>
                                         </div>
-                                        <div class="ml-mselect__dropbox">
-                                            <div>
+
+                                        <div class="ml-mselect-search__dropbox">
+                                            <div class="ml-mselect-search__dropbox-wrap">
+
                                               <i class="mdi mdi-magnify"></i>
-                                              <input class="ml-mselect__input-search" type="text" value="" placeholder="Введите имя сотрудника">
-                                              <div class="ml-mselect__item active">Абрам Иванович Добреев</div>
-                                              <div class="ml-mselect__item">Александр Владимирович Керенко</div>
-                                              <div class="ml-mselect__item">Иван Петрович Клюев</div>
-                                              <div class="ml-mselect__item active">Константин Семенович Лаптин</div>
-                                              <div class="ml-mselect__item">Леонид Петрович Ложкин</div>
-                                              <div class="ml-mselect__item">Михаил Семенович Петров</div>
-                                              <div class="ml-mselect__item">Николай Петрович Русаков</div>
-                                              <div class="ml-mselect__item">Абрам Иванович Добреев</div>
-                                              <div class="ml-mselect__item">Александр Владимирович Керенко</div>
-                                              <div class="ml-mselect__item">Иван Петрович Клюев</div>
-                                              <div class="ml-mselect__item">Константин Семенович Лаптин</div>
-                                              <div class="ml-mselect__item">Леонид Петрович Ложкин</div>
-                                              <div class="ml-mselect__item">Михаил Семенович Петров</div>
-                                              <div class="ml-mselect__item">Николай Петрович Русаков</div>
-                                              <div class="ml-mselect__item">Абрам Иванович Добреев</div>
-                                              <div class="ml-mselect__item">Александр Владимирович Керенко</div>
+                                              <input class="input ml-mselect-search__input" type="text" value="" placeholder="Введите имя сотрудника">
+
+                                              <div class="ml-mselect-search__item active">Абрам Иванович Добреев</div>
+                                              <div class="ml-mselect-search__item">Александр Владимирович Керенко</div>
+                                              <div class="ml-mselect-search__item">Иван Петрович Клюев</div>
+                                              <div class="ml-mselect-search__item active">Константин Семенович Лаптин</div>
+                                              <div class="ml-mselect-search__item">Леонид Петрович Ложкин</div>
+                                              <div class="ml-mselect-search__item">Михаил Семенович Петров</div>
+                                              <div class="ml-mselect-search__item">Николай Петрович Русаков</div>
+                                              <div class="ml-mselect-search__item">Абрам Иванович Добреев</div>
+                                              <div class="ml-mselect-search__item">Александр Владимирович Керенко</div>
+                                              <div class="ml-mselect-search__item">Иван Петрович Клюев</div>
+                                              <div class="ml-mselect-search__item">Константин Семенович Лаптин</div>
+                                              <div class="ml-mselect-search__item">Леонид Петрович Ложкин</div>
+                                              <div class="ml-mselect-search__item">Михаил Семенович Петров</div>
+                                              <div class="ml-mselect-search__item">Николай Петрович Русаков</div>
+                                              <div class="ml-mselect-search__item">Абрам Иванович Добреев</div>
+                                              <div class="ml-mselect-search__item">Александр Владимирович Керенко</div>
                                             </div>
                                         </div>
                                     </div>
@@ -604,6 +607,8 @@
 		</div>
 
 </footer><!-- .footer -->
+
+  
 
 
 				</div><!--container-main-->		
