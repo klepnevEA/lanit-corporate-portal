@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
 	//табы на странице food
 	$('.food-page__tabs-item').click(function() {
 		$('.food-page__tabs-item').removeClass('active');
@@ -7,11 +8,11 @@ $(document).ready(function() {
 	});
 
 		//сендвичи в разделе видео
-	$('.title_comments').click(function(e) {
-		e.preventDefault();
-		$(this).closest('.comments-wrap').toggleClass('active');
-		
-	});
+		$('.title_comments').click(function(e) {
+			e.preventDefault();
+			$(this).closest('.comments-wrap').toggleClass('active');
+
+		});
 
 	//сендвичи в разделе food
 	$('.food-page__sandwich-title').click(function() {
@@ -63,6 +64,93 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		bindSelectedItemsToInput();
 	});
+
+
+
+
+	//мультиселек с поиском
+	function bindSelectedItemsToInputSearch() {
+
+		$('.ml-mselect-search__result').last().empty();
+		var selectedItems = $('.ml-mselect-search__item.active');
+
+		selectedItems.each(function(index) {
+			$('.ml-mselect-search__result').last().append('<div class="ml-mselect-search__result-item">' + $(this).text()  +  '<i class="mdi mdi-close"></i></div>');
+		});
+
+
+		if($('.ml-mselect-search__item.active').length > 0) {
+			$('.ml-mselect-search__box').removeClass('empty');
+		}
+		else {
+			$('.ml-mselect-search__box').addClass('empty');
+			
+		}
+		
+	}
+
+	bindSelectedItemsToInputSearch();
+
+	$('.ml-mselect-search__box,  .mdi-chevron-down').click(function(e) {
+		if($(e.target).is('.ml-mselect-search__box,  .mdi-chevron-down'))
+		{
+			var $mlDropbox = $(this).siblings('.ml-mselect-search__dropbox');
+			var $mlContainer = $(this).closest('.ml-mselect-search');
+			if(!$mlDropbox.hasClass("active"))
+			{
+				$('.ml-mselect-search__dropbox, .ml-mselect-search').removeClass("active");
+			}
+
+			$mlDropbox.toggleClass('active');
+			$mlContainer.toggleClass('active');
+		}
+	});
+
+	$( '.ml-mselect-search__item').click(function() {
+		$(this).toggleClass('active');
+		bindSelectedItemsToInputSearch();
+	});
+
+	$(document).on("click", ".ml-mselect-search__result-item  .mdi-close", function(e) {
+		SelectBlock = $(this).parent().text();
+		console.log(SelectBlock);
+
+
+		$('.ml-mselect-search__item').each(function(index) {
+			if ( $(this).text() == SelectBlock) {
+				$(this).removeClass('active');
+				bindSelectedItemsToInputSearch();
+			}
+		});
+
+	});
+	
+	$(".input.ml-mselect-search__input").keyup(function(e){
+		var items = $('.ml-mselect-search__item');
+		var changedValue = $(e.currentTarget).val().toLowerCase();
+		if(changedValue.length >= 3)
+		{
+			console.log(changedValue);
+
+			items.each(function(index) {
+				if( $(this).text().toLowerCase().indexOf(changedValue) == 0) {
+					$(this).show();
+				}
+				else
+				{
+					$(this).hide();
+				}
+			});
+		}
+		else
+		{
+			items.show();
+		}
+	});
+
+
+
+
 
 	// селект
 	function initCustomSelectControls() {
@@ -219,14 +307,14 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).closest('.popup').removeClass('active');
 	});
-    
+
     // закрыть попап при клике по фону
     /*
     $('.popup').on('click', function(e) {
 		e.preventDefault();
 		$(this).closest('.popup').removeClass('active');
 	});
-    */
+	*/
 
 	// настроение в офисе попап
 
@@ -270,6 +358,7 @@ $(document).ready(function() {
 
 	// // включаем скроллы
 	jQuery('.scrollbar-style').scrollbar();
+
 
 	/*инпуты*/
 
@@ -397,42 +486,42 @@ $('.select').each(function(){
 
 	var msnry = new Masonry( '.photo-grid__list', {
 
-	  itemSelector: '.photo-grid__item'
+		itemSelector: '.photo-grid__item'
 	});
 	
 
 
-    
-    
+
+
     // fullcalendar
     $('#calendar').fullCalendar({
-        header: {
-            left: 'CustomButtonOpenAll CustomButtonCloseAll',
-            center: 'prev title next',
+    	header: {
+    		left: 'CustomButtonOpenAll CustomButtonCloseAll',
+    		center: 'prev title next',
             right: 'month agendaWeek agendaDay' //,listMonth
         },
         customButtons: {
-            CustomButtonOpenAll: {
-                text: 'Развернуть все',
-                click: function() {
-                    alert('что-то произошло');
-                }
-            },
-            CustomButtonCloseAll: {
-                text: 'Свернуть все',
-                click: function() {
-                    alert('что-то произошло');
-                }
-            }
+        	CustomButtonOpenAll: {
+        		text: 'Развернуть все',
+        		click: function() {
+        			alert('что-то произошло');
+        		}
+        	},
+        	CustomButtonCloseAll: {
+        		text: 'Свернуть все',
+        		click: function() {
+        			alert('что-то произошло');
+        		}
+        	}
         },
         eventClick: function(eventObj) {
-            if (eventObj.url) {
-                alert(
-                    'Clicked ' + eventObj.title + '.\n' + 'Will open ' + eventObj.url + ' in a new tab'
-                );
-                
-                window.open(eventObj.url);
-                
+        	if (eventObj.url) {
+        		alert(
+        			'Clicked ' + eventObj.title + '.\n' + 'Will open ' + eventObj.url + ' in a new tab'
+        			);
+
+        		window.open(eventObj.url);
+
                 return false; // prevents browser from following link in current tab.
                 
             } else {
@@ -442,10 +531,10 @@ $('.select').each(function(){
         },
         googleCalendarApiKey: 'AIzaSyC75vIG5KcFLo4tOrAbMLDH6wzZokIFPRM',
         eventSources: [
-            {
-                googleCalendarId: 'en.russian#holiday@group.v.calendar.google.com',
-                className: 'fc-gcal-event'
-            }
+        {
+        	googleCalendarId: 'en.russian#holiday@group.v.calendar.google.com',
+        	className: 'fc-gcal-event'
+        }
         ],
         fixedWeekCount: false,
         defaultDate: '2018-03-12',
@@ -463,84 +552,84 @@ $('.select').each(function(){
         //aspectRatio: 12,
         height: 'auto',
         slotLabelFormat: [
-          'HH:mm'
+        'HH:mm'
         ],
         events: [
-            {
-                id: 1,
-                title: 'Сухаев Яков',
-                start: '2018-03-01T09:00:00',
-                end: '2018-03-01T11:30:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Евграфова Марина',
-                start: '2018-03-01T14:30:00',
-                end: '2018-03-01T15:30:00',
-                className: 'fc-event-blue'
-            },
-            {
-                title: 'Евграфова Марина',
-                start: '2018-03-01T15:30:00',
-                end: '2018-03-01T16:30:00',
-                className: 'fc-event-green'
-            },
-            {
-                title: 'Евграфова Марина',
-                start: '2018-03-01T17:30:00',
-                end: '2018-03-01T18:30:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-02T11:00:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-02T11:00:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-02T12:00:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-02T14:30:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-02T15:30:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-05T10:30:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-05T11:30:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-05T14:30:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-06T10:30:00',
-                className: 'fc-event-orange'
-            },
-            {
-                title: 'Сухаев Яков',
-                start: '2018-03-07T10:30:00',
-                className: 'fc-event-orange'
-            },
+        {
+        	id: 1,
+        	title: 'Сухаев Яков',
+        	start: '2018-03-01T09:00:00',
+        	end: '2018-03-01T11:30:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Евграфова Марина',
+        	start: '2018-03-01T14:30:00',
+        	end: '2018-03-01T15:30:00',
+        	className: 'fc-event-blue'
+        },
+        {
+        	title: 'Евграфова Марина',
+        	start: '2018-03-01T15:30:00',
+        	end: '2018-03-01T16:30:00',
+        	className: 'fc-event-green'
+        },
+        {
+        	title: 'Евграфова Марина',
+        	start: '2018-03-01T17:30:00',
+        	end: '2018-03-01T18:30:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-02T11:00:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-02T11:00:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-02T12:00:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-02T14:30:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-02T15:30:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-05T10:30:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-05T11:30:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-05T14:30:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-06T10:30:00',
+        	className: 'fc-event-orange'
+        },
+        {
+        	title: 'Сухаев Яков',
+        	start: '2018-03-07T10:30:00',
+        	className: 'fc-event-orange'
+        },
             /*
             {
                 title: 'Сухаев Яков',
@@ -574,137 +663,137 @@ $('.select').each(function(){
             },
             */
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-12T10:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-12T10:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-12T11:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-12T11:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-12T14:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-12T14:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-13T10:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-13T10:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-13T13:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-13T13:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-14T10:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-14T10:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-148T10:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-148T10:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-14T12:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-14T12:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-14T14:30:00',
-                className: 'fc-event-blue'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-14T14:30:00',
+            	className: 'fc-event-blue'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-15T10:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-15T10:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-15T12:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-15T12:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-15T14:30:00',
-                className: 'fc-event-green'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-15T14:30:00',
+            	className: 'fc-event-green'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-16T10:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-16T10:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-16T12:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-16T12:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-16T14:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-16T14:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-19T14:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-19T14:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-20T14:30:00',
-                className: 'fc-event-green'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-20T14:30:00',
+            	className: 'fc-event-green'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-21T14:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-21T14:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-22T14:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-22T14:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-23T14:30:00',
-                className: 'fc-event-blue'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-23T14:30:00',
+            	className: 'fc-event-blue'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-26T12:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-26T12:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-27T12:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-27T12:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-28T12:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-28T12:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-29T12:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-29T12:30:00',
+            	className: 'fc-event-orange'
             },
             {
-                title: 'Сухаев Яков',
-                start: '2018-03-30T12:30:00',
-                className: 'fc-event-orange'
+            	title: 'Сухаев Яков',
+            	start: '2018-03-30T12:30:00',
+            	className: 'fc-event-orange'
             }
-        ],
-        timeFormat: 'HH:mm'
-    });
-    
+            ],
+            timeFormat: 'HH:mm'
+        });
 
-    
-    
+
+
+
 
 }); 
 

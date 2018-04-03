@@ -35,6 +35,7 @@
   "dependencies": {
     "normalize.css": "^4.1.1",
     "simplebar": "^2.2.1",
-    "stickyfilljs": "^2.0.2"
+    "stickyfilljs": "^2.0.2",
+    "vue-multiselect": "^2.1.0"
   }
 }

@@ -38,46 +38,67 @@
 									</div>
 
 
-									<div class="ml-mselect-search">
-                                        <div class="ml-mselect__title">
-                                            Имена пользователей
-                                        </div>
-                                        
-                                        <i class="mdi mdi-chevron-down"></i>
-                                        <div class="ml-mselect-search__box ">
-                                        	<div class="ml-mselect-search__text ">Введите имя сотрудника</div>
+									
+									<div class="">
 
 
-                                           <div class="ml-mselect-search__result scrollbar-style">
+										<div id="app">
+										  <multiselect 
+										    v-model="value" 
+										    :options="options"
+										    :multiple="true"
+										    track-by="library"
+										    :custom-label="customLabel"
+										    >
+										  </multiselect>
+										  <pre>{{ value }}</pre>
+										</div>
+
+
+
+
+										
+
+										
+
+
+
+
+											<script>
+
+
+											new Vue({
+												components: {
+											  	Multiselect: window.VueMultiselect.default
+												},
+												data: {
+											  	value: { language: 'JavaScript', library: 'Vue-Multiselect' },
+											  	options: [
+											    	{	language: 'JavaScript', library: 'Vue.js' },
+											      { language: 'JavaScript', library: 'Vue-Multiselect' },
+											      { language: 'JavaScript', library: 'Vuelidate' }
+											    ]
+												}
+											 
+											}).$mount('#app')	
 												
-                                            </div>
-                                        </div>
 
-                                        <div class="ml-mselect-search__dropbox">
-                                            <div class="ml-mselect-search__dropbox-wrap">
 
-                                              <i class="mdi mdi-magnify"></i>
-                                              <input class="input ml-mselect-search__input" type="text" value="" placeholder="Введите имя сотрудника">
 
-                                              <div class="ml-mselect-search__item active">Абрам Иванович Добреев</div>
-                                              <div class="ml-mselect-search__item">Александр Владимирович Керенко</div>
-                                              <div class="ml-mselect-search__item">Иван Петрович Клюев</div>
-                                              <div class="ml-mselect-search__item active">Константин Семенович Лаптин</div>
-                                              <div class="ml-mselect-search__item">Леонид Петрович Ложкин</div>
-                                              <div class="ml-mselect-search__item">Михаил Семенович Петров</div>
-                                              <div class="ml-mselect-search__item">Николай Петрович Русаков</div>
-                                              <div class="ml-mselect-search__item">Абрам Иванович Добреев</div>
-                                              <div class="ml-mselect-search__item">Александр Владимирович Керенко</div>
-                                              <div class="ml-mselect-search__item">Иван Петрович Клюев</div>
-                                              <div class="ml-mselect-search__item">Константин Семенович Лаптин</div>
-                                              <div class="ml-mselect-search__item">Леонид Петрович Ложкин</div>
-                                              <div class="ml-mselect-search__item">Михаил Семенович Петров</div>
-                                              <div class="ml-mselect-search__item">Николай Петрович Русаков</div>
-                                              <div class="ml-mselect-search__item">Абрам Иванович Добреев</div>
-                                              <div class="ml-mselect-search__item">Александр Владимирович Керенко</div>
-                                            </div>
-                                        </div>
-                                    </div>
+
+										</script>
+
+
+	
+
+
+
+
+
+
+
+									</div>
+
 									<div class="ml-thanks__left-string">
 										<button class="btn"><i class="mdi mdi-thumb-up"></i> <span>Отправить</span></button>
 									</div>
