@@ -1,0 +1,104 @@
+.btn {
+	display: inline-block;
+	font-size: 14px;
+	font-family: 'PFBeauSansPro-SemiBold';
+	color: #fff;
+	padding: @sp;
+	background-color: @blue;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: 0px;
+	
+	&:hover {
+		background-color: lighten(@blue, 10%);
+	}
+
+	&_small {
+		font-size: 14px;
+		padding: 4px 12px;
+        border-radius: 20px;
+        margin-right: @sp/5;
+	}
+
+	&_medium {
+		font-size: 16px;
+		padding: 10px 20px;
+		
+		.mdi {
+
+			&:before {
+				position: relative;
+				top: 3px;
+				font-size: 22px;
+				line-height: 0;
+			}
+			
+		}
+	}
+
+	&_right {
+		float: right;
+	}
+
+	&_orange {
+		background-color: @orange;
+		vertical-align: middle;
+		
+		&:hover {
+			background-color: lighten(@orange, 10%);
+		}
+
+		.mdi {
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+	}
+
+	&_blue-dark {
+		background-color: @blue-dark;
+		
+		&:hover {
+			background-color: lighten(@blue-dark, 10%);
+		}
+	}
+
+	&_transparent {
+		background-color: transparent;
+		color: #000;
+		
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+	&__block {
+        &_center {
+            text-align: center;
+            padding: 20px;
+
+            .btn {
+                margin: 0 3px;
+            }
+        }
+        &_text-center {
+            color: @gray;
+            text-align: center;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+	}
+    &_width-160 {
+        width: 160px;
+    }
+    &_width-280 {
+        width: 280px;
+    }
+    &_txtalign-cntr {
+        text-align: center;
+    }
+    
+    &_fsz-14 {
+        font-size: 14px;
+    }
+}
+
