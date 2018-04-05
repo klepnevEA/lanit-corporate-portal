@@ -20,7 +20,7 @@ $(function(){
 		arrows: true,
 		autoplay: true,
 		autoplaySpeed: 5000,
-		fade: true,		
+			
 	});
 
 	$(".ml-photo-modal__slider").slick({
