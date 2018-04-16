@@ -1,0 +1,104 @@
+.title {
+	font-family: 'PFBeauSansPro-Bold';
+	font-size: 24px;
+	margin: @sp*2 @sp*4/3 0 @sp*4/3;
+	padding: 0;
+	margin-bottom: @sp*4/3;
+	text-transform: uppercase;
+	&__wrap {
+		position: relative;
+
+	}
+	&__link {
+		color: @blue;
+        border-top: 1px solid @grey-light-border;
+        border-bottom: 1px solid @grey-light-border;
+        font-size: 16px;
+		margin: 20px 20px 40px 20px;
+        padding: 20px 0;
+		a {
+			text-decoration: underline;
+			color: @blue !important;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	&_fsz-14 {
+		font-size: 14px;
+		margin-bottom: @sp;
+	}
+    
+    &_fsz-17 {
+		font-size: 17px;
+		margin-bottom: @sp;
+	}
+    
+    &_fsz-18 {
+		font-size: 18px;
+		margin-bottom: @sp;
+	}
+    
+    &_fsz-24 {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+    
+    &_fsz-30 {
+		font-size: @sp*2;
+		margin-bottom: 20px;
+	}
+    
+    &_margin-bottom-0 {
+		margin-bottom: 0px;
+	}
+    
+    &_margin-bottom-20 {
+		margin-bottom: 20px;
+	}
+
+	&_margin-bottom-25 {
+		margin-bottom: 25px;
+	}
+    
+    &_margin-bottom-40 {
+		margin-bottom: 40px;
+	}
+
+	&_orange {
+		color: @orange;
+		font-size: 20px;
+		margin-bottom: 30px;	
+	}
+    
+    &_text-transform-none {
+        text-transform: none;
+    }
+    
+    &_orange_fsz-24 {
+		color: @orange;
+		font-size: 24px;
+		margin-bottom: 30px;	
+	}
+
+	&_comments {
+		position: relative;
+		display: inline-block;
+		color: #000;
+		padding-left: 20px;
+		
+		&:before {
+			content: "\F13C";
+		    font-family: "Material Design Icons";
+		    position: absolute;
+		    left: 0;
+		    top: -2px;
+		    width: 20px;
+		    height: 20px;
+		    color: #a0aaae;
+		    transition: all 0.2s;
+		    font-size: 21px;
+		}
+	}
+}

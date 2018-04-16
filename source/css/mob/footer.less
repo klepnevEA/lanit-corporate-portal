@@ -1,9 +1,13 @@
 .footer {
 	&__wrap {
 		.clearfix;
-		padding-top: @sp;
-		padding-bottom: @sp*2;
-		border-top: 1px solid @light-gray;
+        padding: @sp @sp*4/3 @sp*2 @sp*4/3;
+        display: flex;
+        flex-direction: column;
+        
+        & > div {
+            padding-bottom: 10px;
+        }
 	}
 
 	&__copy {

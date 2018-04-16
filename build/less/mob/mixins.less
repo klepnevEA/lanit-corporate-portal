@@ -1,0 +1,15 @@
+.clearfix {
+	&::after,
+	&::before {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.vertical-align-flex {
+	display: flex;
+	justify-content:space-between;
+    align-items: center;
+    margin-bottom: @sp;
+}

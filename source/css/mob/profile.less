@@ -1,0 +1,82 @@
+.profile {
+    left: -100vw;
+    transition: left ease 0.4s;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: none;
+    
+    &.curtail {
+        position: absolute;
+        top: 0;
+        left: 0vw;
+        width: 100%;
+        display: block;
+    }
+    
+    &__menu {
+        top: 0;
+		width: 	100%;
+		min-height: 100vh;
+		background-color: #fff;//@bg;
+		transition: .3s;
+		overflow: hidden;
+    }
+    
+    &-block {
+        padding: 20px;
+        border-bottom: 1px solid @grey-light-border;
+        display: flex;
+        
+        &__left {
+            width: 60px;
+            flex: 0 0 60px;
+        }
+        &__right {
+            flex: 1;
+            padding: 6px 12px;
+            min-width: 1px;
+        }
+        &__photo {
+            width: 60px;
+            height: 60px;
+        }
+        &__name {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            text-transform: uppercase;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+        &__thanks {
+            font-size: 16px;
+            color: @blue;
+            display: flex;
+            margin-top: 6px;
+            &-text {
+                margin-left: 4px;
+                font-size: 14px;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    &-nav {
+        li {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: @blue;
+        }
+        & li:first-child {
+            padding: 20px;
+            border-bottom: 1px solid @grey-light-border;
+        }
+        & li:nth-child(2) {
+            padding-top: 20px;
+        }
+    }
+    
+    
+}

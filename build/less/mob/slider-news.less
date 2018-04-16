@@ -1,0 +1,171 @@
+.slider-news {
+	position: relative;
+	//margin-bottom: @sp*3;
+    margin: 0 @sp*4/3;
+	
+	&__slide {
+		position: relative;
+		width: 100%;
+		padding: 0px;
+	}
+
+	&__wrap {
+		position: relative;
+		width: 100%;
+	}
+
+	&__img {
+		width: 100%;
+		height: 160px;
+		background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin-bottom: 20px;
+	}
+
+	&__title {
+		font-family: 'PFBeauSansPro-Bbook';
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 10px;
+		line-height: 1.2;
+		display: block;
+		color: black;
+		transition: color 0.2s;
+		&:hover {
+			/*text-decoration: underline;*/
+
+		}
+		&:visited {
+			text-decoration: none;
+			color: black;
+
+		}
+	}
+
+	&__date	{
+		color: @gray;
+		font-family: 'PFBeauSansPro-Regular';
+		font-size: 13px;
+		margin-bottom: @sp;
+	}
+
+	&__text {
+		color: #000;
+		font-family: 'PFBeauSansPro-Regular';
+		font-size: 13px;
+		line-height: 1.6;
+		margin-bottom: @sp;
+	}
+
+	&__categories {
+		font-family: 'PFBeauSansPro-Light';
+		color: @gray;
+		margin-bottom: @sp;
+		text-transform: uppercase;
+		
+		i {
+			position: relative;
+			top: 2px;
+			line-height: 0;
+		}
+	}
+
+	&__like {
+		color: @gray;
+		font-family: 'PFBeauSansPro-Bbook';
+		font-size: 13px;
+
+		span {
+			display: inline-block;
+			width: 50px;
+			color: @gray;
+		}
+
+		i {
+			position: relative;
+			top: 1px;
+		}
+        
+        /* отображение иконок комментарии/просмотрено/лайки на разных страницах */
+        &_advt {
+            border-bottom: 1px solid @light-gray;
+            padding-bottom: 35px;
+            margin-bottom: 40px;
+        }
+        &_jobs {
+            margin-bottom: 20px;
+            float: left;
+        }
+        &_photo {
+            margin-bottom: 0;
+            padding-top: 10px;
+            span.slider-news__like-elem {
+                display: inline;
+            }
+        }
+        &_video-list {
+            .active span,
+            .active i,
+            .active i::before {
+                color: #fff;
+            }
+        }
+        &_news-list {
+            div.slider-news__like-elem {
+                display: inline;
+            }
+        }
+        &_narrow .slider-news__like-elem span {
+            width: 35px;
+        }
+        /* отображение иконок комментарии/просмотрено/лайки на разных страницах */
+	}
+
+
+	.slick-prev,
+	.slick-next {
+		position: absolute;
+		display: inline-block;
+		top: 19%;
+		left: 10px;
+		transform: translate(0, -50%);
+		z-index: 100;
+		background-color: transparent;
+		color: transparent;
+		border: 0;
+		outline: none;
+		width: @sp*2;
+	    height: @sp*2;
+	    padding: 10px;
+	    cursor: pointer;
+			&:after {
+				font-family: "Material Design Icons";
+				content: '\f053';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
+				font-size: 23px;
+				color: #6a7983;
+				display: inline-block;
+			}
+	}
+
+	.slick-next {
+		right: 10px;
+		left: auto;
+		
+		&:after {
+			content: '\f05a';
+		}
+	}
+
+	.slick-list {
+		margin: 0px;
+	}
+}
+
