@@ -13,6 +13,7 @@
 	-ms-touch-action: pan-y;
 	touch-action: pan-y;
 	-webkit-tap-highlight-color: transparent;
+    /*padding: 20px 15px;*/
 }
 .slick-list {
 	position: relative;
@@ -84,7 +85,9 @@
 	}
 
 	.slick-initialized & {
-		display: block;
+		/*display: block;*/
+        display: flex;
+        flex-direction: column;
 	}
 
 	.slick-loading & {

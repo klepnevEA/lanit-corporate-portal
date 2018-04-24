@@ -28,10 +28,22 @@
     &-list {
         &__elem {
             border-top: 1px solid @light-gray;
-            padding-top: 20px;
-            margin-bottom: 20px;
+            padding: 20px 0;
+            position: relative;
             &-block {
                 display: flex;
+            }
+            &.activ {
+                background-color: #e3f7ff;
+            }
+            &-icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                .mdi-pencil {
+                    margin-right: 1px;
+                }
+
             }
         }
     }
@@ -100,6 +112,11 @@
                 float: left;
             }
         }
+        &__btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            margin-top: -10px;
+        }
     }
     .comments {
         &__elem {
@@ -112,6 +129,47 @@
             float: right;
             text-decoration-style: dashed;
             margin-top: 10px;
+        }
+    }
+    &-edit {
+        .popup__body {
+            border-top: 1px solid @light-gray;
+            border-bottom: 1px solid @light-gray;
+        }
+        input, textarea {
+            border: 1px solid @light-gray;
+            resize: none;
+        }
+        .popup__title {
+            margin-bottom: 25px;
+        }
+        .text {
+            margin-bottom: 0px;
+        }
+        &__photo {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-right: 10px;
+            background-size: cover;
+            margin-bottom: 10px;
+            position: relative;
+            &:first-child {
+                border: 1px solid @light-gray;
+            }
+            i {
+                background-color: rgba(0, 0, 0, 0.4);
+                position: absolute;
+                top: 0px;
+                right: 0;
+                color: #fff;
+                font-size: 22px;
+                width: 24px;
+                height: 24px;
+                line-height: 24px;
+                text-align: center;
+                cursor: pointer;
+            }
         }
     }
 }

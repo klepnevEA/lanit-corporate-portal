@@ -1,0 +1,187 @@
+.icon-heard:hover .modal-likes {
+    display: block !important;
+}
+.modal-likes {
+    position: fixed;
+    top: 63%;
+    width: 310px;
+    margin: 0 auto;
+    left: 46%;
+    margin-left: -150px;
+    box-shadow: 7px 0 29px rgba(0,0,0,0.2);
+    z-index: 2;
+    display: none;
+    animation: vizible  .3s;
+    &__header {
+        background: #fff;
+        display: flex;
+        padding: 18px 20px 17px 16px;
+        border-bottom: 1px solid #eeeded;
+        align-items: center;
+        .icon-heard {
+            font-size: 12px;
+            margin-right: 6px;
+            &:before {
+                color: @blue;
+            }
+        }
+        &-title {
+            font-size: 13px;
+            font-family: 'PFBeauSansPro-SemiBold';
+            text-transform: uppercase;
+            flex: 1;
+            &_sm {
+                display: inline-block;
+            }
+            &_big {
+                display: none;
+            }
+        }
+        &-link {
+            font-size: 14px;
+            color: @blue;
+            cursor: pointer;
+            text-decoration: underline;
+            &:hover {
+                color: lighten(@blue, 10%);
+            }
+        }
+        .mdi-close {
+            display: none;
+            cursor: pointer;
+        }
+    }
+    &__body {
+        background: #f8f7f7;
+        padding: 10px 16px;
+        display: flex;
+        max-height: 360px;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+    &__list li {
+        display: inline-block;
+        padding: 1px;
+        margin: 0 auto;
+        &:nth-child(n+6) {
+            display: none;
+        }
+    }
+    &__img {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        border-radius: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 0 auto;
+    }
+    &__fio {
+        display: none;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 100px;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    &_top:before {
+        top: auto;
+        bottom: -5px;
+        background: #f8f7f7;
+    }
+    &_big {
+        width: 654px;
+        margin: 0 auto;
+        left: 58%;
+        top: 40%;
+        margin-left: -308px;
+        .modal-likes {
+            &__header {
+                &-link {
+                    display: none;
+                }
+                .mdi-close {
+                    display: block;
+                    position: absolute;
+                    top: 2px;
+                    right: 2px;
+                    font-size: 22px;
+                    color: @gray;
+                }
+                &-title {
+                    &_sm {
+                        display: none !important;
+                    }
+                    &_big {
+                        display: inline-block !important;
+                    }
+                }
+            }
+            &_top:before {
+                top: auto;
+                bottom: -5px;
+                background: #f8f7f7;
+            }
+            &:before {
+                display: none;
+            }
+            &__img {
+                margin-top: 2px;
+            }
+            &__fio {
+                display: block;
+                font-size: 13px;
+                margin-top: 7px;
+                margin-bottom: 20px;
+                line-height: 16px;
+                padding: 0 4px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-height: 32px;
+            }
+            &__list li {
+                width: 100px;
+                display: inline-block;
+                text-align: center;
+                vertical-align: top;
+            }
+        }
+        &:before {
+            display: none;
+        }
+    }
+    &.visible {
+        display: block !important;
+    }
+    &__foo {
+        width: 60px;
+        height: 1px;
+        background-color: transparent;
+        padding-top: 40px;
+        box-sizing: content-box;
+        z-index: 1;
+        &.visible {
+            display: block !important;
+        }
+    }
+}
+
+
+@keyframes vizible {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
