@@ -800,7 +800,7 @@ $('.select').each(function(){
     
     //var checkPoint = true;
     
-    $('.open-popup').mousemove(function(){
+    $('.open-popup').mouseover(function(){
         if( $('.modal-likes').hasClass('modal-likes_big') ) {
             $('.modal-likes').removeClass('modal-likes_top modal-likes_big visible');
             $('.modal-likes__foo').removeClass('visible');
@@ -859,7 +859,7 @@ $('.select').each(function(){
         }
     );
     
-    $('.advt-list').mouseover(function(){
+    $("body").on('mouseout', '.modal-likes__foo.visible, .modal-likes.visible', function(){
         //if(checkPoint){
         if( $('.modal-likes').hasClass('modal-likes_big') ) {
         } else {
@@ -879,7 +879,7 @@ $('.select').each(function(){
         //var checkPoint = true;
     });
     
-    $(window).scroll(function(event) {
+    $(window).on("scrollstop", function(event) {
         var isTriggerAction = event.hasOwnProperty("isTrigger") && event["isTrigger"];
         if(!isTriggerAction && $('.modal-likes').hasClass('visible') ){
             $('.modal-likes').removeClass('visible modal-likes_big modal-likes_top');
