@@ -830,21 +830,23 @@ $('.select').each(function(){
         function(){
             //checkPoint = false;
             var position = $(this).offset();
-            var x = position.left+42;
+            var x = position.left+41;
             var y = position.top;   //var y = position.top-300;
             
             $('.modal-likes').addClass('modal-likes_big');
             var w_y = $('.modal-likes_big').outerHeight();//410;296;183
             
-            if( y - $(window).scrollTop() > $(window).height()/2+120 ) { // элемент ниже середины экрана
+            if( y - $(window).scrollTop() > $(window).height()/2 ) { // элемент ниже середины экрана
+                
                 //$(window).height() - w_y - 50
                 y = y - w_y - 175; //y = $(window).height() - w_y - 100;
             //} else if ( y - $(window).scrollTop() < 0 ) {
             } else {
+                
                 //y = $(window).scrollTop() + 20;
                 y = y - 18;
             }
-            $('.modal-likes').addClass('visible modal-likes_big').removeClass('modal-likes_top').css('position','absolute').css('top', y).css('left', x);
+            $('.modal-likes').addClass('visible modal-likes_big').css('position','absolute').css('top', y).css('left', x);
             //event.preventDefault();
             //checkPoint = true;
         }
