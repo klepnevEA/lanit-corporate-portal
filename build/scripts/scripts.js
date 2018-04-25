@@ -802,8 +802,8 @@ $('.select').each(function(){
     
     $('.open-popup').mouseover(function(){
         if( $('.modal-likes').hasClass('modal-likes_big') ) {
-            $('.modal-likes').removeClass('modal-likes_top modal-likes_big visible');
-            $('.modal-likes__foo').removeClass('visible');
+            //$('.modal-likes').removeClass('modal-likes_top modal-likes_big visible');
+            //$('.modal-likes__foo').removeClass('visible');
         } else {
             var position = $(this).offset();
             var x = position.left+51;
@@ -811,6 +811,7 @@ $('.select').each(function(){
             if( y - $(window).scrollTop() > $(window).height()/2 ) {
                 setTimeout(function() {
                     if ($('.open-popup:hover').length != 0) {
+                        $('.open-popup').removeClass('blue');
                         $('.open-popup:hover').addClass('blue');
                         $('.modal-likes').addClass('modal-likes_top').addClass('visible').css('position','absolute').css('top',y-165).css('left',x);
                         $('.modal-likes__foo').addClass('visible').css('position','absolute').css('top',y-40).css('left',x-52);
@@ -819,6 +820,7 @@ $('.select').each(function(){
             } else {
                 setTimeout(function() {
                     if ($('.open-popup:hover').length != 0) {
+                        $('.open-popup').removeClass('blue');
                         $('.open-popup:hover').addClass('blue');
                         $('.modal-likes').addClass('visible').css('position','absolute').css('top',y).css('left',x);
                         $('.modal-likes__foo').addClass('visible').css('position','absolute').css('top',y-40).css('left',x-52);
@@ -869,17 +871,21 @@ $('.select').each(function(){
     
     $("body").on('mouseout', '.modal-likes__foo.visible, .modal-likes.visible', function(){
         //if(checkPoint){
-        if( $('.modal-likes').hasClass('modal-likes_big') ) {
-        } else {
-            setTimeout(function() {
-                if ($('.modal-likes:hover').length != 0) {
-                } else {
-                    $('.modal-likes').removeClass('modal-likes_top modal-likes_big visible');
-                    $('.modal-likes__foo').removeClass('visible');
-                    $('.open-popup').removeClass('blue');
-                }
-            }, 500);
-        }
+            if( $('.modal-likes').hasClass('modal-likes_big') ) {
+            } else {
+                setTimeout(function() {
+                    if ($('.modal-likes:hover').length != 0) {
+                    } else {
+                        if( $('.modal-likes').hasClass('modal-likes_big') ) {
+                        } else {
+                            $('.modal-likes').removeClass('modal-likes_top modal-likes_big visible');
+                            $('.modal-likes__foo').removeClass('visible');
+                            $('.open-popup').removeClass('blue');
+                        }
+                    }
+                }, 800);
+            }
+        //}
     });
     
     $(window).resize(function() {
@@ -889,14 +895,17 @@ $('.select').each(function(){
         //var checkPoint = true;
     });
     
-    $(window).on("scrollstop", function(event) {
-        var isTriggerAction = event.hasOwnProperty("isTrigger") && event["isTrigger"];
-        if(!isTriggerAction && $('.modal-likes').hasClass('visible') ){
-            $('.modal-likes').removeClass('visible modal-likes_big modal-likes_top');
-            $('.modal-likes__foo').removeClass('visible');
-            $('.open-popup').removeClass('blue');
-            //var checkPoint = true;
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 101) {
+            $(window).on("scrollstop", function(event) {
+                var isTriggerAction = event.hasOwnProperty("isTrigger") && event["isTrigger"];
+                if(!isTriggerAction && $('.modal-likes').hasClass('visible') ){
+                    $('.modal-likes').removeClass('visible modal-likes_big modal-likes_top');
+                    $('.modal-likes__foo').removeClass('visible');
+                    $('.open-popup').removeClass('blue');
+                    //var checkPoint = true;
+                }
+            });
         }
     });
-    
 });

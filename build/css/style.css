@@ -3509,9 +3509,6 @@ template {
 .icons-block__elem.blue span {
   color: #00aeff;
 }
-.icons-block__elem.open-popup {
-  background: red;
-}
 .icons-block__advt {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 35px;
@@ -11940,10 +11937,12 @@ a.fc-more:hover {
 }
 .modal-likes__body {
   background: #f8f7f7;
-  padding: 10px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.modal-likes__body-wrap {
+  padding: 10px 16px;
   max-height: 360px;
 }
 .modal-likes__list {
@@ -12054,6 +12053,7 @@ a.fc-more:hover {
   padding-top: 40px;
   box-sizing: content-box;
   z-index: 1;
+  display: none;
 }
 .modal-likes__foo.visible {
   display: block !important;
