@@ -11753,6 +11753,9 @@ a.fc-more:hover {
 .advert-list__elem.activ {
   background-color: #e3f7ff;
 }
+.advert-list__elem.activ .advert-text__title {
+  max-width: calc(100% - 100px);
+}
 .advert-list__elem-icon {
   position: absolute;
   top: 0;
@@ -11943,7 +11946,7 @@ a.fc-more:hover {
 }
 .modal-likes__body-wrap {
   padding: 10px 16px;
-  max-height: 360px;
+  max-height: 350px;
 }
 .modal-likes__list {
   margin: 0;
@@ -11994,6 +11997,7 @@ a.fc-more:hover {
   left: 58%;
   top: 40%;
   margin-left: -308px;
+  transition: all 0.1s ease;
 }
 .modal-likes_big .modal-likes__header-link {
   display: none;

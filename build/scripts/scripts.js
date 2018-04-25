@@ -805,6 +805,11 @@ $('.select').each(function(){
             //$('.modal-likes').removeClass('modal-likes_top modal-likes_big visible');
             //$('.modal-likes__foo').removeClass('visible');
         } else {
+            var counter = $('.modal-likes__list li').length;
+            if (counter < 6) {
+                $('.modal-likes__all').css('display','none');
+            }
+            $(".modal-likes__header-counter").html(counter);
             var position = $(this).offset();
             var x = position.left+51;
             var y = position.top+25;
@@ -837,9 +842,19 @@ $('.select').each(function(){
             var position = $(this).offset();
             var x = position.left+41;
             var y = position.top;   //var y = position.top-300;
+            //var sm = 110;  //смещение
             
-            $('.modal-likes').addClass('modal-likes_big');
-            var w_y = $('.modal-likes_big').outerHeight();//410;296;183
+            //$('.modal-likes').addClass('modal-likes_big');
+            //var w_y = $('.modal-likes_big').outerHeight() - sm;     //400;296;183
+            
+            if ($('.modal-likes__list li').length > 12) {    //три строчки и более
+                w_y = 289;
+            } else if (6 < $('.modal-likes__list li').length && $('.modal-likes__list li').length < 13 ) {
+                w_y = 186;
+            } else {
+                w_y = 73;
+            }
+            
             /*
             var mdl = $(window).height()/2-107; //смещение по высоте кнопки "все" относительно "сердечка"
             if( y - $(window).scrollTop() > mdl ) { // элемент ниже середины экрана
@@ -849,7 +864,7 @@ $('.select').each(function(){
                 y = y - 18;
             }*/
             if( $('.modal-likes').hasClass('modal-likes_top') ) {   // элемент ниже середины экрана
-                y = y - w_y - 175;
+                y = y - w_y;
             } else {
                 y = y - 18;
             }
