@@ -910,17 +910,13 @@ $('.select').each(function(){
         //var checkPoint = true;
     });
     
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 101) {
-            $(window).on("scrollstop", function(event) {
-                var isTriggerAction = event.hasOwnProperty("isTrigger") && event["isTrigger"];
-                if(!isTriggerAction && $('.modal-likes').hasClass('visible') ){
-                    $('.modal-likes').removeClass('visible modal-likes_big modal-likes_top');
-                    $('.modal-likes__foo').removeClass('visible');
-                    $('.open-popup').removeClass('blue');
-                    //var checkPoint = true;
-                }
-            });
+    $(window).on("scrollstop", function(event) {
+        var isTriggerAction = event.hasOwnProperty("isTrigger") && event["isTrigger"];
+        if(!isTriggerAction && $('.modal-likes').hasClass('visible') ){
+            $('.modal-likes').removeClass('visible modal-likes_big modal-likes_top');
+            $('.modal-likes__foo').removeClass('visible');
+            $('.open-popup').removeClass('blue');
+            //var checkPoint = true;
         }
     });
 });
