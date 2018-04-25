@@ -811,6 +811,7 @@ $('.select').each(function(){
             if( y - $(window).scrollTop() > $(window).height()/2 ) {
                 setTimeout(function() {
                     if ($('.open-popup:hover').length != 0) {
+                        $('.open-popup:hover').addClass('blue');
                         $('.modal-likes').addClass('modal-likes_top').addClass('visible').css('position','absolute').css('top',y-165).css('left',x);
                         $('.modal-likes__foo').addClass('visible').css('position','absolute').css('top',y-40).css('left',x-52);
                     }
@@ -818,6 +819,7 @@ $('.select').each(function(){
             } else {
                 setTimeout(function() {
                     if ($('.open-popup:hover').length != 0) {
+                        $('.open-popup:hover').addClass('blue');
                         $('.modal-likes').addClass('visible').css('position','absolute').css('top',y).css('left',x);
                         $('.modal-likes__foo').addClass('visible').css('position','absolute').css('top',y-40).css('left',x-52);
                     }
@@ -828,6 +830,7 @@ $('.select').each(function(){
 
     $('.modal-likes__all').click(
         function(){
+            
             //checkPoint = false;
             var position = $(this).offset();
             var x = position.left+41;
@@ -835,15 +838,17 @@ $('.select').each(function(){
             
             $('.modal-likes').addClass('modal-likes_big');
             var w_y = $('.modal-likes_big').outerHeight();//410;296;183
-            
-            if( y - $(window).scrollTop() > $(window).height()/2 ) { // элемент ниже середины экрана
-                
-                //$(window).height() - w_y - 50
-                y = y - w_y - 175; //y = $(window).height() - w_y - 100;
-            //} else if ( y - $(window).scrollTop() < 0 ) {
+            /*
+            var mdl = $(window).height()/2-107; //смещение по высоте кнопки "все" относительно "сердечка"
+            if( y - $(window).scrollTop() > mdl ) { // элемент ниже середины экрана
+                y = y - w_y - 175;
+                $('.modal-likes').addClass('modal-likes_top');
             } else {
-                
-                //y = $(window).scrollTop() + 20;
+                y = y - 18;
+            }*/
+            if( $('.modal-likes').hasClass('modal-likes_top') ) {   // элемент ниже середины экрана
+                y = y - w_y - 175;
+            } else {
                 y = y - 18;
             }
             $('.modal-likes').addClass('visible modal-likes_big').css('position','absolute').css('top', y).css('left', x);
@@ -856,6 +861,7 @@ $('.select').each(function(){
         function(event){
             $('.modal-likes').removeClass('visible modal-likes_big modal-likes_top');
             $('.modal-likes__foo').removeClass('visible');
+            $('.open-popup').removeClass('blue');
             //event.preventDefault();
             //var checkPoint = true;
         }
@@ -870,6 +876,7 @@ $('.select').each(function(){
                 } else {
                     $('.modal-likes').removeClass('modal-likes_top modal-likes_big visible');
                     $('.modal-likes__foo').removeClass('visible');
+                    $('.open-popup').removeClass('blue');
                 }
             }, 500);
         }
@@ -878,6 +885,7 @@ $('.select').each(function(){
     $(window).resize(function() {
         $('.modal-likes').removeClass('visible modal-likes_big modal-likes_top');
         $('.modal-likes__foo').removeClass('visible');
+        $('.open-popup').removeClass('blue');
         //var checkPoint = true;
     });
     
@@ -886,6 +894,7 @@ $('.select').each(function(){
         if(!isTriggerAction && $('.modal-likes').hasClass('visible') ){
             $('.modal-likes').removeClass('visible modal-likes_big modal-likes_top');
             $('.modal-likes__foo').removeClass('visible');
+            $('.open-popup').removeClass('blue');
             //var checkPoint = true;
         }
     });
