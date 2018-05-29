@@ -9,7 +9,15 @@
         &__icon {
             color: @orange;
             font-size: 40px;
-            margin-right: 10px;
+            margin-right: 3px;
+            .mood-popup-button_merry-icon,
+            .mood-popup-button_neutral-icon,
+            .mood-popup-button_sad-icon {
+                width: 43px;
+                height: 43px;
+                position: relative;
+                top: 2px;
+            }
         }
 
         &__info {
@@ -20,6 +28,8 @@
             font-family: 'PFBeauSansPro-Regular';
             color: @gray;
             font-size: 13px;
+             position: relative;
+            top: -2px;
         }
 
         &__status {
@@ -64,7 +74,8 @@
                 width: 45px;
                 height: 45px;
                 margin-bottom: 10px;
-                background-size: contain !important;
+                background-size: 100% auto !important;
+                background-repeat: no-repeat;
             }
 
             &:last-child {

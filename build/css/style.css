@@ -3663,7 +3663,15 @@ template {
 .mood-office__icon {
   color: #ff8b00;
   font-size: 40px;
-  margin-right: 10px;
+  margin-right: 3px;
+}
+.mood-office__icon .mood-popup-button_merry-icon,
+.mood-office__icon .mood-popup-button_neutral-icon,
+.mood-office__icon .mood-popup-button_sad-icon {
+  width: 43px;
+  height: 43px;
+  position: relative;
+  top: 2px;
 }
 .mood-office__info {
   float: left;
@@ -3672,6 +3680,8 @@ template {
   font-family: 'PFBeauSansPro-Regular';
   color: #adadad;
   font-size: 13px;
+  position: relative;
+  top: -2px;
 }
 .mood-office__status {
   font-family: 'PFBeauSansPro-Regular';
@@ -3730,7 +3740,8 @@ template {
   width: 45px;
   height: 45px;
   margin-bottom: 10px;
-  background-size: contain !important;
+  background-size: 100% auto !important;
+  background-repeat: no-repeat;
 }
 .mood-popup-button:last-child {
   margin-right: 0;
