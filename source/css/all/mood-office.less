@@ -33,24 +33,38 @@
         &-buttons-wrap {
             display: block;
             padding: 0 25px;
-            margin-bottom: @sp;
+            margin-bottom: @sp; 
             .clearfix;
         }
 
         &-button {
-            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             float: left;
-            width: 100px;
-            height: 80px;
+            width: 105px;
+            height: 90px;
             text-align: center;
-            color: @gray;
+            color: #595755;
             background-color: @bg;
             margin-right: @sp;
-            padding: 10px;
+            padding: 10px 10px 0;
             transition: 0.3s;
+            border-radius: 3px;
+            box-sizing: border-box;
+            // border-bottom: 5px solid transparent;
 
             &:hover, &.active {
-                color: #fff !important;
+                // color: #fff !important;
+                border-bottom: 5px solid @blue;
+            }
+            &_neutral-icon, 
+            &_merry-icon, 
+            &_sad-icon {
+                width: 45px;
+                height: 45px;
+                margin-bottom: 10px;
+                background-size: contain !important;
             }
 
             &:last-child {
@@ -68,27 +82,24 @@
             }
 
             &_merry {
-                color: @orange !important;
-
-                &:hover, &.active {
-                    background-color: @orange;
+                &-icon {
+                   background-image: url(../img/emoji_update_2.png); 
                 }
+                
             }
 
             &_neutral {
-                color: @blue !important;
-
-                &:hover, &.active {
-                    background-color: @blue;
+                &-icon {
+                   background-image: url(../img/emoji_update.png); 
                 }
+               
             }
 
             &_sad {
-                color: @gray !important;
-
-                &:hover, &.active {
-                    background-color: @gray;
+                &-icon {
+                    background-image: url(../img/emoji_update_4.png);
                 }
+
             }
         }
 
@@ -138,22 +149,20 @@
                 &-elem {
                     padding: 0 10px 0 0;
                     .clearfix;
+                    .mood-popup-button_merry-icon, 
+                    .mood-popup-button_neutral-icon,
+                    .mood-popup-button_sad-icon {
+                        float: left;
+                        margin-right: 10px;
+                    }
 
                     &_merry {
-                        i {
-                            color: @orange;
-                        }
-
                         .mood-popup-statistics__info-title {
-                            color: @orange;
+                            color: @orange; 
                         }
                     }
 
                     &_neutral {
-                        i {
-                            color: @blue;
-                        }
-
                         .mood-popup-statistics__info-title {
                             color: @blue;
                         }

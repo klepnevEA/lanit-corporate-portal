@@ -3698,20 +3698,39 @@ template {
   clear: both;
 }
 .mood-popup-button {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   float: left;
-  width: 100px;
-  height: 80px;
+  width: 105px;
+  height: 90px;
   text-align: center;
-  color: #adadad;
+  color: #595755;
   background-color: #f8f7f7;
   margin-right: 15px;
-  padding: 10px;
+  padding: 10px 10px 0;
   transition: 0.3s;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 .mood-popup-button:hover,
 .mood-popup-button.active {
-  color: #fff !important;
+  border-bottom: 5px solid #00aeff;
+}
+.mood-popup-button_neutral-icon,
+.mood-popup-button_merry-icon,
+.mood-popup-button_sad-icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+  background-size: contain !important;
 }
 .mood-popup-button:last-child {
   margin-right: 0;
@@ -3724,26 +3743,14 @@ template {
   font-size: 13px;
   font-family: 'PFBeauSansPro-Regular';
 }
-.mood-popup-button_merry {
-  color: #ff8b00 !important;
+.mood-popup-button_merry-icon {
+  background-image: url(../img/emoji_update_2.png);
 }
-.mood-popup-button_merry:hover,
-.mood-popup-button_merry.active {
-  background-color: #ff8b00;
+.mood-popup-button_neutral-icon {
+  background-image: url(../img/emoji_update.png);
 }
-.mood-popup-button_neutral {
-  color: #00aeff !important;
-}
-.mood-popup-button_neutral:hover,
-.mood-popup-button_neutral.active {
-  background-color: #00aeff;
-}
-.mood-popup-button_sad {
-  color: #adadad !important;
-}
-.mood-popup-button_sad:hover,
-.mood-popup-button_sad.active {
-  background-color: #adadad;
+.mood-popup-button_sad-icon {
+  background-image: url(../img/emoji_update_4.png);
 }
 .mood-popup-statistics {
   background-color: #f8f7f7;
@@ -3816,14 +3823,14 @@ template {
   display: block;
   clear: both;
 }
-.mood-popup-statistics__info-elem_merry i {
-  color: #ff8b00;
+.mood-popup-statistics__info-elem .mood-popup-button_merry-icon,
+.mood-popup-statistics__info-elem .mood-popup-button_neutral-icon,
+.mood-popup-statistics__info-elem .mood-popup-button_sad-icon {
+  float: left;
+  margin-right: 10px;
 }
 .mood-popup-statistics__info-elem_merry .mood-popup-statistics__info-title {
   color: #ff8b00;
-}
-.mood-popup-statistics__info-elem_neutral i {
-  color: #00aeff;
 }
 .mood-popup-statistics__info-elem_neutral .mood-popup-statistics__info-title {
   color: #00aeff;
