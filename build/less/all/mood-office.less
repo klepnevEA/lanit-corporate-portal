@@ -9,7 +9,15 @@
         &__icon {
             color: @orange;
             font-size: 40px;
-            margin-right: 10px;
+            margin-right: 3px;
+            .mood-popup-button_merry-icon,
+            .mood-popup-button_neutral-icon,
+            .mood-popup-button_sad-icon {
+                width: 43px;
+                height: 43px;
+                position: relative;
+                top: 2px;
+            }
         }
 
         &__info {
@@ -20,6 +28,8 @@
             font-family: 'PFBeauSansPro-Regular';
             color: @gray;
             font-size: 13px;
+             position: relative;
+            top: -2px;
         }
 
         &__status {
@@ -43,7 +53,7 @@
             align-items: center;
             float: left;
             width: 105px;
-            height: 85px;
+            height: 90px;
             text-align: center;
             color: #595755;
             background-color: @bg;
@@ -64,7 +74,8 @@
                 width: 45px;
                 height: 45px;
                 margin-bottom: 10px;
-                background-size: contain !important;
+                background-size: 100% auto !important;
+                background-repeat: no-repeat;
             }
 
             &:last-child {
@@ -149,22 +160,20 @@
                 &-elem {
                     padding: 0 10px 0 0;
                     .clearfix;
+                    .mood-popup-button_merry-icon, 
+                    .mood-popup-button_neutral-icon,
+                    .mood-popup-button_sad-icon {
+                        float: left;
+                        margin-right: 10px;
+                    }
 
                     &_merry {
-                        i {
-                            color: @orange;
-                        }
-
                         .mood-popup-statistics__info-title {
                             color: @orange; 
                         }
                     }
 
                     &_neutral {
-                        i {
-                            color: @blue; 
-                        }
-
                         .mood-popup-statistics__info-title {
                             color: @blue;
                         }
