@@ -6180,7 +6180,7 @@ template {
   top: 0px;
   left: 0px;
   font-size: 14px;
-  width: 16px;
+  width: 17px;
   height: 15px;
   color: #fff;
   border-radius: 3px;
@@ -12139,4 +12139,109 @@ a.fc-more:hover {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+}
+.interview__graybox {
+  padding: 20px 30px 4px;
+  background: #f8f7f7;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 30px;
+}
+.interview__graybox .hr {
+  margin-bottom: 15px;
+}
+.interview__graybox-footer {
+  margin-bottom: 45px;
+}
+.interview__graybox-footer:before,
+.interview__graybox-footer:after {
+  content: " ";
+  display: table;
+}
+.interview__graybox-footer:after {
+  clear: both;
+}
+.interview__graybox-footer::after,
+.interview__graybox-footer::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.interview__graybox-footer .btn {
+  margin-left: 15px;
+}
+.interview__graybox sup {
+  color: #dd2400;
+}
+.interview__graybox label {
+  padding-top: 17px;
+  display: block;
+  color: #adadad;
+  font-size: 14px;
+}
+.interview__graybox-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+.interview__graybox-item_date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.interview__graybox-item_date-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 45px;
+}
+.interview__graybox-left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 125px;
+          flex: 0 0 125px;
+  max-width: 125px;
+}
+.interview__graybox-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.interview__graybox-right-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 15px;
+}
+.interview__graybox input,
+.interview__graybox textarea {
+  border: 1px solid #e7e6e6;
+}
+.interview__graybox-cboxlist {
+  margin: 15px 0;
+}
+.interview__graybox-cboxlist .input-block__string-chkbox {
+  font-size: 14px;
+}
+.interview__graybox .invisible-btn.active {
+  display: none;
+}
+.interview__graybox-invisible {
+  display: none;
+}
+.interview__graybox-invisible-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 5px;
+}
+.interview__graybox-invisible.active {
+  display: block;
 }

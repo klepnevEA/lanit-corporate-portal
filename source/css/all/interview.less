@@ -1,0 +1,87 @@
+.interview {
+
+	&__graybox {
+		padding: 20px 30px 4px;
+		background: @bg;
+		border-top: 1px solid #eaeaea;
+		border-bottom: 1px solid #eaeaea;
+		margin-bottom: 30px;
+		.hr {
+			margin-bottom: @sp;
+		}
+		&-footer {
+			margin-bottom: @sp*3;
+			.clearfix;
+			.btn {
+				margin-left: @sp;
+			}
+		}
+		sup {
+			color: @red;
+		}
+		label {
+			padding-top: 17px;
+			display: block;
+			color: #adadad;
+			font-size: 14px;
+		}
+		&-item {
+			display: flex;
+			box-sizing: border-box;
+			margin-bottom: @sp;
+			&_date {
+				display: flex;
+				&-box {
+					display: flex;
+					margin-right: @sp*3;
+					label {
+
+					}
+				}
+			}
+		}
+		&-left {
+			flex: 0 0 125px;
+			max-width: 125px;
+			
+		}
+		&-right {
+			flex: 1;
+			
+			&-box {
+				display: flex;
+				align-items: center;
+				margin-right: @sp;
+			}
+		}
+		input, textarea {
+			border: 1px solid #e7e6e6;
+		}
+		&-cboxlist {
+			margin: @sp 0;
+			.input-block__string-chkbox {
+				font-size: 14px;
+			}
+
+		}
+		.invisible-btn {
+			&.active {
+				display: none;
+			}
+		}
+		&-invisible {
+			display: none;
+			&-btn {
+				display: flex;
+				justify-content: flex-end;
+				margin-top: 5px;
+				
+			}
+			&.active {
+				display: block;
+			}
+		}
+
+	}
+
+}

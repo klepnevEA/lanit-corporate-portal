@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+
+					@@include('./file-include/header.html')
+					@@include('./file-include/bread-crumbs.html')
+
+
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 class="title title_fsz-30">Список опросов</h2>
+							
+							<div class="interview__graybox">
+
+
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Название<sup>*</sup></label>
+									</div>
+									<div class="interview__graybox-right">
+										<input type="text" class="input">
+									</div>
+								</div>
+
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Описание<sup>*</sup></label>
+									</div>
+									<div class="interview__graybox-right">
+										<textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+
+										<div class="interview__graybox-cboxlist">
+											<div class="input-block__string-chkbox">
+											    <input type="checkbox" class="checkbox" id="checkbox_1">
+											    <label for="checkbox_1">Опубликовать</label>
+											</div>
+											<div class="input-block__string-chkbox">
+											    <input type="checkbox" class="checkbox" id="checkbox_2">
+											    <label for="checkbox_2">Опубликовать результаты</label>
+											</div>
+											<div class="input-block__string-chkbox">
+											    <input type="checkbox" class="checkbox" id="checkbox_3">
+											    <label for="checkbox_3">Повторное прохождение</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="interview__graybox-item interview__graybox-item_date">
+									<div class="interview__graybox-item_date-box">
+										<div class="interview__graybox-left">
+											<label>Дата начала<sup>*</sup></label>
+										</div>
+										
+										<div class="interview__graybox-item_date-input">
+											<input type="text" class="input">
+										</div>
+									</div>
+									<div class="interview__graybox-item_date-box">
+										<div class="interview__graybox-left">
+											<label for="" class="">Дата окончания<sup>*</sup></label>
+										</div>
+										<div class="interview__graybox-item_date-input">
+											<input type="text" class="input">
+										</div>
+									</div>
+								</div>
+
+								<div class="hr"></div>
+								
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Вопросы</label>
+									</div>
+									<div class="interview__graybox-right">
+										<button class="btn btn_orange btn_medium invisible-btn" ><i class="mdi mdi-plus-circle-outline"></i> Добавить вопрос</button>
+
+										<div class="interview__graybox-invisible">
+											<textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+											<div class="interview__graybox-invisible-btn">
+												<button class="btn btn_orange btn_medium invisible-btn active">Добавить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<script type="text/javascript">
+									$(document).ready(function() {
+										$('.invisible-btn').click(function() {
+											$('.invisible-btn').toggleClass('active');
+											$('.interview__graybox-invisible').toggleClass('active');
+										});
+									})
+								</script>
+							</div>
+							<div class="interview__graybox-footer">
+								<button class="btn btn_medium  btn_right">Сохранить</button>
+								<button class="btn btn_medium btn_blue-dark btn_right">Отменить</button>
+							</div>
+						</div>
+					</div>
+
+
+					
+
+
+					@@include('./file-include/footer.html')
+				</div><!--container-main-->
+			</div><!--container-wrap-->
+		</div>	 <!--container-->
+		<!-- <div class="footer__before"></div> -->
+	</div> <!--wrapper-->
+	<!-- popups -->
+	@@include('./file-include/popup-mood-office.html')
+	@@include('./file-include/popup-call-win-main.html')
+	@@include('./file-include/popup-call-win-search.html')
+	@@include('./file-include/popup-call-win-add.html')
+</body>
+</html>
