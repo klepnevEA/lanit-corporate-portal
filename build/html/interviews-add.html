@@ -349,101 +349,177 @@
 
 					<div class="row">
 						<div class="col-xs-12">
-							<h2 class="title title_fsz-30">Список опросов</h2>
-							<button class="btn btn_medium btn_orange" data-popup="popup-add-advert">
-								<span class="mdi mdi-plus-circle-outline"></span>
-								Добавить опрос
-							</button>
-
-						</div>
-					</div>
+							<h2 class="title title_fsz-30">Создание опроса</h2>
+							
+							<div class="interview__graybox">
 
 
-					<!-- Список объявлений -->
-					<div class="row">
-						<div class="col-xs-12 advert advert_list-topics">
-							<ul class="advert-list">
-								<li class="advert-list__elem">
-									<div class="clearfix">
-										<div class="advert-list__elem-block">
-											<div class="advert__block-text">
-												<a href="#" class="title title_fsz-18 title_margin-bottom-0 advert-text__title">
-													Новый опрос
-												</a>
-												<div class="text text_gray text_margin-bottom-10 advert-text__public">
-													01.07.2018 — 23.07.2018
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Название<sup>*</sup></label>
+									</div>
+									<div class="interview__graybox-right">
+										<input type="text" class="input">
+									</div>
+								</div>
+
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Описание<sup>*</sup></label>
+									</div>
+									<div class="interview__graybox-right">
+										<textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+
+										<div class="interview__graybox-cboxlist">
+											<div class="input-block__string-chkbox">
+												<input type="checkbox" class="checkbox" id="checkbox_1">
+												<label for="checkbox_1">Опубликовать</label>
+											</div>
+											<div class="input-block__string-chkbox">
+												<input type="checkbox" class="checkbox" id="checkbox_2">
+												<label for="checkbox_2">Опубликовать результаты</label>
+											</div>
+											<div class="input-block__string-chkbox">
+												<input type="checkbox" class="checkbox" id="checkbox_3">
+												<label for="checkbox_3">Повторное прохождение</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="interview__graybox-item interview__graybox-item_date">
+									<div class="interview__graybox-item_date-box">
+										<div class="interview__graybox-left">
+											<label>Дата начала<sup>*</sup></label>
+										</div>
+										
+										<div class="interview__graybox-item_date-input">
+											<input type="text" class="input">
+										</div>
+									</div>
+									<div class="interview__graybox-item_date-box">
+										<div class="interview__graybox-left">
+											<label for="" class="">Дата окончания<sup>*</sup></label>
+										</div>
+										<div class="interview__graybox-item_date-input">
+											<input type="text" class="input">
+										</div>
+									</div>
+								</div>
+
+								<div class="hr"></div>
+								
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Вопросы</label>
+									</div>
+									<div class="interview__graybox-right">
+										<button class="btn btn_orange btn_medium invisible-btn" ><i class="mdi mdi-plus-circle-outline"></i> Добавить вопрос</button>
+
+										<!-- <div class="interview__graybox-invisible">
+											<textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+											<div class="interview__graybox-invisible-btn">
+												<button class="btn btn_orange btn_medium invisible-btn active">Добавить</button>
+											</div>
+										</div> -->
+										
+										<div class="interview__qest-list">
+
+
+											<div class="interview__qest-item">
+												<div class="interview__qest-item-left">
+													<div class="interview__qest-num">1</div>
+													<div class="interview__qest-text"><p>Кровью скреплять не будем – (...) надежнее.</p></div>
 												</div>
+												<div class="interview__qest-btns">
 
-												<div class="advert-text__wrap">
-													<div class="advert-text__message">
-														Мы хотим задать вам несколько вопросов о новом портале. Расскажите нам, удобно ли им пользоваться, чтобы мы могли учесть ваши пожелания и сделать его еще лучше. Это займет у вас не более пары минут.
-													</div>
-												</div>
-												<div class="advert-list__elem-icon">
-													<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
-														<span class="mdi mdi-download"></span>
-													</button>
 													<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
 														<span class="mdi mdi-pencil"></span>
 													</button>
 													<button class="btn btn_medium btn_blue-dark btn_square" data-popup="drive-add-new">
 														<span class="mdi mdi-delete"></span>
 													</button>
-												</div>
-												<div class="advert-text__btn">
-													<button class="btn btn_medium btn__blue">Результаты опроса</button>
+													
 												</div>
 											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<ul class="advert-list">
-								<li class="advert-list__elem">
-									<div class="clearfix">
-										<div class="advert-list__elem-block">
-											<div class="advert__block-text">
-												<a href="#" class="title title_fsz-18 title_margin-bottom-0 advert-text__title">
-													Новый год настает
-												</a>
-												<div class="text text_gray text_margin-bottom-10 advert-text__public">
-													01.07.2018 — 23.07.2018
+											<div class="interview__qest-item">
+												<div class="interview__qest-item-left">
+													<div class="interview__qest-num">1</div>
+													<div class="interview__qest-text"><p>Кровью скреплять не будем – (...) надежнее.</p></div>
 												</div>
-												<div class="advert-text__status advert-text__status_red">Опрос завершен</div>
+												<div class="interview__qest-btns">
 
-												<div class="advert-text__wrap">
-													<div class="advert-text__message">
-														Мы хотим задать вам несколько вопросов о новом портале. Расскажите нам, удобно ли им пользоваться, чтобы мы могли учесть ваши пожелания и сделать его еще лучше. Это займет у вас не более пары минут.
-													</div>
-
-													<div class="advert-text__img">
-														<img src="../img/slider-news/slide-2.png" alt="">
-													</div>
-												</div>
-												<div class="advert-list__elem-icon">
-													<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
-														<span class="mdi mdi-download"></span>
-													</button>
 													<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
 														<span class="mdi mdi-pencil"></span>
 													</button>
 													<button class="btn btn_medium btn_blue-dark btn_square" data-popup="drive-add-new">
 														<span class="mdi mdi-delete"></span>
 													</button>
-												</div>
-												<div class="advert-text__btn">
-													<button class="btn btn_medium btn__blue">Результаты опроса</button>
+													
 												</div>
 											</div>
+											<div class="interview__qest-item">
+												<div class="interview__qest-item-left">
+													<div class="interview__qest-num">1</div>
+													<div class="interview__qest-text">
+														<p>Абрикосовая дала обильную желтую пену, и в воздухе запахло парикмахерской. Напившись, литераторы немедленно начали икать, расплатились и уселись на скамейке лицом к пруду и спиной к Бронной.</p>
+														<p>Тут приключилась вторая странность, касающаяся одного Берлиоза. Он внезапно перестал икать, сердце его стукнуло и на мгновенье куда-то провалилось, потом вернулось, но с тупой иглой, засевшей в нем. Кроме того, Берлиоза охватил необоснованный, но столь сильный страх, что ему захотелось тотчас же бежать с (...) без оглядки. Берлиоз тоскливо оглянулся, не понимая, что его напугало. Он побледнел, вытер лоб платком, подумал: «Что это со мной? Этого никогда не было… сердце шалит…</p> 
+														<p>я переутомился. Пожалуй, пора бросить все к черту и в Кисловодск…»
+														И тут знойный воздух сгустился перед ним, и соткался из этого воздуха прозрачный гражданин престранного вида. На маленькой головке жокейский картузик, клетчатый кургузый воздушный же пиджачок… Гражданин ростом в сажень, но в плечах узок, худ неимоверно, и физиономия, прошу заметить, глумливая.</p></div>
+													</div>
+													<div class="interview__qest-btns">
+
+														<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
+															<span class="mdi mdi-pencil"></span>
+														</button>
+														<button class="btn btn_medium btn_blue-dark btn_square" data-popup="drive-add-new">
+															<span class="mdi mdi-delete"></span>
+														</button>
+														
+													</div>
+												</div>
+												<div class="interview__qest-item">
+													<div class="interview__qest-item-left">
+														<div class="interview__qest-num">1</div>
+														<div class="interview__qest-text">
+															<p>и тут какой-то текст</p>
+															<img src="../img/slider-news/slide-2.png" alt="">
+															<ul>
+																<li>Сколько можно жертвовать собой</li>
+																<li>Другими жертвовать то что надо!</li>
+															</ul>
+														</div>
+													</div>
+													<div class="interview__qest-btns">
+														
+														<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
+															<span class="mdi mdi-pencil"></span>
+														</button>
+														<button class="btn btn_medium btn_blue-dark btn_square" data-popup="drive-add-new">
+															<span class="mdi mdi-delete"></span>
+														</button>
+														
+													</div>
+												</div>
+
+												
+											</div>
+
 										</div>
 									</div>
-								</li>
-							</ul>
+								</div>
+								<div class="interview__graybox-footer">
+									<button class="btn btn_medium  btn_right">Сохранить</button>
+									<button class="btn btn_medium btn_blue-dark btn_right">Отменить</button>
+								</div>
+							</div>
 						</div>
-					</div>
 
 
-					<footer class="footer">
+						
+
+
+						<footer class="footer">
 
 		<div class="row">
 			<div class="col-xs-12">
@@ -463,13 +539,13 @@
 
   
 
-				</div><!--container-main-->
-			</div><!--container-wrap-->
-		</div>	 <!--container-->
-		<!-- <div class="footer__before"></div> -->
-	</div> <!--wrapper-->
-	<!-- popups -->
-	<div class="popup" id="mood-office">
+					</div><!--container-main-->
+				</div><!--container-wrap-->
+			</div>	 <!--container-->
+			<!-- <div class="footer__before"></div> -->
+		</div> <!--wrapper-->
+		<!-- popups -->
+		<div class="popup" id="mood-office">
 		<div class="popup__wrap">
 			<a href="#" class="popup__close">
 				<i class="mdi mdi-close"></i>
@@ -576,7 +652,7 @@
 
 		</div>
 	</div>
-	<div class="popup view-booking" id="popup-call-win-main">
+		<div class="popup view-booking" id="popup-call-win-main">
     <div class="popup__wrap popup__wrap_width-700">
         <a href="#" class="popup__close">
             <i class="mdi mdi-close"></i>
@@ -675,7 +751,7 @@
         </div>
 	</div>
 </div>
-	<div class="popup search-meetingroom" id="popup-call-win-search">
+		<div class="popup search-meetingroom" id="popup-call-win-search">
     <div class="popup__wrap popup__wrap_width-700">
         <a href="#" class="popup__close">
             <i class="mdi mdi-close"></i>
@@ -856,7 +932,7 @@
         </div>
 	</div>
 </div>
-	<div class="popup search-meetingroom" id="popup-call-win-add">
+		<div class="popup search-meetingroom" id="popup-call-win-add">
     <div class="popup__wrap popup__wrap_width-700">
         <a href="#" class="popup__close">
             <i class="mdi mdi-close"></i>
@@ -1009,5 +1085,14 @@
         </div>
 	</div>
 </div>
+
+	<!-- <script type="text/javascript">
+		$(document).ready(function() {
+			$('.invisible-btn').click(function() {
+				// $('.invisible-btn').toggleClass('active');
+				$('.interview__graybox-invisible').toggleClass('active');
+			});
+		})
+	</script> -->
 </body>
 </html>
