@@ -85,7 +85,12 @@
 										<label>Вопросы</label>
 									</div>
 									<div class="interview__graybox-right">
-										<button class="btn btn_orange btn_medium invisible-btn" ><i class="mdi mdi-plus-circle-outline"></i> Добавить вопрос</button>
+										
+
+										<div class="btn btn_orange btn_medium invisible-btn popup-open" data-popup="interview-modal">
+											<i class="mdi mdi-plus-circle-outline"></i> Добавить вопрос
+										</div> 
+
 
 										<!-- <div class="interview__graybox-invisible">
 											<textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
@@ -146,7 +151,7 @@
 														<button class="btn btn_medium btn_blue-dark btn_square" data-popup="drive-add-new">
 															<span class="mdi mdi-delete"></span>
 														</button>
-														
+
 													</div>
 												</div>
 												<div class="interview__qest-item">
@@ -162,18 +167,18 @@
 														</div>
 													</div>
 													<div class="interview__qest-btns">
-														
+
 														<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
 															<span class="mdi mdi-pencil"></span>
 														</button>
 														<button class="btn btn_medium btn_blue-dark btn_square" data-popup="drive-add-new">
 															<span class="mdi mdi-delete"></span>
 														</button>
-														
+
 													</div>
 												</div>
 
-												
+
 											</div>
 
 										</div>
@@ -187,7 +192,7 @@
 						</div>
 
 
-						
+
 
 
 						@@include('./file-include/footer.html')
@@ -197,6 +202,7 @@
 			<!-- <div class="footer__before"></div> -->
 		</div> <!--wrapper-->
 		<!-- popups -->
+		@@include('./file-include/interview-modal.html')
 		@@include('./file-include/popup-mood-office.html')
 		@@include('./file-include/popup-call-win-main.html')
 		@@include('./file-include/popup-call-win-search.html')
