@@ -12320,3 +12320,57 @@ a.fc-more:hover {
   left: 0px;
   top: 0px;
 }
+.interview-modal .interview__graybox {
+  padding: 0;
+  background: none;
+  border: none;
+  margin-bottom: 0;
+}
+.interview-modal .interview__graybox input {
+  margin-right: 0;
+}
+.interview-modal .interview__graybox-item_date {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.interview-modal .interview__graybox-item_date-box {
+  margin-right: 0;
+}
+.interview-modal .interview__graybox .label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.interview-modal .interview__graybox .label_right {
+  text-align: right;
+  padding-right: 15px;
+}
+.interview-modal .interview__graybox-right-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.interview-modal .interview__graybox-right-btns a {
+  color: #adadad;
+  border-bottom: 1px dotted;
+  font-size: 14px;
+  margin-right: 15px;
+  transition: all 0.2s;
+}
+.interview-modal .interview__graybox-right-btns a:hover {
+  color: #00aeff;
+}
+.interview-modal .interview__graybox-right-btns span {
+  color: #adadad;
+  font-size: 14px;
+}
+.interview-modal .interview__graybox-right-btns span i {
+  margin-right: 3px;
+}
