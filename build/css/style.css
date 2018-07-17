@@ -12337,6 +12337,9 @@ a.fc-more:hover {
 .interview-modal .interview__graybox-item_date-box {
   margin-right: 0;
 }
+.interview-modal .interview__graybox-item:last-child {
+  margin-bottom: 0;
+}
 .interview-modal .interview__graybox .label {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -12356,6 +12359,7 @@ a.fc-more:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 15px;
 }
 .interview-modal .interview__graybox-right-btns a {
   color: #adadad;
@@ -12373,4 +12377,17 @@ a.fc-more:hover {
 }
 .interview-modal .interview__graybox-right-btns span i {
   margin-right: 3px;
+}
+.interview-modal .interview__graybox-right-answer {
+  border-top: 1px solid #eaeaea;
+  margin-top: 15px;
+}
+.interview-modal .interview__graybox-right-answer-text {
+  font-size: 14px;
+}
+.interview-modal .interview__graybox-right-visible {
+  display: none;
+}
+.interview-modal .interview__graybox-right-visible.active {
+  display: block;
 }

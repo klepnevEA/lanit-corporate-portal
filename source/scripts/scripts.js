@@ -1,6 +1,15 @@
 $(document).ready(function() {
 
 
+	// добавления ответа
+	
+	$('#asweradd').click(function() {
+		$('.interview__graybox-right-visible').toggleClass('active');
+	});
+	$('#asweradd-2').click(function() {
+		$('.interview__graybox-right-visible').toggleClass('active');
+	});
+
 	//табы на странице food
 	$('.food-page__tabs-item').click(function() {
 		$('.food-page__tabs-item').removeClass('active');
@@ -919,4 +928,10 @@ $('.select').each(function(){
             //var checkPoint = true;
         }
     });
+
+
+
+
+
+
 });

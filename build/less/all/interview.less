@@ -149,11 +149,60 @@
 			}
 		}
 	}
+	//модалка с добавление вопроса
 
-
-
-
-
+	&-modal {
+		.interview__graybox {
+			padding: 0;
+			background: none;
+			border: none;
+			margin-bottom: 0;
+			input {
+				margin-right: 0;
+			}
+			&-item_date {
+				justify-content: space-between;
+			}
+			&-item {
+				&_date-box {
+					margin-right: 0;
+				}
+			}
+			.label {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				&_right {
+					text-align: right;
+					padding-right: @sp;
+				}
+			}
+			&-right {
+				&-btns {
+					display: flex;
+					justify-content: flex-end;
+					-ms-align-items: center;
+					align-items: center;
+					a {
+						color: #adadad;
+						border-bottom: 1px dotted;
+						font-size: 14px;
+						margin-right: @sp;
+						transition: all 0.2s;
+						&:hover {
+							color: @blue;
+						}
+					}
+					span {
+						color: #adadad;
+						font-size: 14px;
+						i {
+							margin-right: @sp/5;
+						}
+					}
+				}
+			}
+		}	
+	}
 
 
 
