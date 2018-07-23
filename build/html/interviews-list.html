@@ -380,7 +380,7 @@
 													</div>
 												</div>
 												<div class="advert-list__elem-icon">
-													<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
+													<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="interview-modal-select">
 														<span class="mdi mdi-download"></span>
 													</button>
 													<button class="btn btn_medium btn_blue btn_square popup-open" data-popup="popup-person-edit">
@@ -469,6 +469,74 @@
 		<!-- <div class="footer__before"></div> -->
 	</div> <!--wrapper-->
 	<!-- popups -->
+	<div class="popup" id="interview-modal-select">  
+	<div class="popup__wrap">
+		<a href="#" class="popup__close">
+			<i class="mdi mdi-close"></i>
+		</a>
+		<div class="popup__head">
+			<div class="popup__title">
+				Выгрузка
+			</div>
+		</div>
+
+		<div class="popup__block popup__block_privateads">
+			<div class="ml-privateads ml-privateads_notower">
+				<div class="interview-modal">
+
+					<div class="interview__graybox">
+
+
+
+						<div class="interview__graybox-item">
+							<div class="interview__graybox-left">
+								<label>Вид выгрузки<sup>*</sup></label>
+							</div>
+							<div class="interview__graybox-right">
+								
+
+								<div class="ml-select" id="ms1">
+									<div class="ml-select__title">Выберите вид выгрузки</div>
+									<i class="mdi mdi-chevron-down"></i>
+									<input class="input ml-select__input" type="text" value=""/ placeholder="Выберите интересующий вас раздел">
+									<div class="ml-select__dropbox">
+										<div clml-mselect__list>
+											<div class="ml-select__item active">Скидки для сотрудников</div>
+											<div class="ml-select__item">Тема 2 очень важная</div>
+											<div class="ml-select__item">Второстепенная тема</div>
+											<div class="ml-select__item">Тема что надо но для избранных</div>
+											<div class="ml-select__item">Тема не о политике</div>
+											<div class="ml-select__item">Тема про отпуск</div>
+											<div class="ml-select__item">Лесные демоны атакуют</div>
+											<div class="ml-select__item">Тема дня</div>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="interview__graybox-cboxlist">
+									<div class="input-block__string-chkbox">
+										<input type="checkbox" class="checkbox" id="checkbox_10">
+										<label for="checkbox_10">Опубликовать</label>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="popup__footer">
+				<div class="popup__footer-btn">
+					<button class="btn btn_medium btn_blue-dark">Отменить</button>
+					<button class="btn btn_medium ">Выгрузить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
 	<div class="popup" id="mood-office">
 		<div class="popup__wrap">
 			<a href="#" class="popup__close">

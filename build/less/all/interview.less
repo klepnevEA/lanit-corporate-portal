@@ -167,6 +167,9 @@
 				&_date-box {
 					margin-right: 0;
 				}
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 			.label {
 				padding-top: 10px;
@@ -182,6 +185,7 @@
 					justify-content: flex-end;
 					-ms-align-items: center;
 					align-items: center;
+					margin-top: @sp;
 					a {
 						color: #adadad;
 						border-bottom: 1px dotted;
@@ -198,6 +202,19 @@
 						i {
 							margin-right: @sp/5;
 						}
+					}
+				}
+				&-answer {
+					border-top: 1px solid #eaeaea;
+					margin-top: @sp;
+					&-text {
+						font-size: 14px;
+					}
+				}
+				&-visible {
+					display: none;
+					&.active {
+						display: block;
 					}
 				}
 			}

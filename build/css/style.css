@@ -7879,6 +7879,9 @@ template {
 .ml-privateads.scrollbar-style > .scroll-element.scroll-y {
   right: 3px;
 }
+.ml-privateads_notower {
+  overflow: unset;
+}
 .ml-privateads__line {
   margin-bottom: 7px;
 }
@@ -12226,6 +12229,9 @@ a.fc-more:hover {
   border: 1px solid #e7e6e6;
   padding-bottom: 14px ;
   padding-top: 18px;
+}
+.interview__graybox .ml-select input {
+  padding-top: 25px;
 }
 .interview__graybox-cboxlist {
   margin: 15px 0;
