@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+
+					@@include('./file-include/header.html')
+					@@include('./file-include/bread-crumbs.html')
+
+
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 class="title title_fsz-30">Создание фотоконкурса</h2>
+							
+							<div class="interview__graybox">
+
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Название<sup>*</sup></label>
+									</div>
+									<div class="interview__graybox-right">
+										<input type="text" class="input">
+									</div>
+								</div>
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Порядок отображения<sup>*</sup></label>
+									</div>
+									<div class="interview__graybox-right">
+										<div class="interview__photo">
+											<div class="interview__photo-sort">
+												<input type="text" class="input">
+											</div>
+											<div class="interview__photo-text">
+												Устанавливает порядок отображения фотоконкурсов Фотоконкурсы с меньшим значением отображаются первыми
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Описание<sup>*</sup></label>
+									</div>
+									<div class="interview__graybox-right">
+										<textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>
+
+										
+									</div>
+								</div>
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+										<label>Тип <br>фотоконкурса<sup>*</sup></label>
+									</div>
+									<div class="interview__graybox-right">
+										<div class="interview__photo">
+											<div class="interview__photo-select">
+												
+												<div class="ml-select" id="ms1">
+													<div class="ml-select__title">Разделы селект</div>
+													<i class="mdi mdi-chevron-down"></i>
+													<input class="input ml-select__input" type="text" value=""/ placeholder="Выберите интересующий вас раздел">
+													<div class="ml-select__dropbox">
+														<div clml-mselect__list>
+															<div class="ml-select__item active">Скидки для сотрудников</div>
+															<div class="ml-select__item">Тема 2 очень важная</div>
+															<div class="ml-select__item">Второстепенная тема</div>
+															<div class="ml-select__item">Тема что надо но для избранных</div>
+															<div class="ml-select__item">Тема не о политике</div>
+															<div class="ml-select__item">Тема про отпуск</div>
+															<div class="ml-select__item">Лесные демоны атакуют</div>
+															<div class="ml-select__item">Тема дня</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="interview__graybox-item interview__graybox-item_date">
+									<div class="interview__graybox-item_date-box">
+										<div class="interview__graybox-left">
+											<label>Дата начала<sup>*</sup></label>
+										</div>
+										
+										<div class="interview__graybox-item_date-input">
+											<input type="text" class="input">
+										</div>
+									</div>
+									<div class="interview__graybox-item_date-box">
+										<div class="interview__graybox-left">
+											<label for="" class="">Дата окончания<sup>*</sup></label>
+										</div>
+										<div class="interview__graybox-item_date-input">
+											<input type="text" class="input">
+										</div>
+									</div>
+								</div> 
+								<div class="interview__graybox-item">
+									<div class="interview__graybox-left">
+									</div>
+									<div class="interview__graybox-right">
+										<div class="interview__graybox-cboxlist">
+											<div class="input-block__string-chkbox">
+												<input type="checkbox" class="checkbox" id="checkbox_1">
+												<label for="checkbox_1">Отображать результаты фотоконкурса</label>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="interview__btnsofbody">
+								<button class="btn btn_medium  btn_right">Сохранить</button>
+								<button class="btn btn_medium btn_blue-dark btn_right">Отменить</button>
+							</div>
+						</div>
+
+						@@include('./file-include/footer.html')
+					</div><!--container-main-->
+				</div><!--container-wrap-->
+			</div>   <!--container-->
+			<!-- <div class="footer__before"></div> -->
+		</div> <!--wrapper-->
+		<!-- popups -->
+		@@include('./file-include/interview-modal.html')
+		@@include('./file-include/popup-mood-office.html')
+		@@include('./file-include/popup-call-win-main.html')
+		@@include('./file-include/popup-call-win-search.html')
+		@@include('./file-include/popup-call-win-add.html')
+
+
+	<!-- popups -->
+	@@include('./file-include/popup-mood-office.html')
+
+</body>
+</html>
+

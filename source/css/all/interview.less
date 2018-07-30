@@ -6,6 +6,7 @@
 		border-top: 1px solid #eaeaea;
 		border-bottom: 1px solid #eaeaea;
 		margin-bottom: 30px;
+
 		.hr {
 			margin-bottom: @sp;
 		}
@@ -224,6 +225,34 @@
 				}
 			}
 		}	
+	}
+
+	//блок относится к фотоконкурсам
+	&__photo {
+		display: flex;
+		&-text {
+			padding-left: @sp;
+			font-size: 14px;
+			color: #adadad;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 52px;
+		}
+		&-sort {
+			min-width: 250px;
+
+		}
+		&-select {
+			width: 536px;
+		}
+	}
+	&__btnsofbody {
+		margin-bottom: 60px;
+		.clearfix;
+		.btn {
+			margin-left: @sp/3;
+		}
 	}
 
 

@@ -12397,3 +12397,49 @@ a.fc-more:hover {
 .interview-modal .interview__graybox-right-visible.active {
   display: block;
 }
+.interview__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.interview__photo-text {
+  padding-left: 15px;
+  font-size: 14px;
+  color: #adadad;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 52px;
+}
+.interview__photo-sort {
+  min-width: 250px;
+}
+.interview__photo-select {
+  width: 536px;
+}
+.interview__btnsofbody {
+  margin-bottom: 60px;
+}
+.interview__btnsofbody:before,
+.interview__btnsofbody:after {
+  content: " ";
+  display: table;
+}
+.interview__btnsofbody:after {
+  clear: both;
+}
+.interview__btnsofbody::after,
+.interview__btnsofbody::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.interview__btnsofbody .btn {
+  margin-left: 5px;
+}
