@@ -170,14 +170,19 @@
 		&__title {
 			text-transform: uppercase;
 			font-family: 'PFBeauSansPro-Bold'; 
-			font-size: 24px;
+			font-size: 22px;
 			margin-bottom: 2px;
 		}
 		&__value {
-			color: @orange;
-			font-family: 'PFBeauSansPro-Bold'; 
+			color: @gray;
+			
 			margin-bottom: 35px;
-			font-size: 24px;
+			font-size: 22px;
+			margin-top: @sp;
+			font-family: 'PFBeauSansPro-SemiBold';
+			span {
+				color: @orange;
+			}
 		}
 		&__text {
 			font-size: 13px;
@@ -205,6 +210,13 @@
 			a {
 				color: @blue;
 				text-decoration: underline;
+			}
+			&-title {
+				margin-bottom: @sp/3;
+			}
+			&-name {
+				text-transform: uppercase;
+				font-family: 'PFBeauSansPro-SemiBold';
 			}
 		}
 		&__like {

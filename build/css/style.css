@@ -7681,14 +7681,18 @@ template {
 .ml-photo-modal-contests__title {
   text-transform: uppercase;
   font-family: 'PFBeauSansPro-Bold';
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 2px;
 }
 .ml-photo-modal-contests__value {
-  color: #ff8b00;
-  font-family: 'PFBeauSansPro-Bold';
+  color: #adadad;
   margin-bottom: 35px;
-  font-size: 24px;
+  font-size: 22px;
+  margin-top: 15px;
+  font-family: 'PFBeauSansPro-SemiBold';
+}
+.ml-photo-modal-contests__value span {
+  color: #ff8b00;
 }
 .ml-photo-modal-contests__text {
   font-size: 13px;
@@ -7716,6 +7720,13 @@ template {
 .ml-photo-modal-contests__links a {
   color: #00aeff;
   text-decoration: underline;
+}
+.ml-photo-modal-contests__links-title {
+  margin-bottom: 5px;
+}
+.ml-photo-modal-contests__links-name {
+  text-transform: uppercase;
+  font-family: 'PFBeauSansPro-SemiBold';
 }
 .ml-photo-modal-contests__like {
   margin-top: 25px;
@@ -9723,6 +9734,33 @@ template {
 .photo-grid .icons-block {
   margin-bottom: 0;
   padding-top: 10px;
+}
+.photo-grid__cup {
+  width: 70px;
+  float: right;
+  font-size: 13px;
+  color: #ff8b00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.photo-grid__cup-text {
+  white-space: nowrap;
+}
+.photo-grid__cup-img {
+  margin-right: 3px;
+  width: 22px;
+  height: 22px;
+  display: block;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  box-sizing: border-box;
+  position: relative;
+  top: -5px;
 }
 .food-page__tabs {
   -webkit-box-flex: 1;
