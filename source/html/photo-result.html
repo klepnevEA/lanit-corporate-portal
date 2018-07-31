@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./file-include/head.html')
+<body>
+
+	<div class="wrapper">
+
+		<div class="container">
+			<div class="container-wrap">
+
+				<div class="container-nav">
+					@@include('./file-include/nav-menu.html')
+				</div>
+
+				<div class="container-main">
+
+					@@include('./file-include/header.html')
+					@@include('./file-include/bread-crumbs.html')
+
+
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 class="title title_fsz-30">Фотоконкурсы</h2>
+							
+							<hr class="delimiter delimiter_mb15">
+
+							<div class="row">
+								<div class="col-xs-7">
+									<div class="tab-links">
+										<ul class="tab-links__list">
+											<li class="tab-links__elem"> 
+												<a href="#" class="tab-links__link">Конкурсы</a>
+											</li>
+
+											<li class="tab-links__elem active">
+												<a href="#" class="tab-links__link">Результаты</a>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+								<div class="col-xs-5">
+									<div class="tab-links">
+										<a href="#" class="link link_right" >
+											<span class="mdi mdi-minus"></span>
+											Архив фотоконкурсов
+										</a>
+									</div>
+								</div>
+							</div>	
+							<hr class="delimiter">
+							<div class="ml-photo-result">
+								<div class="ml-photo-result__block">
+									<div class="ml-photo-result__title">
+										Результаты текущих фтотоконкурсов
+									</div>
+									<div class="ml-photo-result__group">
+										<div class="ml-photo-result__item">
+											<div class="ml-photo-result__item-left">
+												<div class="ml-photo-result__item-title">Праздник к нам приходит</div>
+												<div class="ml-photo-result__item-date">10.11.2018 – 10.12.2018</div>
+											</div>
+											<div class="ml-photo-result__item-right">
+												<div class="ml-photo-result__item-value">
+													<i class="mdi mdi-camera"></i>
+													<span>1230</span>
+												</div>
+											</div>
+										</div>
+										<div class="ml-photo-result__item">
+											<div class="ml-photo-result__item-left">
+												<div class="ml-photo-result__item-title">Праздник к нам приходит. Это праздник поклонения культа Вуду. Он светел как лик самого Вуду. Я вего видел. Дважды</div>
+												<div class="ml-photo-result__item-date">10.11.2018 – 10.12.2018</div>
+											</div>
+											<div class="ml-photo-result__item-right">
+												<div class="ml-photo-result__item-value">
+													<i class="mdi mdi-camera"></i>
+													<span>123</span>
+												</div>
+											</div>
+										</div>
+										<div class="ml-photo-result__item">
+											<div class="ml-photo-result__item-left">
+												<div class="ml-photo-result__item-title">Праздник к нам приходит</div>
+												<div class="ml-photo-result__item-date">10.11.2018 – 10.12.2018</div>
+											</div>
+											<div class="ml-photo-result__item-right">
+												<div class="ml-photo-result__item-value">
+													<i class="mdi mdi-camera"></i>
+													<span>1</span>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+
+								<div class="ml-photo-result__block">
+									<div class="ml-photo-result__title">
+										Архив
+									</div>
+									<div class="ml-photo-result__group">
+										<div class="ml-photo-result__item">
+											<div class="ml-photo-result__item-left">
+												<div class="ml-photo-result__item-title">Праздник к нам приходит</div>
+												<div class="ml-photo-result__item-date">10.11.2018 – 10.12.2018</div>
+											</div>
+											<div class="ml-photo-result__item-right">
+												<div class="ml-photo-result__item-value">
+													<i class="mdi mdi-camera"></i>
+													<span>123</span>
+												</div>
+											</div>
+										</div>
+										<div class="ml-photo-result__item">
+											<div class="ml-photo-result__item-left">
+												<div class="ml-photo-result__item-title">Праздник к нам приходит</div>
+												<div class="ml-photo-result__item-date">10.11.2018 – 10.12.2018</div>
+											</div>
+											<div class="ml-photo-result__item-right">
+												<div class="ml-photo-result__item-value">
+													<i class="mdi mdi-camera"></i>
+													<span>123</span>
+												</div>
+											</div>
+										</div>
+										<div class="ml-photo-result__item">
+											<div class="ml-photo-result__item-left">
+												<div class="ml-photo-result__item-title">Праздник к нам приходит</div>
+												<div class="ml-photo-result__item-date">10.11.2018 – 10.12.2018</div>
+											</div>
+											<div class="ml-photo-result__item-right">
+												<div class="ml-photo-result__item-value">
+													<i class="mdi mdi-camera"></i>
+													<span>123</span>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+
+
+							<div class="text text_footnote">
+								Размещая фотографии в фотоконкурсе, автор соглашается с тем, что данные изображения могут быть использованы на страницах печатной и инрернет продукции от имени ГК ЛАНИТ. 
+							</div>
+
+							@@include('./file-include/footer.html')
+						</div><!--container-main-->
+					</div><!--container-wrap-->
+				</div>   <!--container-->
+				<!-- <div class="footer__before"></div> -->
+			</div> <!--wrapper-->
+			<!-- popups -->
+			@@include('./file-include/interview-modal.html')
+			@@include('./file-include/popup-mood-office.html')
+			@@include('./file-include/popup-call-win-main.html')
+			@@include('./file-include/popup-call-win-search.html')
+			@@include('./file-include/popup-call-win-add.html')
+
+
+			<!-- popups -->
+			@@include('./file-include/popup-mood-office.html')
+
+		</body>
+		</html>
+

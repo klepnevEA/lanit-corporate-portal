@@ -38,10 +38,22 @@
 			white-space: nowrap;
 		}
 		&-img {
-			margin-right: @sp/3;
-			border: 1px solid;
-			width: 20px;
-			height: 20px;
+			margin-right: @sp/5;
+			width: 22px;
+			height: 22px;
+			display: block;
+			background-size: contain !important;
+			background-repeat: no-repeat !important;
+			background-position: center !important;
+			box-sizing: border-box;
+			position: relative;
+			top: -5px
+			
+		}
+		&_spec {
+			.photo-grid__cup-text {
+				color: @blue;
+			}
 			
 		}
 	}

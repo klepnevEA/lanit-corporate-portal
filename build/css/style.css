@@ -7878,6 +7878,90 @@ template {
           align-items: center;
   height: 40px;
 }
+.ml-photo-result:before,
+.ml-photo-result:after {
+  content: " ";
+  display: table;
+}
+.ml-photo-result:after {
+  clear: both;
+}
+.ml-photo-result::after,
+.ml-photo-result::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.ml-photo-result__block {
+  margin-bottom: 45px;
+}
+.ml-photo-result__block:last-child {
+  margin-bottom: 20px;
+}
+.ml-photo-result__title {
+  color: #ff8b00;
+  font-family: 'PFBeauSansPro-Bold';
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.ml-photo-result__group {
+  border-top: 1px solid #eaeaea;
+  background: #f8f7f7;
+}
+.ml-photo-result__item {
+  border-bottom: 1px solid #eaeaea;
+  padding: 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.ml-photo-result__item-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.ml-photo-result__item-right {
+  margin-left: 30px;
+}
+.ml-photo-result__item-title {
+  font-weight: 18px;
+  color: black;
+  font-family: 'PFBeauSansPro-SemiBold';
+  margin-bottom: 10px;
+}
+.ml-photo-result__item-date {
+  color: #a6a6a6;
+  font-size: 13px;
+}
+.ml-photo-result__item-value {
+  margin-top: 4px;
+  background: #00aeff;
+  color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.ml-photo-result__item-value span {
+  display: block;
+  margin-left: 5px;
+  font-size: 18px;
+  font-family: 'PFBeauSansPro-Bold';
+  position: relative;
+  top: 2px;
+}
+.ml-photo-result__item-value i {
+  line-height: 1;
+  font-size: 24px;
+  position: relative;
+  top: 2px;
+}
 .ml-privateads {
   width: 700px;
   background: #f8f6f7;
@@ -9701,6 +9785,10 @@ template {
 .tab-links__elem {
   float: left;
 }
+.tab-links__elem.active .tab-links__link {
+  text-decoration: none;
+  color: #0685b9;
+}
 .tab-links__link {
   color: #00aeff;
   font-size: 14px;
@@ -9719,6 +9807,12 @@ template {
   width: calc(33.33333333%);
   margin-bottom: 5px;
 }
+.photo-grid__item_prize .photo-grid__link img {
+  border: 3px solid #ff8b00;
+}
+.photo-grid__item_spec .photo-grid__link img {
+  border: 3px solid #00aeff;
+}
 .photo-grid__link {
   display: inline-block;
   width: 100%;
@@ -9736,7 +9830,6 @@ template {
   padding-top: 10px;
 }
 .photo-grid__cup {
-  width: 70px;
   float: right;
   font-size: 13px;
   color: #ff8b00;
@@ -9757,10 +9850,13 @@ template {
   display: block;
   background-size: contain !important;
   background-repeat: no-repeat !important;
-  background-position: center !important;
+  background-position: right center !important;
   box-sizing: border-box;
   position: relative;
   top: -5px;
+}
+.photo-grid__cup_spec .photo-grid__cup-text {
+  color: #00aeff;
 }
 .food-page__tabs {
   -webkit-box-flex: 1;

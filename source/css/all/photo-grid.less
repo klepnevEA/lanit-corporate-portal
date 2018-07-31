@@ -3,6 +3,20 @@
 	&__item {
 		width: calc(100% / 3);
 		margin-bottom: 5px;
+		&_prize {
+			.photo-grid__link {
+				img {
+					border: 3px solid @orange;
+				}
+			}
+		}
+		&_spec {
+			.photo-grid__link {
+				img {
+					border: 3px solid @blue;
+				}
+			}
+		}
 	}
 
 	&__link {
@@ -27,7 +41,7 @@
 	}
 	&__cup {
 		
-		width: 70px;
+		// width: 70px;
 		float: right;
 		font-size: 13px;
 		color: @orange;
@@ -44,11 +58,17 @@
 			display: block;
 			background-size: contain !important;
 			background-repeat: no-repeat !important;
-			background-position: center !important;
+			background-position: right center !important;
 			box-sizing: border-box;
 			position: relative;
 			top: -5px
 			
+		}
+		&_spec {
+			.photo-grid__cup-text {
+				color: @blue;
+			}
+
 		}
 	}
 }
