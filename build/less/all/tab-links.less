@@ -1,16 +1,18 @@
 .tab-links {
-    
     padding: 10px 0;
     margin-bottom: 5px;
-    
     &__list {
         .clearfix;
     }
-    
     &__elem {
         float: left;
+        &.active {
+            .tab-links__link {
+                text-decoration: none;
+                color: #0685b9;
+            }
+        }
     }
-
     &__link {
         color: @blue;
         font-size: 14px;

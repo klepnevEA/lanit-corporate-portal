@@ -368,8 +368,12 @@
 										<a href="#" class="tab-links__link">Вне конкурса</a>
 									</li>
 									<li class="tab-links__elem">
-										<a href="#" class="tab-links__link">Результаты</a>
+                                        <a href="#" class="tab-links__link">Результаты</a>
+                                    </li>
+                                    <li class="tab-links__elem ">
+										<a href="#" class="tab-links__link popup-open" data-popup="popup-add-photos">addphoto</a>
 									</li>
+                                
 								</ul>
 							</div>
 							
@@ -742,6 +746,74 @@
 
 		</div>
 	</div>
+    <div class="popup advt-edit" id="popup-add-photos">
+    <div class="popup__wrap popup__wrap_width-700">
+        <a href="#" class="popup__close">
+            <i class="mdi mdi-close"></i>
+        </a>
+        <div class="popup__head">
+            <div class="popup__title">
+                Добавление фотографии
+            </div>
+        </div>
+        <div class="popup__body">
+            <div class="popup__wrap-block scrollbar-style popup__block_add">
+                <div class="popup__block popup__block_gray">
+                    
+                    <div class="ml-privateads__line">
+                        <div class="ml-select">
+							<input class="input" type="text" value="Фотография" />
+							<div class="ml-select__title">Добавление фоторафии<sup>*</sup></div>
+						</div>
+				    </div>
+                    <div class="ml-privateads__line">
+						<div class="ml-select">
+							<div class="ml-select__title ml-select__title-bg">Описание фотографии</div>
+							<textarea name="" id="" cols="20" rows="10" class="textarea" placeholder="Текст">
+                            </textarea>
+						</div>
+					</div>
+                    <div class="ml-privateads__line">
+						<div class="fileinput-button">
+							<div class="fileinput-button__text">Перетащите файлы фотографий, чтобы прикрепить их к объявлению, или воспользуйтесь кнопкой ниже.</div>
+						    <input id="fileupload" type="file" name="files[]" multiple="">
+						</div>
+					</div>
+                    <div class="ml-privateads__line">
+						<div class="fileinput-button__orange">
+							<i class="mdi mdi-plus-circle-outline"></i> Добавить изображение
+						</div>
+					</div>
+                   
+                    <div class="ml-privateads__line">
+                        <div class="advt-edit__photo" style="background-image: url('/img/!advertising/photo-4.png')">
+                            <i class="mdi mdi-close"></i>
+                        </div>
+                        <div class="advt-edit__photo" style="background-image: url('/img/!advertising/photo-5.png')">
+                            <i class="mdi mdi-close"></i>
+                        </div>
+                        <div class="advt-edit__photo" style="background-image: url('/img/!advertising/photo-6.png')">
+                            <i class="mdi mdi-close"></i>
+                        </div>
+                    </div>
+                    <div class="text text_gray">
+                       Размещать фотографии можно в форматах: jpg, jpeg, gif, png.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup__footer">
+            <div class="popup__footer-btn">
+                <button class="btn btn_medium btn_blue-dark btn_width-160">
+                    Отмена
+                </button>
+                <button class="btn btn_medium btn_width-160">
+                    Сохранить
+                </button>
+            </div>
+        </div>
+	</div>
+</div>
 
 </body>
 </html>
