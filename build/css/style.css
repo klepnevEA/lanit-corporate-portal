@@ -7967,6 +7967,31 @@ template {
   margin-bottom: 30px;
   margin-top: 15px;
 }
+.ml-photo-result-vote__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 220px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  line-height: 1;
+}
+.ml-photo-result-vote__btnicon {
+  background: url(../../img/xls.svg) no-repeat;
+  width: 45px;
+  height: 14px;
+  background-position: center right;
+  background-size: contain;
+  margin-right: 7.5px;
+}
 .ml-photo-result-vote__item {
   border-bottom: 1px solid #e7e6e6;
   background: #fff;
