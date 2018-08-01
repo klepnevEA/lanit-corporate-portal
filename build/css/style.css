@@ -8043,6 +8043,9 @@ template {
   position: relative;
   top: -3px;
 }
+.ml-photo-result-vote__cup-text {
+  min-width: 60px;
+}
 .ml-photo-result-vote__img {
   width: 40px;
   height: 40px;
